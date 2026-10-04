@@ -1,0 +1,9 @@
+{
+  "className": "Sound",
+  "properties": {
+    "PlaybackSpeed": 1.5,
+    "RollOffMode": "InverseTapered",
+    "Looped": true,
+    "AudioContent": "rbxassetid://88967797911082"
+  }
+}

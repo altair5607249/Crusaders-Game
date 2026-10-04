@@ -1,0 +1,24 @@
+{
+  "name": "MyRojoGame",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "$path": "src/ReplicatedStorage"
+    },
+    "ServerScriptService": {
+      "$path": "src/ServerScriptService"
+    },
+    "StarterPlayer": {
+      "StarterPlayerScripts": {
+        "$path": "src/StarterPlayerScripts"
+      },
+      "$properties": {
+        "AutoJumpEnabled": false,
+        "AvatarJointUpgrade": "Enabled",
+        "CameraMaxZoomDistance": 64.0,
+        "CharacterBreakJointsOnDeath": false,
+        "EnableMouseLockOption": false
+      }
+    }
+  }
+}
