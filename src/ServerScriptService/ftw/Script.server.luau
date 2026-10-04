@@ -8,5 +8,3 @@ Players.PlayerAdded:Connect(function(player)
 		end)
 	end
 end)
-
-print("testing rojo")

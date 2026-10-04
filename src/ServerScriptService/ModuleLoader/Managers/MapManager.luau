@@ -35,7 +35,8 @@ local mapInfo = {
 	["Parking Lot"] = "Nicholas3285 & MinecraftPro97k",
 	["Floating Castle"] = "J4milion & InstantlyBread",
 	Backrooms = "InstantlyBread & GreenHoldinItDown",
-	["Former School"] = "Brendan & RedManta LLC"
+	["Former School"] = "Brendan & RedManta LLC",
+	Town = "CorruptTypes"
 }
 
 local skyboxes = {
@@ -121,6 +122,15 @@ local skyboxes = {
 	},
 	
 	["Former School"] = {
+		Bk = "rbxasset://sky/null_plainsky512_bk.jpg",
+		Dn = "rbxasset://sky/null_plainsky512_dn.jpg",
+		Ft = "rbxasset://sky/null_plainsky512_ft.jpg",
+		Lf = "rbxasset://sky/null_plainsky512_lf.jpg",
+		Rt = "rbxasset://sky/null_plainsky512_rt.jpg",
+		Up = "rbxasset://sky/null_plainsky512_up.jpg",
+	},
+	
+	Town = {
 		Bk = "rbxasset://sky/null_plainsky512_bk.jpg",
 		Dn = "rbxasset://sky/null_plainsky512_dn.jpg",
 		Ft = "rbxasset://sky/null_plainsky512_ft.jpg",

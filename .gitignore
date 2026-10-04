@@ -1,8 +1,11 @@
-# Project place file
-/SOLHWOS.rbxlx
+# Roblox binary and XML place files
+*.rbxl
+*.rbxlx
+*.rbxm
+*.rbxmx
 
-# Roblox Studio lock files
-/*.rbxlx.lock
-/*.rbxl.lock
+# macOS specific system junk files
+.DS_Store
 
-sourcemap.json
+# Rojo local lock files
+.rojo-lock
