@@ -1,5 +1,7 @@
 # Crusaders — Game
-This contains my work on "Crusaders", a 3D fighting game available on Roblox; it's age restricted to 16+ for now, since I haven't hit Roblox's engagement quota yet. Currently working to create a Unity version of the game.
+This contains my work on "Crusaders", a 3D, free-for-all fighting game available on Roblox!
+
+I have not met Roblox's Highly-Engaged Player (HEP) threshold, so the game will be age restricted to 16+ until then. Currently working to create a Unity version of the game.
 
 ***Link to the Game***: [Crusaders](https://www.roblox.com/games/123600574843310/Crusaders)  
   
