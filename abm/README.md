@@ -1,5 +1,13 @@
 # Agent-Based Model (ABM)
-This is a subfolder detailing the codebase for Crusaders' crude ABM!
+This is a subfolder about Crusaders' simple ABM, which tests baseline character balance!
+
+## Version History
+
+| Version | Description | Status |
+| --- | --- | --- |
+| v1 | Bare-style-focused version. I designed the model + its agent behavior and directed the build, finding and fixing most of the problems myself. Much of the code was written with AI assistance (Claude and Gemini). | [Recovered](https://github.com/altair5607249/Crusaders-Game/blob/main/abm/abm_v1.ipynb?short_path=d9abe4e) |
+| v2 | Weapon-style-focused version with batched matchups, per-move tallying, and a fixed RL wrapper. | Lost (not saved) |
+| v3 | Full rewrite by me. I'm aware that the ABM code is rushed and messy, so I will be working on a full rewrite without AI! | In progress |
 
 ## Codebase
 (insert flowchart here)  
