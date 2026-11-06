@@ -30,6 +30,6 @@ graph TD;
   Sol_Client-->Attack;
   Movement-->MovementTrigger;
 
-  style Attack,MovementTrigger remoteEvent
+  class Attack,MovementTrigger remoteEvent;
 ```  
 (insert desc of every mechanic/module here later)
