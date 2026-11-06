@@ -49,7 +49,7 @@ graph TD;
   Managers-->MovementManager;
   Managers-->StunManager;
 
-  class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,Commands,Permissions serverNode;
+  class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,Commands,Permissions,CooldownManager,DamageManager,DataManager,KnockbackManager,MapManager,MovementManager,StunManager serverNode;
   class ModuleLoader2,Energy,M1_Client,Sol_Client,Movement clientNode;
   class Attack,MovementTrigger remoteEvent;
 ```  
