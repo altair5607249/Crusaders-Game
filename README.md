@@ -39,8 +39,17 @@ graph TD;
   OutputModules-->M1_Server;
   OutputModules-->Bare_Server;
   OutputModules-->Weapon_Server;
+  Administration-->Commands;
+  Administration-->Permissions;
+  Managers-->CooldownManager;
+  Managers-->DamageManager;
+  Managers-->DataManager;
+  Managers-->KnockbackManager;
+  Managers-->MapManager;
+  Managers-->MovementManager;
+  Managers-->StunManager;
 
-  class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager serverNode;
+  class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,Commands,Permissions serverNode;
   class ModuleLoader2,Energy,M1_Client,Sol_Client,Movement clientNode;
   class Attack,MovementTrigger remoteEvent;
 ```  
