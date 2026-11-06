@@ -18,6 +18,13 @@ For those who wish to see the game's progress from before I added GitHub to my w
   - If you decide to open the binary place file (the second link), you must download Roblox Studio.
 
 ## Codebase
-(insert flowchart here later)  
-(insert desc of every mechanic/module here later)
+```mermaid
+graph TD;
+  A-->B;
+  A-->C;
+  B-->D;
+  C-->D;
+```  
 
+(just testing what the GitHub Docs said to do)
+(insert desc of every mechanic/module here later)
