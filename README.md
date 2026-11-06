@@ -36,7 +36,7 @@ graph TD;
   ModuleLoader-->Administration;
   ModuleLoader-->Managers;
   ModuleLoader-->OutputModules;
-  ModuleLoader-->Matter;
+  ModuleLoader-->Matter-->MapManager;
   Administration-->Commands;
   Administration-->Permissions;
   Managers-->CooldownManager;
@@ -52,7 +52,7 @@ graph TD;
   Space;
   Time;
 
-  class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,Commands,Permissions,CooldownManager,DamageManager,DataManager,KnockbackManager,MapManager,MovementManager,StunManager serverNode;
+  class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,Commands,Permissions,CooldownManager,DamageManager,DataManager,KnockbackManager,MapManager,MovementManager,StunManager,Matter serverNode;
   class ModuleLoader2,Energy,M1_Client,Sol_Client,Movement clientNode;
   class Attack,MovementTrigger remoteEvent;
   class Space,Time universalNode;
