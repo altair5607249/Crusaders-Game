@@ -20,11 +20,11 @@ For those who wish to see the game's progress from before I added GitHub to my w
 ## Codebase
 ```mermaid
 graph TD;
-  A-->B;
-  A-->C;
-  B-->D;
-  C-->D;
+  Energy-->M1_Client;
+  Energy-->Sol_Client;
+  Energy-->Movement_Client;
+  M1_Client-->Energy;
+  Sol_Client-->Energy;
+  Movement_Client-->Energy;
 ```  
-
-(just testing what the GitHub Docs said to do)
 (insert desc of every mechanic/module here later)
