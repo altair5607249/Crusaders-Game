@@ -131,12 +131,12 @@ local skyboxes = {
 	},
 	
 	Town = {
-		Bk = "rbxasset://sky/null_plainsky512_bk.jpg",
-		Dn = "rbxasset://sky/null_plainsky512_dn.jpg",
-		Ft = "rbxasset://sky/null_plainsky512_ft.jpg",
-		Lf = "rbxasset://sky/null_plainsky512_lf.jpg",
-		Rt = "rbxasset://sky/null_plainsky512_rt.jpg",
-		Up = "rbxasset://sky/null_plainsky512_up.jpg",
+		Bk = "rbxassetid://150939022",
+		Dn = "rbxassetid://150939038",
+		Ft = "rbxassetid://150939047",
+		Lf = "rbxassetid://150939056",
+		Rt = "rbxassetid://150939063",
+		Up = "rbxassetid://150939082",
 	}
 }
 

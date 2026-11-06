@@ -15,12 +15,12 @@ local stun = require(script.Parent.StunManager)
 
 local DamageManager = {}
 
---Deals damage, with the player argument as the adminstrator of said damage.
+--the main attraction, and probably the most important function in this game's codebase
 function DamageManager:Damage(player: Player, attributes: {any})
 	local char = nil 
 	
 	if player:IsA("Player") then char = player.Character or player.CharacterAdded:Wait()
-	else char = player end --for dummies (remove after testing phase)
+	else char = player end --case for dummies
 	
 	local root: Part = char:WaitForChild("HumanoidRootPart")
 	local hum: Humanoid = char:WaitForChild("Humanoid")
@@ -175,7 +175,7 @@ function DamageManager:Damage(player: Player, attributes: {any})
 				if attributes["oneHit"] and targetPlr then
 					duration = attributes.atkdur --cuts off the sequential damage frames
 					char:AddTag("HitFinished")
-					task.delay(0.1, function()
+					task.delay(0.1, function() --REMEMBER TO FIX THIS LATER
 						char:RemoveTag("HitFinished")
 					end)
 				end
