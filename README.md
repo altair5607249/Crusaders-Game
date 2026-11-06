@@ -20,11 +20,16 @@ For those who wish to see the game's progress from before I added GitHub to my w
 ## Codebase
 ```mermaid
 graph TD;
-  Energy-->M1_Client;
-  Energy-->Sol_Client;
-  Energy-->Movement_Client;
-  M1_Client-->Energy;
-  Sol_Client-->Energy;
-  Movement_Client-->Energy;
+
+  classDef remoteEvent fill:#FF7F00
+
+  Energy-->M1_Client-->Energy;
+  Energy-->Sol_Client-->Energy;
+  Energy-->Movement-->Energy;
+  M1_Client-->Attack;
+  Sol_Client-->Attack;
+  Movement-->MovementTrigger;
+
+  style Attack, MovementTrigger remoteEvent
 ```  
 (insert desc of every mechanic/module here later)
