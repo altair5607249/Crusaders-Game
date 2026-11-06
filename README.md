@@ -32,9 +32,13 @@ graph TD;
   M1_Client-->Attack-->ModuleLoader;
   Sol_Client-->Attack-->ModuleLoader;
   Movement-->MovementTrigger-->MovementManager;
-  ModuleLoader-->M1_Server;
-  ModuleLoader-->Bare_Server;
-  ModuleLoader-->Weapon_Server;
+  ModuleLoader-->Administration;
+  ModuleLoader-->Managers;
+  ModuleLoader-->OutputModules;
+  ModuleLoader-->Matter;
+  OutputModules-->M1_Server;
+  OutputModules-->Bare_Server;
+  OutputModules-->Weapon_Server;
 
   class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager serverNode;
   class ModuleLoader2,Energy,M1_Client,Sol_Client,Movement clientNode;
