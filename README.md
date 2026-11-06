@@ -21,7 +21,7 @@ For those who wish to see the game's progress from before I added GitHub to my w
 ```mermaid
 graph TD;
 
-  classDef remoteEvent fill:#FF7F00
+  classDef remoteEvent fill:#FF7F00,stroke:#000000,color:#000000
 
   Energy-->M1_Client-->Energy;
   Energy-->Sol_Client-->Energy;
@@ -30,6 +30,6 @@ graph TD;
   Sol_Client-->Attack;
   Movement-->MovementTrigger;
 
-  style Attack, MovementTrigger remoteEvent
+  style Attack,MovementTrigger remoteEvent
 ```  
 (insert desc of every mechanic/module here later)
