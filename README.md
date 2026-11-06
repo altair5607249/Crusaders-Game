@@ -21,6 +21,8 @@ For those who wish to see the game's progress from before I added GitHub to my w
 ```mermaid
 graph TD;
 
+  classDef serverNode fill:#00FF00,stroke:#000000,color:#000000
+  classDef clientNode fill:#0000FF,stroke:#000000,color:#000000
   classDef remoteEvent fill:#FF7F00,stroke:#000000,color:#000000
 
   Energy-->M1_Client-->Energy;
@@ -31,8 +33,10 @@ graph TD;
   Movement-->MovementTrigger-->MovementManager;
   ModuleLoader-->M1_Server;
   ModuleLoader-->Bare_Server;
-  ModuleLoader-->Weapon_Server
+  ModuleLoader-->Weapon_Server;
 
+  class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager;
+  class Energy,M1_Client,Sol_Client,Movement clientNode;
   class Attack,MovementTrigger remoteEvent;
 ```  
 (insert desc of every mechanic/module here later)
