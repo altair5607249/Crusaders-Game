@@ -26,10 +26,15 @@ graph TD;
   Energy-->M1_Client-->Energy;
   Energy-->Sol_Client-->Energy;
   Energy-->Movement-->Energy;
-  M1_Client-->Attack;
+  M1_Client-->Attack-->M1_Server;
   Sol_Client-->Attack;
-  Movement-->MovementTrigger;
+  Movement-->MovementTrigger-->MovementManager;
 
   class Attack,MovementTrigger remoteEvent;
 ```  
 (insert desc of every mechanic/module here later)
+
+## Roadmap
+- Add a state machine
+- Merge `Bare_Server` and `Weapon_Server`
+- Reduce collision latency
