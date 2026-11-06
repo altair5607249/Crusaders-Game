@@ -35,7 +35,7 @@ graph TD;
   ModuleLoader-->Bare_Server;
   ModuleLoader-->Weapon_Server;
 
-  class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager;
+  class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager serverNode;
   class Energy,M1_Client,Sol_Client,Movement clientNode;
   class Attack,MovementTrigger remoteEvent;
 ```  
