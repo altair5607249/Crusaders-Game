@@ -24,6 +24,7 @@ graph TD;
   classDef serverNode fill:#5bf547,stroke:#000000,color:#000000
   classDef clientNode fill:#42a1f5,stroke:#000000,color:#000000
   classDef remoteEvent fill:#FF7F00,stroke:#000000,color:#000000
+  classDef repStoreNode fill:#b549eb,stroke:#000000,color:#000000
 
   ModuleLoader2-->Energy;
   Energy-->M1_Client-->Energy;
@@ -48,6 +49,8 @@ graph TD;
   Managers-->MapManager;
   Managers-->MovementManager;
   Managers-->StunManager;
+  Space;
+  Time;
 
   class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,Commands,Permissions,CooldownManager,DamageManager,DataManager,KnockbackManager,MapManager,MovementManager,StunManager serverNode;
   class ModuleLoader2,Energy,M1_Client,Sol_Client,Movement clientNode;
