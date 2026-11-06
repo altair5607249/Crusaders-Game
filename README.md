@@ -26,9 +26,12 @@ graph TD;
   Energy-->M1_Client-->Energy;
   Energy-->Sol_Client-->Energy;
   Energy-->Movement-->Energy;
-  M1_Client-->Attack-->M1_Server;
-  Sol_Client-->Attack;
+  M1_Client-->Attack-->ModuleLoader;
+  Sol_Client-->Attack-->ModuleLoader;
   Movement-->MovementTrigger-->MovementManager;
+  ModuleLoader-->M1_Server;
+  ModuleLoader-->Bare_Server;
+  ModuleLoader-->Weapon_Server
 
   class Attack,MovementTrigger remoteEvent;
 ```  
