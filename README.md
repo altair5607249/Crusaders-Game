@@ -66,7 +66,8 @@ flowchart TB;
   ModuleLoader==>Administration;
   ModuleLoader==>Managers;
   ModuleLoader==>OutputModules;
-  ModuleLoader==>Matter-->MapManager;
+  ModuleLoader==>Matter
+  Matter-->MapManager;
 
   subgraph Administration
     Commands;
@@ -101,7 +102,8 @@ flowchart TB;
   M1_Server-->Space;
   Bare_Server-->Space;
   Weapon_Server-->Space;
-  KnockbackManager-.->ModuleLoader2-->KnockbackHandler;
+  KnockbackManager-.->ModuleLoader2
+  ModuleLoader2-->KnockbackHandler;
 
   class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,Commands,Permissions,CooldownManager,DamageManager,DataManager,KnockbackManager,MapManager,MovementManager,StunManager,Matter serverNode;
   class ModuleLoader2,Energy,M1_Client,Sol_Client,Movement,AnimationHandler,KnockbackHandler,MusicHandler clientNode;
