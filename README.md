@@ -28,16 +28,15 @@ graph TD;
 
   classDef serverNode fill:#5bf547,stroke:#000000,color:#000000
   classDef clientNode fill:#42a1f5,stroke:#000000,color:#000000
-  classDef remoteEvent fill:#FF7F00,stroke:#000000,color:#000000
   classDef universalNode fill:#b549eb,stroke:#000000,color:#000000
 
   ModuleLoader2-->Energy;
   Energy-->M1_Client-->Energy;
   Energy-->Sol_Client-->Energy;
   Energy-->Movement-->Energy;
-  M1_Client-->Attack-->ModuleLoader;
-  Sol_Client-->Attack-->ModuleLoader;
-  Movement-->MovementTrigger-->MovementManager;
+  M1_Client-.->ModuleLoader;
+  Sol_Client-.->ModuleLoader;
+  Movement-.->MovementManager;
   ModuleLoader-->Administration;
   ModuleLoader-->Managers;
   ModuleLoader-->OutputModules;
@@ -68,7 +67,6 @@ graph TD;
 
   class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,Commands,Permissions,CooldownManager,DamageManager,DataManager,KnockbackManager,MapManager,MovementManager,StunManager,Matter serverNode;
   class ModuleLoader2,Energy,M1_Client,Sol_Client,Movement clientNode;
-  class Attack,MovementTrigger remoteEvent;
   class Space,Time universalNode;
 ```
 
