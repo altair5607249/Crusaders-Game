@@ -54,25 +54,25 @@ graph TD;
   ModuleLoader==>OutputModules;
   ModuleLoader==>Matter-->MapManager;
 
-  subgraph Administration Services
-    Administration---Commands;
-    Administration---Permissions;
+  subgraph Administration
+    Commands;
+    Permissions;
   end
 
-  subgraph Manager Nodes
-    Managers---CooldownManager;
-    Managers---DamageManager;
-    Managers---DataManager;
-    Managers---KnockbackManager;
-    Managers---MapManager;
-    Managers---MovementManager;
-    Managers---StunManager-->Time;
+  subgraph Managers
+    CooldownManager;
+    DamageManager;
+    DataManager;
+    KnockbackManager;
+    MapManager;
+    MovementManager;
+    StunManager-->Time;
   end
 
-  subgraph Output Nodes
-    OutputModules---M1_Server-->DamageManager;
-    OutputModules---Bare_Server-->DamageManager;
-    OutputModules---Weapon_Server-->DamageManager;
+  subgraph OutputModules
+    M1_Server-->DamageManager;
+    Bare_Server-->DamageManager;
+    Weapon_Server-->DamageManager;
   end
 
   KnockbackManager-->Space;
