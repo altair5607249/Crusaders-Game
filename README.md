@@ -1,5 +1,7 @@
 # Crusaders — Game
-Crusaders is a 3D, free-for-all fighting game currently in beta and available on Roblox!
+Crusaders is a 3D, free-for-all fighting game currently in beta and is available on Roblox! 
+
+Not all of Crusaders' code is visible on this repo, so please refer to the [Source File](https://github.com/altair5607249/Crusaders-Game/blob/main/7046.rbxl) for everything, including the minor scripts!!! ***Assistive technology was used for production efficiency***, and full credits for it can be found under "Credits & Disclosures" if you're interested in the specifics.
 
 For those who wish to see the game's progress from before I added GitHub to my workflow, please refer to [The Timeline](https://github.com/altair5607249/Crusaders-Game-Timeline).
 
@@ -16,13 +18,26 @@ For those who wish to see the game's progress from before I added GitHub to my w
 - You need a Roblox account to play the game, whether via Roblox itself or Roblox Studio; it only takes a few minutes to make if you don't already have one!
   - If you decide to play the public release of the game (the first link), you must verify that you're of 16 years or older.
   - If you decide to open the binary place file (the second link), you must download Roblox Studio.
+ 
+## My Roles
+Each job below is something I spent significant time on, listed in order of personal importance:
+- Project Lead
+- Lead Programmer
+- Lead Animator
+- Game Balance Designer
+- Systems Designer
+- Map Designer
+- Lead Narrative Designer
+- UI/UX Designer
+- Composer
+- QA Tester
 
 ## Codebase
 ### Legend
 - Connections
   - Solid Line — Relation
   - Solid Arrow — Require
-    - Arrow labels may specify otherwise
+    - Arrow labels may specify otherwise, such as the following:
       - RE — Remote Event
   - Thick Arrow — Init
 - Colors
@@ -117,13 +132,46 @@ flowchart TB;
   MovementManager-->CooldownManager;
   MovementManager-->StunManager;
 
+  subgraph StarterGui
+    ModuleLoader3==>TransitionManager;
+    ModuleLoader4==>SettingsManager;
+    SelectionManager;
+  end
+
   class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,Commands,Permissions,CooldownManager,DamageManager,DataManager,KnockbackManager,MapManager,MovementManager,StunManager,Matter serverNode;
-  class ModuleLoader2,Energy,M1_Client,Sol_Client,Movement,AnimationHandler,KnockbackHandler,MusicHandler clientNode;
+  class ModuleLoader2,Energy,M1_Client,Sol_Client,Movement,AnimationHandler,KnockbackHandler,MusicHandler,ModuleLoader3,ModuleLoader4,TransitionManager,SettingsManager,SelectionManager clientNode;
   class Space,Time universalNode;
 ```
 
 ### Functionality
 (insert desc of every mechanic/module here later)
+
+## Agent-Based Modeling
+For those who wanna check out the simple ABM I worked on to optimize the game a bit, feel free to take a look [here](https://github.com/altair5607249/Crusaders-Game/tree/main/abm)!
+
+## Constraints
+
+## Credits & Disclosures
+- Crusaders' full codebase is only visible in the [Source File](https://github.com/altair5607249/Crusaders-Game/blob/main/7046.rbxl)
+  - The reason for this is that I couldn't properly save the content under certain services, like `StarterGui`
+  - If you absolutely cannot access the [Source File](https://github.com/altair5607249/Crusaders-Game/blob/main/7046.rbxl), please refer to misc-scripts (WIP)!!!
+- My friends, who are listed below, played so many roles of their own in this project; I couldn't have made it to Crusaders' open beta phase without them!
+  - Aidan ([@Trapizoid](https://www.pixilart.com/trapizoid)) — Lead Artist, Lead Composer, QA Tester
+  - Jazz — QA Tester
+  - Zachary — Programmer, Artist, QA Tester, Map Designer, Narrative Designer, Voice Actor, Animator
+  - Gabriel ([@NERailDude](https://www.youtube.com/@northeasttransitproductions)) — QA Tester
+- AI was used for several things in this project, including the following:
+  - Reviewing and suggesting code for the game
+  - Writing code for the game, which was tweaked by me afterwards and occurred on two separate occasions:
+    - Applying skins in `Matter`
+    - Applying skins in `SelectionManager`
+  - Writing code for the ABM, specifically:
+    - Mesa/Agent boilerplate 
+    - Gymnasium/RL wrapper
+    - Seaborn data visualization
+- Parts of these tutorials were referenced in the learning process:
+  - [RPG Tutorial by GnomeCode](https://www.youtube.com/playlist?list=PLtMUa6NlF10eTKSVlNrTiPRqiR87f-V1j)
+  - [Roblox Advanced Scripting Tutorial Guide by BrawlDev](https://www.youtube.com/playlist?list=PLQ1Qd31Hmi3WKkVHnadvhOOjz04AuMYAf)
 
 ## Roadmap
 - Add a state machine
