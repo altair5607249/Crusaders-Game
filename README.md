@@ -48,7 +48,7 @@ flowchart TB;
   subgraph Handlers
     AnimationHandler;
     KnockbackHandler;
-    MusicHandler
+    MusicHandler;
   end
 
   subgraph InputModules
