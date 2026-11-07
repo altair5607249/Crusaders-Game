@@ -59,7 +59,6 @@ flowchart TB;
 
   M1_Client-->AnimationHandler;
   Sol_Client-->AnimationHandler;
-  Movement-->AnimationHandler;
   M1_Client-.->ModuleLoader;
   Sol_Client-.->ModuleLoader;
   Movement-.->MovementManager;
