@@ -42,10 +42,21 @@ flowchart TB;
   classDef universalNode fill:#b549eb,stroke:#000000,color:#000000
 
   ModuleLoader2==>Energy;
-  ModuleLoader2==>KnockbackHandler;
-  Energy==>M1_Client;
-  Energy==>Sol_Client;
-  Energy==>Movement;
+  ModuleLoader2==>Handlers;
+  Energy==>InputModules;
+
+  subgraph Handlers
+    AnimationHandler;
+    KnockbackHandler;
+    MusicHandler
+  end
+
+  subgraph InputModules
+    M1_Client;
+    Sol_Client;
+    Movement;
+  end
+
   M1_Client-.->ModuleLoader;
   Sol_Client-.->ModuleLoader;
   Movement-.->MovementManager;
@@ -90,7 +101,7 @@ flowchart TB;
   KnockbackManager-.->ModuleLoader2-->KnockbackHandler;
 
   class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,Commands,Permissions,CooldownManager,DamageManager,DataManager,KnockbackManager,MapManager,MovementManager,StunManager,Matter serverNode;
-  class ModuleLoader2,Energy,M1_Client,Sol_Client,Movement,KnockbackHandler clientNode;
+  class ModuleLoader2,Energy,M1_Client,Sol_Client,Movement,AnimationHandler,KnockbackHandler,MusicHandler clientNode;
   class Space,Time universalNode;
 ```
 
