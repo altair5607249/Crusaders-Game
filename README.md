@@ -43,6 +43,7 @@ flowchart TB;
 
   ModuleLoader2==>Energy;
   ModuleLoader2==>Handlers;
+  ModuleLoader2-.->Matter;
   Energy==>InputModules;
 
   subgraph Handlers
