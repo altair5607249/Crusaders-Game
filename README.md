@@ -54,7 +54,7 @@ graph TD;
   OutputModules-->M1_Server-->DamageManager;
   OutputModules-->Bare_Server-->DamageManager;
   OutputModules-->Weapon_Server-->DamageManager;
-  KnockbackManager-->Space;
+  KnockbackManager-->|requires| Space;
   DamageManager-->Space;
   DamageManager-->DataManager;
   DamageManager-->KnockbackManager;
