@@ -64,6 +64,11 @@ flowchart TB;
   M1_Client-->|RE| ModuleLoader;
   Sol_Client-->|RE| ModuleLoader;
   Movement-->|RE| MovementManager;
+  M1_Client-->Time;
+  Sol_Client-->Time;
+  Movement-->Time;
+  Movement-->Space;
+
   ModuleLoader==>Administration;
   ModuleLoader==>Managers;
   ModuleLoader==>OutputModules;
@@ -103,7 +108,7 @@ flowchart TB;
   Bare_Server-->Space;
   Weapon_Server-->Space;
   KnockbackManager-->Space;
-  KnockbackManager-->|RE| ModuleLoader2
+  KnockbackManager-->|RE| ModuleLoader2;
   ModuleLoader2-->KnockbackHandler;
 
   class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,Commands,Permissions,CooldownManager,DamageManager,DataManager,KnockbackManager,MapManager,MovementManager,StunManager,Matter serverNode;
