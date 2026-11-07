@@ -91,7 +91,6 @@ flowchart TB;
     Weapon_Server-->DamageManager;
   end
 
-  KnockbackManager-->Space;
   DamageManager-->Space;
   DamageManager-->DataManager;
   DamageManager-->KnockbackManager;
@@ -103,6 +102,7 @@ flowchart TB;
   M1_Server-->Space;
   Bare_Server-->Space;
   Weapon_Server-->Space;
+  KnockbackManager-->Space;
   KnockbackManager-->|RE| ModuleLoader2
   ModuleLoader2-->KnockbackHandler;
 
