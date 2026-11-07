@@ -72,8 +72,8 @@ flowchart TB;
   ModuleLoader==>Administration;
   ModuleLoader==>Managers;
   ModuleLoader==>OutputModules;
-  ModuleLoader==>Matter
-  Matter-->MapManager;
+  ModuleLoader==>Matter;
+  MapManager-->Matter;
 
   subgraph Administration
     Commands;
@@ -96,6 +96,7 @@ flowchart TB;
     Weapon_Server-->DamageManager;
   end
 
+  CooldownManager-->Time;
   DamageManager-->Space;
   DamageManager-->DataManager;
   DamageManager-->KnockbackManager;
@@ -103,6 +104,7 @@ flowchart TB;
   M1_Server-->Time;
   Bare_Server-->Time;
   Weapon_Server-->Time;
+  StunManager-->Space;
   StunManager-->Time;
   M1_Server-->Space;
   Bare_Server-->Space;
@@ -110,6 +112,10 @@ flowchart TB;
   KnockbackManager-->Space;
   KnockbackManager-->|RE| ModuleLoader2;
   ModuleLoader2-->KnockbackHandler;
+  MovementManager-->Space;
+  MovementManager-->Time;
+  MovementManager-->CooldownManager;
+  MovementManager-->StunManager;
 
   class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,Commands,Permissions,CooldownManager,DamageManager,DataManager,KnockbackManager,MapManager,MovementManager,StunManager,Matter serverNode;
   class ModuleLoader2,Energy,M1_Client,Sol_Client,Movement,AnimationHandler,KnockbackHandler,MusicHandler clientNode;
