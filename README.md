@@ -22,8 +22,9 @@ For those who wish to see the game's progress from before I added GitHub to my w
 - Connections
   - Solid Line — Relation
   - Solid Arrow — Require
+    - Arrow labels may specify otherwise
+      - RE — Remote Event
   - Thick Arrow — Init
-  - Dotted Arrow — Remote Event
 - Colors
   - Blue — Client
   - Green — Server
@@ -43,7 +44,7 @@ flowchart TB;
 
   ModuleLoader2==>Energy;
   ModuleLoader2==>Handlers;
-  ModuleLoader2-.->Matter;
+  ModuleLoader2-->|RE| Matter;
   Energy==>InputModules;
 
   subgraph Handlers
@@ -60,9 +61,9 @@ flowchart TB;
 
   M1_Client-->AnimationHandler;
   Sol_Client-->AnimationHandler;
-  M1_Client -.-> ModuleLoader;
-  Sol_Client-.->ModuleLoader;
-  Movement-.->MovementManager;
+  M1_Client-->|RE| ModuleLoader;
+  Sol_Client-->|RE| ModuleLoader;
+  Movement-->|RE| MovementManager;
   ModuleLoader==>Administration;
   ModuleLoader==>Managers;
   ModuleLoader==>OutputModules;
@@ -102,7 +103,7 @@ flowchart TB;
   M1_Server-->Space;
   Bare_Server-->Space;
   Weapon_Server-->Space;
-  KnockbackManager-.->ModuleLoader2
+  KnockbackManager-->|RE| ModuleLoader2
   ModuleLoader2-->KnockbackHandler;
 
   class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,Commands,Permissions,CooldownManager,DamageManager,DataManager,KnockbackManager,MapManager,MovementManager,StunManager,Matter serverNode;
