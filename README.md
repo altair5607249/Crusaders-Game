@@ -1,7 +1,7 @@
 # Crusaders — Game
 Crusaders is a 3D, free-for-all fighting game currently in beta and is available on Roblox! 
 
-Not all of Crusaders' code is visible on this repo, so please refer to the [Source File](https://github.com/altair5607249/Crusaders-Game/blob/main/7046.rbxl) for everything, including the minor scripts!!! ***Assistive technology was used for production efficiency***, and full credits for it can be found under "Credits & Disclosures" if you're interested in the specifics.
+Not all of Crusaders' code is visible on this repo, so please refer to the [Source File](https://github.com/altair5607249/Crusaders-Game/blob/main/7046.rbxl) for everything, including the minor scripts!!! ***Assistive technology was used for production efficiency***, and full credits for it can be found under [Credits & Disclosures](https://github.com/altair5607249/Crusaders-Game#credits--disclosures) if you're interested in the specifics.
 
 For those who wish to see the game's progress from before I added GitHub to my workflow, please refer to [The Timeline](https://github.com/altair5607249/Crusaders-Game-Timeline).
 
@@ -12,12 +12,11 @@ For those who wish to see the game's progress from before I added GitHub to my w
 | Source File | Roblox Account; Roblox Studio | PC | [Active](https://github.com/altair5607249/Crusaders-Game/blob/main/7046.rbxl)
 | Unity | N/A | N/A | In Progress |
 
-### Notes  
-- I have not met Roblox's Highly-Engaged Player (HEP) threshold, so the live game will be age restricted to 16+ until then.
-- Currently working to create a Unity version of the game.
+### Instructions  
+- I have not met Roblox's Highly-Engaged Player (HEP) threshold, so the live game will be age restricted to 16+ until then
 - You need a Roblox account to play the game, whether via Roblox itself or Roblox Studio; it only takes a few minutes to make if you don't already have one!
-  - If you decide to play the public release of the game (the first link), you must verify that you're of 16 years or older.
-  - If you decide to open the binary place file (the second link), you must download Roblox Studio.
+  - If you decide to play the public release of the game (the first link), you must verify that you're of 16 years or older
+  - If you decide to open the binary place file (the second link), you must download Roblox Studio
  
 ## My Roles
 Each job below is something I spent significant time on, listed in order of personal importance:
@@ -25,7 +24,7 @@ Each job below is something I spent significant time on, listed in order of pers
 - Lead Programmer
 - Lead Animator
 - Game Balance Designer
-- Systems Designer
+- Systems & Tools Engineer
 - Map Designer
 - Lead Narrative Designer
 - UI/UX Designer
@@ -127,6 +126,7 @@ flowchart TB;
   KnockbackManager-->Space;
   KnockbackManager-->|RE| ModuleLoader2;
   ModuleLoader2-->KnockbackHandler;
+  ModuleLoader2-->MusicHandler;
   MovementManager-->Space;
   MovementManager-->Time;
   MovementManager-->CooldownManager;
@@ -138,6 +138,9 @@ flowchart TB;
     SelectionManager;
   end
 
+  DataManager-->|RE| SettingsManager;
+  SettingsManager-->|RE| DataManager;
+
   class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,Commands,Permissions,CooldownManager,DamageManager,DataManager,KnockbackManager,MapManager,MovementManager,StunManager,Matter serverNode;
   class ModuleLoader2,Energy,M1_Client,Sol_Client,Movement,AnimationHandler,KnockbackHandler,MusicHandler,ModuleLoader3,ModuleLoader4,TransitionManager,SettingsManager,SelectionManager clientNode;
   class Space,Time universalNode;
@@ -147,20 +150,25 @@ flowchart TB;
 (insert desc of every mechanic/module here later)
 
 ## Agent-Based Modeling
-For those who wanna check out the simple ABM I worked on to optimize the game a bit, feel free to take a look [here](https://github.com/altair5607249/Crusaders-Game/tree/main/abm)!
+For those who wanna check out the simple ABM I worked on to optimize the game a bit, feel free to take a look [here](https://github.com/altair5607249/Crusaders-Game/tree/main/abm)!  
+
+In short, it was a capricious choice made by me to algorithmically balance every character. I'd understood that the simple ABM was only useful for measuring baseline fairness, since further research brought me to the realization that I would need to employ many more concepts in machine learning to accrue accurate data.  
+
+Its effects were small, in which only a few values (e.g., cooldown, damage, range) were tweaked, but the whole process meant a lot to me in terms of learning, even if I wasn't writing the majority of it (see [Credits & Disclosures](https://github.com/altair5607249/Crusaders-Game#credits--disclosures)) and simply designing its agent logic for the most part.
 
 ## Constraints
+
 
 ## Credits & Disclosures
 - Crusaders' full codebase is only visible in the [Source File](https://github.com/altair5607249/Crusaders-Game/blob/main/7046.rbxl)
   - The reason for this is that I couldn't properly save the content under certain services, like `StarterGui`
-  - If you absolutely cannot access the [Source File](https://github.com/altair5607249/Crusaders-Game/blob/main/7046.rbxl), please refer to misc-scripts (WIP)!!!
-- My friends, who are listed below, played so many roles of their own in this project; I couldn't have made it to Crusaders' open beta phase without them!
+  - If you absolutely cannot access the the file, please refer to misc-scripts (WIP)!!!
+- My Friends' Roles
   - Aidan ([@Trapizoid](https://www.pixilart.com/trapizoid)) — Lead Artist, Lead Composer, QA Tester
   - Jazz — QA Tester
-  - Zachary — Programmer, Artist, QA Tester, Map Designer, Narrative Designer, Voice Actor, Animator
+  - Zachary — Programmer, Artist, QA Tester, Map Designer, Narrative Designer, Voice Actor, Composer, Animator
   - Gabriel ([@NERailDude](https://www.youtube.com/@northeasttransitproductions)) — QA Tester
-- AI was used for several things in this project, including the following:
+- AI (Claude & Gemini) Usage:
   - Reviewing and suggesting code for the game
   - Writing code for the game, which was tweaked by me afterwards and occurred on two separate occasions:
     - Applying skins in `Matter`
@@ -169,11 +177,27 @@ For those who wanna check out the simple ABM I worked on to optimize the game a 
     - Mesa/Agent boilerplate 
     - Gymnasium/RL wrapper
     - Seaborn data visualization
-- Parts of these tutorials were referenced in the learning process:
+- Tutorials
   - [RPG Tutorial by GnomeCode](https://www.youtube.com/playlist?list=PLtMUa6NlF10eTKSVlNrTiPRqiR87f-V1j)
   - [Roblox Advanced Scripting Tutorial Guide by BrawlDev](https://www.youtube.com/playlist?list=PLQ1Qd31Hmi3WKkVHnadvhOOjz04AuMYAf)
+- Public Assets
+  - Maps
+  - Props
+    - There are too many of these for me to list, but you can find all of them in the [Roblox Creator Store](https://create.roblox.com/store/)!
+  - SFX
+  - VFX
+  - Music
+  - UI/UX
+    - [Star's Shaders](https://create.roblox.com/store/asset/6980389129/Stars-Shaders) by [stxrryxnvght](https://www.roblox.com/users/536426235/profile)
+    - [TopbarPlus](https://create.roblox.com/store/asset/92368439343389/TopbarPlus) by [ForeverHD](https://www.roblox.com/users/82347291/profile)
+    - [Asadrith's Dialogue Kit](https://create.roblox.com/store/asset/18835619908/Asadriths-Dialogue-Kit) by [Asadrith](https://www.youtube.com/channel/UCSHDfp-fGeSeIP4j_Q_gKdA)
+- Inspirations
+  - [The Strongest Battlegrounds](https://www.roblox.com/games/10449761463/The-Strongest-Battlegrounds)
+  - [Street Fighter 6](https://store.steampowered.com/app/1364780/Street_Fighter_6/)
 
 ## Roadmap
+- Create a Unity version of Crusaders
 - Add a state machine
 - Merge `Bare_Server` and `Weapon_Server`
 - Reduce collision latency
+- Replace royalty-free music with custom music
