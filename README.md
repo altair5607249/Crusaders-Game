@@ -10,7 +10,7 @@ For those who wish to see the game's progress from before I added GitHub to my w
 | Source File | Roblox Account; Roblox Studio | PC | [Active](https://github.com/altair5607249/Crusaders-Game/blob/main/7046.rbxl)
 | Unity | N/A | N/A | In Progress |
 
-### Notes:  
+### Notes  
 - I have not met Roblox's Highly-Engaged Player (HEP) threshold, so the live game will be age restricted to 16+ until then.
 - Currently working to create a Unity version of the game.
 - You need a Roblox account to play the game, whether via Roblox itself or Roblox Studio; it only takes a few minutes to make if you don't already have one!
@@ -18,6 +18,17 @@ For those who wish to see the game's progress from before I added GitHub to my w
   - If you decide to open the binary place file (the second link), you must download Roblox Studio.
 
 ## Codebase
+### Legend
+- Connections
+  - Solid Line — Relation
+  - Solid Arrow — Require
+  - Thick Arrow — Init
+  - Dotted Arrow — Remote Event
+- Colors
+  - Blue — Client
+  - Green — Server
+  - Purple — Universal
+
 ### Combat Flow
 
 ### Initialization
@@ -30,30 +41,41 @@ graph TD;
   classDef clientNode fill:#42a1f5,stroke:#000000,color:#000000
   classDef universalNode fill:#b549eb,stroke:#000000,color:#000000
 
-  ModuleLoader2-->Energy;
-  Energy-->M1_Client-->Energy;
-  Energy-->Sol_Client-->Energy;
-  Energy-->Movement-->Energy;
+  ModuleLoader2==>Energy;
+  ModuleLoader2==>KnockbackHandler;
+  Energy==>M1_Client;
+  Energy==>Sol_Client;
+  Energy==>Movement;
   M1_Client-.->ModuleLoader;
   Sol_Client-.->ModuleLoader;
   Movement-.->MovementManager;
-  ModuleLoader-->Administration;
-  ModuleLoader-->Managers;
-  ModuleLoader-->OutputModules;
-  ModuleLoader-->Matter-->MapManager;
-  Administration-->Commands;
-  Administration-->Permissions;
-  Managers-->CooldownManager;
-  Managers-->DamageManager;
-  Managers-->DataManager;
-  Managers-->KnockbackManager;
-  Managers-->MapManager;
-  Managers-->MovementManager;
-  Managers-->StunManager-->Time;
-  OutputModules-->M1_Server-->DamageManager;
-  OutputModules-->Bare_Server-->DamageManager;
-  OutputModules-->Weapon_Server-->DamageManager;
-  KnockbackManager-->|requires| Space;
+  ModuleLoader==>Administration;
+  ModuleLoader==>Managers;
+  ModuleLoader==>OutputModules;
+  ModuleLoader==>Matter-->MapManager;
+
+  subgraph Administration Services
+    Administration---Commands;
+    Administration---Permissions;
+  end
+
+  subgraph Manager Nodes
+    Managers---CooldownManager;
+    Managers---DamageManager;
+    Managers---DataManager;
+    Managers---KnockbackManager;
+    Managers---MapManager;
+    Managers---MovementManager;
+    Managers---StunManager-->Time;
+  end
+
+  subgraph Output Nodes
+    OutputModules---M1_Server-->DamageManager;
+    OutputModules---Bare_Server-->DamageManager;
+    OutputModules---Weapon_Server-->DamageManager;
+  end
+
+  KnockbackManager-->Space;
   DamageManager-->Space;
   DamageManager-->DataManager;
   DamageManager-->KnockbackManager;
@@ -64,9 +86,10 @@ graph TD;
   M1_Server-->Space;
   Bare_Server-->Space;
   Weapon_Server-->Space;
+  KnockbackManager-.->ModuleLoader2-->KnockbackHandler;
 
   class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,Commands,Permissions,CooldownManager,DamageManager,DataManager,KnockbackManager,MapManager,MovementManager,StunManager,Matter serverNode;
-  class ModuleLoader2,Energy,M1_Client,Sol_Client,Movement clientNode;
+  class ModuleLoader2,Energy,M1_Client,Sol_Client,Movement,KnockbackHandler clientNode;
   class Space,Time universalNode;
 ```
 
