@@ -18,6 +18,11 @@ For those who wish to see the game's progress from before I added GitHub to my w
   - If you decide to open the binary place file (the second link), you must download Roblox Studio.
 
 ## Codebase
+### Combat Flow
+
+### Initialization
+
+### Full System Diagram
 ```mermaid
 graph TD;
 
@@ -45,18 +50,27 @@ graph TD;
   Managers-->KnockbackManager;
   Managers-->MapManager;
   Managers-->MovementManager;
-  Managers-->StunManager;
+  Managers-->StunManager-->Time-->StunManager;
   OutputModules-->M1_Server-->DamageManager;
   OutputModules-->Bare_Server-->DamageManager;
   OutputModules-->Weapon_Server-->DamageManager;
-  Space;
-  Time;
+  KnockbackManager-->Space;
+  DamageManager-->Space;
+  DamageManager-->DataManager;
+  M1_Server-->Time;
+  Bare_Server-->Time;
+  Weapon_Server-->Time;
+  M1_Server-->Space;
+  Bare_Server-->Space;
+  Weapon_Server-->Space;
 
   class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,Commands,Permissions,CooldownManager,DamageManager,DataManager,KnockbackManager,MapManager,MovementManager,StunManager,Matter serverNode;
   class ModuleLoader2,Energy,M1_Client,Sol_Client,Movement clientNode;
   class Attack,MovementTrigger remoteEvent;
   class Space,Time universalNode;
-```  
+```
+
+### Functionality
 (insert desc of every mechanic/module here later)
 
 ## Roadmap
