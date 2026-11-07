@@ -35,7 +35,7 @@ For those who wish to see the game's progress from before I added GitHub to my w
 
 ### Full System Diagram
 ```mermaid
-graph TD;
+flowchart TB;
 
   classDef serverNode fill:#5bf547,stroke:#000000,color:#000000
   classDef clientNode fill:#42a1f5,stroke:#000000,color:#000000
@@ -66,7 +66,7 @@ graph TD;
     KnockbackManager;
     MapManager;
     MovementManager;
-    StunManager-->Time;
+    StunManager;
   end
 
   subgraph OutputModules
@@ -83,6 +83,7 @@ graph TD;
   M1_Server-->Time;
   Bare_Server-->Time;
   Weapon_Server-->Time;
+  StunManager-->Time;
   M1_Server-->Space;
   Bare_Server-->Space;
   Weapon_Server-->Space;
