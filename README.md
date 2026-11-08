@@ -212,6 +212,10 @@ flowchart TB;
   Weapon_Server-->CooldownManager;
   Weapon_Server-->StunManager;
 
+  M1_Server-->DamageManager;
+  Bare_Server-->DamageManager;
+  Weapon_Server-->DamageManager;
+
   M1_Client-->Time;
   Sol_Client-->Time;
   Movement-->Space;
