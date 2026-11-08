@@ -32,7 +32,7 @@ Each job below is something I spent significant time on, listed in order of pers
 - QA Tester
 
 ## Codebase
-The important parts will be given in smaller diagrams, and everything, everywhere, all at once will be visible in the final diagram.
+If you wish to view more diagrams than the three below, please refer to the [docs](https://github.com/altair5607249/Crusaders-Game/blob/main/docs/diagrams.md).
 
 ### Legend
 - Connections
