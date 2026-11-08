@@ -32,7 +32,7 @@ Each job below is something I spent significant time on, listed in order of pers
 - QA Tester
 
 ## Codebase
-If you wish to view more diagrams than the three below, please refer to the [docs](https://github.com/altair5607249/Crusaders-Game/blob/main/docs/diagrams.md).
+If you wish to view more diagrams than the three below, please refer to the [docs (WIP)](https://github.com/altair5607249/Crusaders-Game/blob/main/docs/diagrams.md).
 
 ### Legend
 - Connections
@@ -108,10 +108,9 @@ flowchart TB;
 
   Player-Joins==>ModuleLoader2
 
-  ModuleLoader2==>Loading-Screen
-  ModuleLoader3-->|Loading-Screen-Dissolves| Loading-Screen
+  ModuleLoader3==>|Loading-Screen-Removed| ModuleLoader2
 
-  Loading-Screen-->|RE| Matter-->Player-Appears;
+  ModuleLoader2-->|RE| Matter-->Player-Appears;
   Loading-Screen==>Energy==>InputModules;
 
   ModuleLoader==>Matter;
