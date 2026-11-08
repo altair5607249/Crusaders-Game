@@ -108,7 +108,7 @@ flowchart TB;
 
   Player-Joins==>ModuleLoader2
 
-  ModuleLoader3==>|Loading-Screen-Removed| ModuleLoader2
+  A==>|Loading-Screen-Removed| ModuleLoader2
 
   ModuleLoader2-->|RE| Matter-->Player-Appears;
   ModuleLoader2==>Energy==>InputModules;
