@@ -159,12 +159,8 @@ flowchart TB;
     Time;
   end
 
-  M1_Server-->Space;
-  M1_Server-->Time;  
-  Bare_Server-->Space;
-  Bare_Server-->Time;
-  Weapon_Server-->Space;
-  Weapon_Server-->Time;
+  OutputModules-->Space;
+  OutputModules-->Time;
 
   M1_Server-->CooldownManager;
   Bare_Server-->CooldownManager;
