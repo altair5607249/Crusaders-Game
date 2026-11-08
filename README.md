@@ -172,8 +172,14 @@ flowchart TB;
   Weapon_Server-CharModules-->Space;
   Weapon_Server-CharModules-->Time;
 
+  M1_Client-->Time;
+  Sol_Client-->Time;
+  Movement-->Space;
+  Movement-->Time;
+
   class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,DamageManager,BSCR-Move1,BSCR-Move2,BSCR-Move3,BSCR-Move4,BSCY-Move1,BSCY-Move2,BSCY-Move3,BSCY-Move4,BSCG-Move1,BSCG-Move2,BSCG-Move3,BSCG-Move4,BSCB-Move1,BSCB-Move2,BSCB-Move3,BSCB-Move4,WSCR-Move1,WSCR-Move2,WSCR-Move3,WSCR-Move4,WSCY-Move1,WSCY-Move2,WSCY-Move3,WSCY-Move4,WSCG-Move1,WSCG-Move2,WSCG-Move3,WSCG-Move4,WSCB-Move1,WSCB-Move2,WSCB-Move3,WSCB-Move4,KnockbackManager,StunManager serverNode;
   class ModuleLoader2,Player-Input,M1_Client,Sol_Client,Movement,KnockbackHandler clientNode;
+  class Space,Time universalNode;
 
   class BSC-Redd,WSC-Redd redNode;
   class BSC-Yello,WSC-Yello yellowNode;
