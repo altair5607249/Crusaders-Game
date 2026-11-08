@@ -310,14 +310,45 @@ flowchart TB;
 ```
 This is the complete map for anyone who wants it :)
 
-### Functionality
-- StarterPlayerScripts
-- StarterGui
-- ServerScriptService
+### Tree of Functionality
+This is the nigh-complete hierarchy of the game's source code, including scripts that didn't fit as nodes in the Full System Diagram! For those who want to see everything, including the most minor scripts, please refer to the [Source File](https://github.com/altair5607249/Crusaders-Game/blob/main/7077.rbxl) or the [docs (WIP)](https://github.com/altair5607249/Crusaders-Game/blob/main/docs/diagrams.md).
+- `StarterPlayerScripts`
+  - `ChatHandler` —
+  - `GuiManager` —
+  - `Hitboxes` —
+  - `ModuleLoader2` —
+  - `Energy` —
+- `StarterGui`
+  - `LoadingScreen`
+    - `ModuleLoader3` —
+      - `Manager` —
+  - `SelectionGui`
+    - `Manager` —
+  - `Settings`
+    - `ModuleLoader4` —
+      - `Manager` —
+- `ServerScriptService`
+  - `ModuleLoader` —
+    - `Administration`
+      - `Commands` —
+      - `Permissions` —
+    - `Managers`
+      - `CooldownManager` —
+      - `DamageManager` —
+      - `DataManager` —
+      - `KnockbackManager` —
+      - `MapManager` —
+      - `MovementManager` —
+      - `StunManager` —
+    - `OutputModules`
+      - `M1_Server` —
+      - `Bare_Server` —
+      - `Weapon_Server` —
+    - `Matter` —
 - `ReplicatedStorage`
   - `UniversalModules`
     - `Space` — houses config tables for O(1) lookups, calculates knockback vectors, and helps with finding directions
-    - `Time` - houses a config table for O(1) lookups, calculates timing constraints, and helps with M1 timing
+    - `Time` — houses a config table for O(1) lookups, calculates timing constraints, and helps with M1 timing
 
 ## Agent-Based Modeling
 For those who wanna check out the simple ABM I worked on to optimize the game a bit, feel free to take a look [here](https://github.com/altair5607249/Crusaders-Game/tree/main/abm)!  
@@ -341,7 +372,7 @@ Its effects were small, in which only a few values (e.g., cooldown, damage, rang
 ## Credits & Disclosures
 - Crusaders' full codebase is only visible in the [Source File](https://github.com/altair5607249/Crusaders-Game/blob/main/7077.rbxl)
   - The reason for this is that I couldn't properly save the content under certain services, like `StarterGui`
-  - If you absolutely cannot access the the file, please refer to misc-scripts (WIP)!!!
+  - If you absolutely cannot access the the file, please refer to the [docs (WIP)](https://github.com/altair5607249/Crusaders-Game/blob/main/docs/diagrams.md)!!!
 - My Friends' Roles
   - Aidan ([@Trapizoid](https://www.pixilart.com/trapizoid)) — Lead Artist, Lead Composer, QA Tester
   - Jazz — QA Tester
