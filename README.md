@@ -127,7 +127,7 @@ flowchart TB;
   Movement-->Space;
   Movement-->Time;
 
-  class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,DamageManager,KnockbackManager,StunManager serverNode;
+  class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,DamageManager,KnockbackManager,StunManager,CooldownManager serverNode;
   class ModuleLoader2,Player-Input,M1_Client,Sol_Client,Movement,KnockbackHandler clientNode;
   class Space,Time universalNode;
 
@@ -151,6 +151,10 @@ flowchart TB;
   classDef blueNode fill:#91b8ff,stroke:#000000,color:#000000
 
   subgraph ServerScriptService
+    subgraph Managers
+      DamageManager;
+    end
+
     subgraph Bare_Server-CharModules
       subgraph BSC-Redd
         A["Move1"]-->DamageManager;
