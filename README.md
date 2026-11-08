@@ -78,19 +78,6 @@ flowchart TB;
     subgraph Transition
       ModuleLoader3==>A["Manager"]
     end
-
-    subgraph Selection
-      B["Manager"]
-    end
-
-    subgraph Settings
-      ModuleLoader4==>C["Manager"]
-    end
-  end
-
-  subgraph ReplicatedStorage
-    Space;
-    Time;
   end
 
   subgraph ServerScriptService
@@ -121,15 +108,18 @@ flowchart TB;
 
   Player-Joins==>ModuleLoader2
 
-  ModuleLoader2-->|RE| Matter-->Player-Appears;
-  ModuleLoader2==>Energy==>InputModules;
+  ModuleLoader2==>Loading-Screen
+  ModuleLoader3-->|Loading-Screen-Dissolves| Loading-Screen
+
+  Loading-Screen-->|RE| Matter-->Player-Appears;
+  Loading-Screen==>Energy==>InputModules;
 
   ModuleLoader==>Matter;
   ModuleLoader==>Administration;
   ModuleLoader==>Managers;
   ModuleLoader==>OutputModules;
 
-  class Player-Joins,Player-Appears eventNode;
+  class Player-Joins,Player-Appears,Loading-Screen eventNode;
   class ModuleLoader,Matter,Commands,Permissions,CooldownManager,DamageManager,DataManager,KnockbackManager,MapManager,MovementManager,StunManager,M1_Server,Bare_Server,Weapon_Server serverNode;
   class ModuleLoader2,Energy,AnimationHandler,KnockbackHandler,MusicHandler,M1_Client,Sol_Client,Movement,ModuleLoader3,ModuleLoader4,A,B,C clientNode;
   class Space,Time universalNode;
