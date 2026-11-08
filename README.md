@@ -32,6 +32,8 @@ Each job below is something I spent significant time on, listed in order of pers
 - QA Tester
 
 ## Codebase
+The important parts will be given in smaller diagrams, and everything, everywhere, all at once will be visible in the final diagram.
+
 ### Legend
 - Connections
   - Solid Line — Relation
@@ -44,6 +46,47 @@ Each job below is something I spent significant time on, listed in order of pers
   - Blue — Client
   - Green — Server
   - Purple — Universal
+ 
+### Client-Server Communication
+```mermaid
+flowchart TB;
+
+  classDef serverNode fill:#5bf547,stroke:#000000,color:#000000
+  classDef clientNode fill:#42a1f5,stroke:#000000,color:#000000
+
+  subgraph StarterPlayerScripts
+    Energy
+
+    subgraph InputModules
+      M1_Client;
+      Sol_Client;
+      Movement;
+    end
+  end
+
+  subgraph ServerScriptService
+    ModuleLoader;
+
+    subgraph Managers
+      MovementManager;
+    end
+
+    subgraph OutputModules
+      M1_Server;
+      Bare_Server;
+      Weapon_Server;
+    end
+  end
+
+  Energy==>InputModules
+
+  M1_Client-->|RE| ModuleLoader
+  Sol_Client-->|RE| ModuleLoader
+  Movement-->|RE| MovementManager
+
+  class ModuleLoader, MovementManager,M1_Server,Bare_Server,Weapon_Server serverNode;
+  class Energy,M1_Client,Sol_Client,Movement clientNode;
+```
 
 ### Combat Flow
 ```mermaid
@@ -53,12 +96,11 @@ flowchart TB;
   classDef clientNode fill:#42a1f5,stroke:#000000,color:#000000
   classDef universalNode fill:#b549eb,stroke:#000000,color:#000000
 
-  classDef redNode fill:#ff9191,stroke:#000000,color:#000000
-  classDef yellowNode fill:#fdff91,stroke:#000000,color:#000000
-  classDef greenNode fill:#91ff9c,stroke:#000000,color:#000000
-  classDef blueNode fill:#91b8ff,stroke:#000000,color:#000000
-
   subgraph StarterPlayerScripts
+    subgraph Handlers
+      KnockbackHandler;
+    end
+
     ModuleLoader2-->KnockbackHandler;
   
     subgraph InputModules
@@ -130,11 +172,6 @@ flowchart TB;
   class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,DamageManager,KnockbackManager,StunManager,CooldownManager serverNode;
   class ModuleLoader2,Player-Input,M1_Client,Sol_Client,Movement,KnockbackHandler clientNode;
   class Space,Time universalNode;
-
-  class BSC-Redd,WSC-Redd redNode;
-  class BSC-Yello,WSC-Yello yellowNode;
-  class BSC-Gleen,WSC-Gleen greenNode;
-  class BSC-Bluee,WSC-Bluee blueNode;
 ```
 
 ### Bare-Style Flow
@@ -155,26 +192,32 @@ flowchart TB;
       DamageManager;
     end
 
-    subgraph Bare_Server-CharModules
-      subgraph BSC-Redd
+    subgraph OutputModules
+      Bare_Server;
+    end
+
+    Bare_Server---CharModules
+
+    subgraph CharModules
+      subgraph Redd
         A["Move1"]-->DamageManager;
         B["Move2"]-->DamageManager;
         C["Move3"]-->DamageManager;
         D["Move4"];
       end 
-      subgraph BSC-Yello
+      subgraph Yello
         E["Move1"]-->DamageManager;
         F["Move2"]-->DamageManager;
         G["Move3"]-->DamageManager;
         H["Move4"]-->DamageManager;
       end
-      subgraph BSC-Gleen
+      subgraph Gleen
         I["Move1"]-->DamageManager;
         J["Move2"]-->DamageManager;
         K["Move3"]-->DamageManager;
         L["Move4"]-->DamageManager;
       end 
-      subgraph BSC-Bluee
+      subgraph Bluee
         M["Move1"]-->DamageManager;
         N["Move2"];
         O["Move3"]-->DamageManager;
@@ -192,10 +235,10 @@ flowchart TB;
   class ModuleLoader2,Player-Input,M1_Client,Sol_Client,Movement,KnockbackHandler clientNode;
   class Space,Time universalNode;
 
-  class BSC-Redd redNode;
-  class BSC-Yello yellowNode;
-  class BSC-Gleen greenNode;
-  class BSC-Bluee blueNode;
+  class Redd redNode;
+  class Yello yellowNode;
+  class Gleen greenNode;
+  class Bluee blueNode;
 ```
 
 ### Weapon-Style Flow
@@ -216,26 +259,32 @@ flowchart TB;
       DamageManager;
     end
 
-    subgraph Weapon_Server-CharModules
-      subgraph WSC-Redd
+    subgraph OutputModules
+      Weapon_Server;
+    end
+
+    Weapon_Server---CharModules
+
+    subgraph CharModules
+      subgraph Redd
         Q["Move1"]-->DamageManager;
         R["Move2"]-->DamageManager;
         S["Move3"]-->DamageManager;
         T["Move4"];
       end 
-      subgraph WSC-Yello
+      subgraph Yello
         U["Move1"]-->DamageManager;
         V["Move2"]-->DamageManager;
         W["Move3"]-->DamageManager;
         X["Move4"];
       end 
-      subgraph WSC-Gleen
+      subgraph Gleen
         Y["Move1"]-->DamageManager;
         Z["Move2"]-->DamageManager;
         a["Move3"];
         b["Move4"]-->DamageManager;
         end 
-      subgraph WSC-Bluee
+      subgraph Bluee
         c["Move1"]-->DamageManager;
         d["Move2"]-->DamageManager;
         e["Move3"]-->DamageManager;
@@ -253,10 +302,10 @@ flowchart TB;
   class ModuleLoader2,Player-Input,M1_Client,Sol_Client,Movement,KnockbackHandler clientNode;
   class Space,Time universalNode;
 
-  class WSC-Redd redNode;
-  class WSC-Yello yellowNode;
-  class WSC-Gleen greenNode;
-  class WSC-Bluee blueNode;
+  class Redd redNode;
+  class Yello yellowNode;
+  class Gleen greenNode;
+  class Bluee blueNode;
 ```
 
 ### Full System Diagram
