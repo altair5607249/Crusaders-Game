@@ -84,7 +84,7 @@ flowchart TB;
   Sol_Client-->|RE| ModuleLoader
   Movement-->|RE| MovementManager
 
-  class ModuleLoader, MovementManager,M1_Server,Bare_Server,Weapon_Server serverNode;
+  class ModuleLoader,MovementManager,M1_Server,Bare_Server,Weapon_Server serverNode;
   class Energy,M1_Client,Sol_Client,Movement clientNode;
 ```
 
