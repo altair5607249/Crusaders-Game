@@ -162,21 +162,23 @@ flowchart TB;
   classDef clientNode fill:#42a1f5,stroke:#000000,color:#000000
   classDef universalNode fill:#b549eb,stroke:#000000,color:#000000
 
-  ModuleLoader2==>Energy;
-  ModuleLoader2==>Handlers;
-  ModuleLoader2-->|RE| Matter;
-  Energy==>InputModules;
-
-  subgraph Handlers
-    AnimationHandler;
-    KnockbackHandler;
-    MusicHandler;
-  end
-
-  subgraph InputModules
-    M1_Client;
-    Sol_Client;
-    Movement;
+  subgraph StarterPlayerScripts
+    ModuleLoader2==>Energy;
+    ModuleLoader2==>Handlers;
+    ModuleLoader2-->|RE| Matter;
+    Energy==>InputModules;
+  
+    subgraph Handlers
+      AnimationHandler;
+      KnockbackHandler;
+      MusicHandler;
+    end
+  
+    subgraph InputModules
+      M1_Client;
+      Sol_Client;
+      Movement;
+    end
   end
 
   M1_Client-->AnimationHandler;
@@ -189,31 +191,41 @@ flowchart TB;
   Movement-->Time;
   Movement-->Space;
 
+  subgraph ReplicatedStorage
+    Space;
+    Time;
+  end
+
   ModuleLoader==>Administration;
   ModuleLoader==>Managers;
   ModuleLoader==>OutputModules;
   ModuleLoader==>Matter;
   MapManager-->Matter;
 
-  subgraph Administration
-    Commands;
-    Permissions;
-  end
+  subgraph ServerScriptService
+    ModuleLoader;
+    Matter;
 
-  subgraph Managers
-    CooldownManager;
-    DamageManager;
-    DataManager;
-    KnockbackManager;
-    MapManager;
-    MovementManager;
-    StunManager;
-  end
-
-  subgraph OutputModules
-    M1_Server-->DamageManager;
-    Bare_Server-->DamageManager;
-    Weapon_Server-->DamageManager;
+    subgraph Administration
+      Commands;
+      Permissions;
+    end
+  
+    subgraph Managers
+      CooldownManager;
+      DamageManager;
+      DataManager;
+      KnockbackManager;
+      MapManager;
+      MovementManager;
+      StunManager;
+    end
+  
+    subgraph OutputModules
+      M1_Server-->DamageManager;
+      Bare_Server-->DamageManager;
+      Weapon_Server-->DamageManager;
+    end
   end
 
   CooldownManager-->Time;
