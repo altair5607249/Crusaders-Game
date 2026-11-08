@@ -320,7 +320,16 @@ In short, it was a capricious choice made by me to algorithmically balance every
 Its effects were small, in which only a few values (e.g., cooldown, damage, range) were tweaked, but the whole process meant a lot to me in terms of learning, even if I wasn't writing the majority of it (see [Credits & Disclosures](https://github.com/altair5607249/Crusaders-Game/blob/main/README.md#credits--disclosures)) and simply designing its agent logic for the most part.
 
 ## Constraints
-
+- Project Constraints
+  - No budget, so custom & public assets + free tools are used during Crusaders' development
+  - No formal team, so my friends collaborate whenever they're available
+  - No mentors to consult, so everyone involved in Crusaders' development is either self-taught or taught by another person on the project
+    - Whether someone is self-taught or informally taught depends on the matter at hand
+      - Zachary taught himself how to code with Luau; I taught him how to rig models in Roblox Studio
+      - Aidan taught himself how to compose and create digital art; I taught him how to use and test his character (Redd/Aidalon)
+- Personal Constraints
+  - Hard to get work done at my house
+  - Making time competes with schoolwork & extracurriculars
 
 ## Credits & Disclosures
 - Crusaders' full codebase is only visible in the [Source File](https://github.com/altair5607249/Crusaders-Game/blob/main/7077.rbxl)
