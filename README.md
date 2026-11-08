@@ -94,55 +94,55 @@ flowchart TB;
   
     subgraph Bare_Server-CharModules;
       subgraph BSC-Redd
-        BSCR-Move1-->DamageManager;
-        BSCR-Move2-->DamageManager;
-        BSCR-Move3-->DamageManager;
-        BSCR-Move4;
+        A["Move1"]-->DamageManager;
+        B["Move2"]-->DamageManager;
+        C["Move3"]-->DamageManager;
+        D["Move4"];
       end 
       subgraph BSC-Yello
-        BSCY-Move1-->DamageManager;
-        BSCY-Move2-->DamageManager;
-        BSCY-Move3-->DamageManager;
-        BSCY-Move4-->DamageManager;
+        E["Move1"]-->DamageManager;
+        F["Move2"]-->DamageManager;
+        G["Move3"]-->DamageManager;
+        H["Move4"]-->DamageManager;
       end
       subgraph BSC-Gleen
-        BSCG-Move1-->DamageManager;
-        BSCG-Move2-->DamageManager;
-        BSCG-Move3-->DamageManager;
-        BSCG-Move4-->DamageManager;
+        I["Move1"]-->DamageManager;
+        J["Move2"]-->DamageManager;
+        K["Move3"]-->DamageManager;
+        L["Move4"]-->DamageManager;
       end 
       subgraph BSC-Bluee
-        BSCB-Move1-->DamageManager;
-        BSCB-Move2;
-        BSCB-Move3-->DamageManager;
-        BSCB-Move4;
+        M["Move1"]-->DamageManager;
+        N["Move2"];
+        O["Move3"]-->DamageManager;
+        P["Move4"];
       end 
     end
   
     subgraph Weapon_Server-CharModules;
       subgraph WSC-Redd
-        WSCR-Move1-->DamageManager;
-        WSCR-Move2-->DamageManager;
-        WSCR-Move3-->DamageManager;
-        WSCR-Move4;
+        Q["Move1"]-->DamageManager;
+        R["Move2"]-->DamageManager;
+        S["Move3"]-->DamageManager;
+        T["Move4"];
       end 
       subgraph WSC-Yello
-        WSCY-Move1-->DamageManager;
-        WSCY-Move2-->DamageManager;
-        WSCY-Move3-->DamageManager;
-        WSCY-Move4;
+        U["Move1"]-->DamageManager;
+        V["Move2"]-->DamageManager;
+        W["Move3"]-->DamageManager;
+        X["Move4"];
       end 
       subgraph WSC-Gleen
-        WSCG-Move1-->DamageManager;
-        WSCG-Move2-->DamageManager;
-        WSCG-Move3;
-        WSCG-Move4-->DamageManager;
+        Y["Move1"]-->DamageManager;
+        Z["Move2"]-->DamageManager;
+        a["Move3"];
+        b["Move4"]-->DamageManager;
       end 
       subgraph WSC-Bluee
-        WSCB-Move1-->DamageManager;
-        WSCB-Move2-->DamageManager;
-        WSCB-Move3-->DamageManager;
-        WSCB-Move4-->DamageManager;
+        c["Move1"]-->DamageManager;
+        d["Move2"]-->DamageManager;
+        e["Move3"]-->DamageManager;
+        f["Move4"]-->DamageManager;
       end 
     end
   
@@ -177,7 +177,7 @@ flowchart TB;
   Movement-->Space;
   Movement-->Time;
 
-  class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,DamageManager,BSCR-Move1,BSCR-Move2,BSCR-Move3,BSCR-Move4,BSCY-Move1,BSCY-Move2,BSCY-Move3,BSCY-Move4,BSCG-Move1,BSCG-Move2,BSCG-Move3,BSCG-Move4,BSCB-Move1,BSCB-Move2,BSCB-Move3,BSCB-Move4,WSCR-Move1,WSCR-Move2,WSCR-Move3,WSCR-Move4,WSCY-Move1,WSCY-Move2,WSCY-Move3,WSCY-Move4,WSCG-Move1,WSCG-Move2,WSCG-Move3,WSCG-Move4,WSCB-Move1,WSCB-Move2,WSCB-Move3,WSCB-Move4,KnockbackManager,StunManager serverNode;
+  class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,DamageManager,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,KnockbackManager,StunManager serverNode;
   class ModuleLoader2,Player-Input,M1_Client,Sol_Client,Movement,KnockbackHandler clientNode;
   class Space,Time universalNode;
 
