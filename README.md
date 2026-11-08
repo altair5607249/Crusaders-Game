@@ -78,9 +78,13 @@ flowchart TB;
 
   subgraph ServerScriptService
     ModuleLoader;
-    MovementManager;
-    KnockbackManager;
-    StunManager;
+
+    subgraph Managers
+      CooldownManager;
+      KnockbackManager;
+      MovementManager;
+      StunManager;
+    end
 
     subgraph OutputModules
       M1_Server;
@@ -92,7 +96,62 @@ flowchart TB;
       DamageManager;
     end
   
-    subgraph Bare_Server-CharModules;
+    ModuleLoader-->|M1| M1_Server
+    ModuleLoader-->|Sol| Bare_Server
+    ModuleLoader-->|Sol| Weapon_Server
+  end
+
+  DamageManager-->KnockbackManager-->|RE| ModuleLoader2;
+  DamageManager-->StunManager;
+
+  subgraph ReplicatedStorage
+    Space;
+    Time;
+  end
+
+  M1_Server-->Space;
+  M1_Server-->Time;  
+  Bare_Server-->Space;
+  Bare_Server-->Time;
+  Weapon_Server-->Space;
+  Weapon_Server-->Time;
+
+  M1_Server-->CooldownManager;
+  Bare_Server-->CooldownManager;
+  Bare_Server-->StunManager;
+  Weapon_Server-->CooldownManager;
+  Weapon_Server-->StunManager;
+
+  M1_Client-->Time;
+  Sol_Client-->Time;
+  Movement-->Space;
+  Movement-->Time;
+
+  class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,DamageManager,KnockbackManager,StunManager serverNode;
+  class ModuleLoader2,Player-Input,M1_Client,Sol_Client,Movement,KnockbackHandler clientNode;
+  class Space,Time universalNode;
+
+  class BSC-Redd,WSC-Redd redNode;
+  class BSC-Yello,WSC-Yello yellowNode;
+  class BSC-Gleen,WSC-Gleen greenNode;
+  class BSC-Bluee,WSC-Bluee blueNode;
+```
+
+### Bare-Style Flow
+```mermaid
+flowchart TB;
+
+  classDef serverNode fill:#5bf547,stroke:#000000,color:#000000
+  classDef clientNode fill:#42a1f5,stroke:#000000,color:#000000
+  classDef universalNode fill:#b549eb,stroke:#000000,color:#000000
+
+  classDef redNode fill:#ff9191,stroke:#000000,color:#000000
+  classDef yellowNode fill:#fdff91,stroke:#000000,color:#000000
+  classDef greenNode fill:#91ff9c,stroke:#000000,color:#000000
+  classDef blueNode fill:#91b8ff,stroke:#000000,color:#000000
+
+  subgraph ServerScriptService
+    subgraph Bare_Server-CharModules
       subgraph BSC-Redd
         A["Move1"]-->DamageManager;
         B["Move2"]-->DamageManager;
@@ -118,8 +177,38 @@ flowchart TB;
         P["Move4"];
       end 
     end
-  
-    subgraph Weapon_Server-CharModules;
+  end
+
+  subgraph ReplicatedStorage
+    Space;
+    Time;
+  end
+
+  class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,DamageManager,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,KnockbackManager,StunManager serverNode;
+  class ModuleLoader2,Player-Input,M1_Client,Sol_Client,Movement,KnockbackHandler clientNode;
+  class Space,Time universalNode;
+
+  class BSC-Redd redNode;
+  class BSC-Yello yellowNode;
+  class BSC-Gleen greenNode;
+  class BSC-Bluee blueNode;
+```
+
+### Weapon-Style Flow
+```mermaid
+flowchart TB;
+
+  classDef serverNode fill:#5bf547,stroke:#000000,color:#000000
+  classDef clientNode fill:#42a1f5,stroke:#000000,color:#000000
+  classDef universalNode fill:#b549eb,stroke:#000000,color:#000000
+
+  classDef redNode fill:#ff9191,stroke:#000000,color:#000000
+  classDef yellowNode fill:#fdff91,stroke:#000000,color:#000000
+  classDef greenNode fill:#91ff9c,stroke:#000000,color:#000000
+  classDef blueNode fill:#91b8ff,stroke:#000000,color:#000000
+
+  subgraph ServerScriptService
+    subgraph Weapon_Server-CharModules
       subgraph WSC-Redd
         Q["Move1"]-->DamageManager;
         R["Move2"]-->DamageManager;
@@ -137,7 +226,7 @@ flowchart TB;
         Z["Move2"]-->DamageManager;
         a["Move3"];
         b["Move4"]-->DamageManager;
-      end 
+        end 
       subgraph WSC-Bluee
         c["Move1"]-->DamageManager;
         d["Move2"]-->DamageManager;
@@ -145,46 +234,21 @@ flowchart TB;
         f["Move4"]-->DamageManager;
       end 
     end
-  
-    ModuleLoader-->|M1| M1_Server-->DamageManager;
-    ModuleLoader-->|Sol| Bare_Server-->Bare_Server-CharModules;
-    ModuleLoader-->|Sol| Weapon_Server-->Weapon_Server-CharModules;
-  
-    Bare_Server==>Bare_Server-CharModules;
-    Weapon_Server==>Weapon_Server-CharModules;
   end
-
-  DamageManager-->KnockbackManager-->|RE| ModuleLoader2;
-  DamageManager-->StunManager;
 
   subgraph ReplicatedStorage
     Space;
     Time;
   end
 
-  Bare_Server-->Space;
-  Bare_Server-->Time;
-  Weapon_Server-->Space;
-  Weapon_Server-->Time;
-
-  Bare_Server-CharModules-->Space;
-  Bare_Server-CharModules-->Time;
-  Weapon_Server-CharModules-->Space;
-  Weapon_Server-CharModules-->Time;
-
-  M1_Client-->Time;
-  Sol_Client-->Time;
-  Movement-->Space;
-  Movement-->Time;
-
-  class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,DamageManager,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,KnockbackManager,StunManager serverNode;
+  class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,DamageManager,Q,R,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,KnockbackManager,StunManager serverNode;
   class ModuleLoader2,Player-Input,M1_Client,Sol_Client,Movement,KnockbackHandler clientNode;
   class Space,Time universalNode;
 
-  class BSC-Redd,WSC-Redd redNode;
-  class BSC-Yello,WSC-Yello yellowNode;
-  class BSC-Gleen,WSC-Gleen greenNode;
-  class BSC-Bluee,WSC-Bluee blueNode;
+  class WSC-Redd redNode;
+  class WSC-Yello yellowNode;
+  class WSC-Gleen greenNode;
+  class WSC-Bluee blueNode;
 ```
 
 ### Full System Diagram
@@ -293,6 +357,12 @@ flowchart TB;
   Matter-->|RE| ModuleLoader3-->Transition-Manager;
   DataManager-->|RE| Settings-Manager-->|RE| DataManager;
   Selection-Manager-->|RE| ModuleLoader-->Matter;
+
+  M1_Server-->CooldownManager;
+  Bare_Server-->CooldownManager;
+  Bare_Server-->StunManager;
+  Weapon_Server-->CooldownManager;
+  Weapon_Server-->StunManager;
 
   class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,Commands,Permissions,CooldownManager,DamageManager,DataManager,KnockbackManager,MapManager,MovementManager,StunManager,Matter serverNode;
   class ModuleLoader2,Energy,M1_Client,Sol_Client,Movement,AnimationHandler,KnockbackHandler,MusicHandler,ModuleLoader3,ModuleLoader4,Transition-Manager,Settings-Manager,Selection-Manager clientNode;
