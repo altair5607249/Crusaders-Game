@@ -43,6 +43,7 @@ The important parts will be given in smaller diagrams, and everything, everywher
       - IA — Input Action
   - Thick Arrow — Init
 - Colors
+  - Red — Event
   - Blue — Client
   - Green — Server
   - Purple — Universal
@@ -51,6 +52,7 @@ The important parts will be given in smaller diagrams, and everything, everywher
 ```mermaid
 flowchart TB;
 
+  classDef eventNode fill:#e33939,stroke:#000000,color:#000000
   classDef serverNode fill:#5bf547,stroke:#000000,color:#000000
   classDef clientNode fill:#42a1f5,stroke:#000000,color:#000000
   classDef universalNode fill:#b549eb,stroke:#000000,color:#000000
@@ -117,7 +119,15 @@ flowchart TB;
     end
   end
 
+  Player-Joins==>ModuleLoader2
 
+  ModuleLoader2==>Energy==>InputModules;
+
+  ModuleLoader==>Administration;
+  ModuleLoader==>Managers;
+  ModuleLoader==>OutputModules;
+
+  class Player-Joins eventNode;
   class ModuleLoader,Matter,Commands,Permissions,CooldownManager,DamageManager,DataManager,KnockbackManager,MapManager,MovementManager,StunManager,M1_Server,Bare_Server,Weapon_Server serverNode;
   class ModuleLoader2,Energy,AnimationHandler,KnockbackHandler,MusicHandler,M1_Client,Sol_Client,Movement,ModuleLoader3,ModuleLoader4,A,B,C clientNode;
   class Space,Time universalNode;
@@ -127,6 +137,7 @@ flowchart TB;
 ```mermaid
 flowchart TB;
 
+  classDef eventNode fill:#e33939,stroke:#000000,color:#000000
   classDef serverNode fill:#5bf547,stroke:#000000,color:#000000
   classDef clientNode fill:#42a1f5,stroke:#000000,color:#000000
   classDef universalNode fill:#b549eb,stroke:#000000,color:#000000
@@ -204,8 +215,9 @@ flowchart TB;
   Movement-->Space;
   Movement-->Time;
 
+  class Player-Input eventNode;
   class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,DamageManager,KnockbackManager,StunManager,CooldownManager serverNode;
-  class ModuleLoader2,Player-Input,M1_Client,Sol_Client,Movement,KnockbackHandler clientNode;
+  class ModuleLoader2,M1_Client,Sol_Client,Movement,KnockbackHandler clientNode;
   class Space,Time universalNode;
 ```
 
