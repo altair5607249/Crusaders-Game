@@ -182,11 +182,22 @@ Its effects were small, in which only a few values (e.g., cooldown, damage, rang
   - [Roblox Advanced Scripting Tutorial Guide by BrawlDev](https://www.youtube.com/playlist?list=PLQ1Qd31Hmi3WKkVHnadvhOOjz04AuMYAf)
 - Public Assets
   - Maps
-  - Props
+    - [City 17](https://developer.valvesoftware.com/wiki/City_17) by [Valve Software](https://www.valvesoftware.com/en/) (Abeyant)
+      - Can't find the original asset from the Creator Store, but it's literally an asset rip from Half-Life 2
+      - The map won't be in the current rotation until Valve Software confirms with Zachary that it's okay to use their map
+    - [Cyberpunk City](https://create.roblox.com/store/asset/11332829712/Cyberpunk-city) by [Animateria](https://sketchfab.com/Animateria)
+    - [Floating Castle](https://create.roblox.com/store/asset/8673654426/Floating-Castle) by [J4milion](https://www.roblox.com/users/2236599004/profile)
+    - [Former School](https://create.roblox.com/store/asset/8855189243/Former-School) by [Brendan](https://www.linkedin.com/in/brendan-o-brien-a6b1b4269/) & [RedManta LLC](https://www.redmanta.games/)
+    - [Parking Lot](https://create.roblox.com/store/asset/11891234812/Repaved-Parking-Lot) by [Nicholas3285](https://www.roblox.com/users/113413962/profile) & [MinecraftPro97k](https://create.roblox.com/store/asset/11891234812/Repaved-Parking-Lot)
+    - Station by MasonEpicBuilder2008
+      - I, for the life of me, CANNOT find the original build, OR the builder...
+    - [Town](https://create.roblox.com/store/asset/15996614363/Town-Map) by [CorruptTypes](https://www.roblox.com/users/1267741523/profile)
+    - [Woodlands](https://create.roblox.com/store/asset/103509386196677/battlegrounds-map) by [Infexornn](https://www.roblox.com/users/1551586271/profile) & [CorruptTypes](https://www.roblox.com/users/1267741523/profile)
+  - Props, SFX, & VFX
     - There are too many of these for me to list, but you can find all of them in the [Roblox Creator Store](https://create.roblox.com/store/)!
-  - SFX
-  - VFX
   - Music
+    - [Memories](https://www.youtube.com/watch?v=WjzPrwieDHs) by [Dapper Husky](https://www.youtube.com/@DapperHusky)
+    - [Final Transmission](https://music.apple.com/us/song/final-transmission/6783587437) by [Lazy Tunes](https://music.apple.com/us/artist/lazy-tunes/1807274042)
   - UI/UX
     - [Star's Shaders](https://create.roblox.com/store/asset/6980389129/Stars-Shaders) by [stxrryxnvght](https://www.roblox.com/users/536426235/profile)
     - [TopbarPlus](https://create.roblox.com/store/asset/92368439343389/TopbarPlus) by [ForeverHD](https://www.roblox.com/users/82347291/profile)
