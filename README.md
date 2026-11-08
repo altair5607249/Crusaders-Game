@@ -170,10 +170,8 @@ flowchart TB;
   Bare_Server-->DamageManager;
   Weapon_Server-->DamageManager;
 
-  M1_Client-->Time;
-  Sol_Client-->Time;
+  InputModules-->Time;
   Movement-->Space;
-  Movement-->Time;
 
   class Player-Input eventNode;
   class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,DamageManager,CooldownManager serverNode;
