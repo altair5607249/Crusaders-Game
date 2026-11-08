@@ -147,6 +147,7 @@ flowchart TB;
   
     subgraph Managers
       DamageManager;
+      MovementManager;
     end
   
     ModuleLoader-->|M1| M1_Server
@@ -172,9 +173,10 @@ flowchart TB;
 
   InputModules-->Time;
   Movement-->Space;
+  Movement-->|RE; Anticheat| MovementManager;
 
   class Player-Input eventNode;
-  class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,DamageManager,CooldownManager serverNode;
+  class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,DamageManager,CooldownManager,MovementManager serverNode;
   class ModuleLoader2,M1_Client,Sol_Client,Movement,KnockbackHandler clientNode;
   class Space,Time universalNode;
 ```
