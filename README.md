@@ -1,7 +1,7 @@
 # Crusaders — Game
 Crusaders is a 3D, free-for-all fighting game currently in beta and is available on Roblox! 
 
-Not all of Crusaders' code is visible on this repo, so please refer to the [Source File](https://github.com/altair5607249/Crusaders-Game/blob/main/7046.rbxl) for everything, including the minor scripts!!! ***Assistive technology was used for production efficiency***, and full credits for it can be found under [Credits & Disclosures](https://github.com/altair5607249/Crusaders-Game#credits--disclosures) if you're interested in the specifics.
+Not all of Crusaders' code is visible on this repo, so please refer to the [Source File](https://github.com/altair5607249/Crusaders-Game/blob/main/7046.rbxl) for everything, including the minor scripts!!! ***Assistive technology was used for production efficiency***, and full credits for it can be found under [Credits & Disclosures](https://github.com/altair5607249/Crusaders-Game/blob/main/README.md#credits--disclosures) if you're interested in the specifics.
 
 For those who wish to see the game's progress from before I added GitHub to my workflow, please refer to [The Timeline](https://github.com/altair5607249/Crusaders-Game-Timeline).
 
@@ -9,7 +9,7 @@ For those who wish to see the game's progress from before I added GitHub to my w
 | Medium | Requirements | Compatibility | Status |
 | --- | --- | --- | --- |
 | Live Game | Roblox Account (Verified 16+) | PC & Mobile | [Active](https://www.roblox.com/games/123600574843310/Crusaders) |
-| Source File | Roblox Account; Roblox Studio | PC | [Active](https://github.com/altair5607249/Crusaders-Game/blob/main/7046.rbxl)
+| Source File | Roblox Account; Roblox Studio | PC | [Active](https://github.com/altair5607249/Crusaders-Game/blob/main/7073.rbxl)
 | Unity | N/A | N/A | In Progress |
 
 ### Instructions  
@@ -154,7 +154,7 @@ For those who wanna check out the simple ABM I worked on to optimize the game a 
 
 In short, it was a capricious choice made by me to algorithmically balance every character. I'd understood that the simple ABM was only useful for measuring baseline fairness, since further research brought me to the realization that I would need to employ many more concepts in machine learning to accrue accurate data.  
 
-Its effects were small, in which only a few values (e.g., cooldown, damage, range) were tweaked, but the whole process meant a lot to me in terms of learning, even if I wasn't writing the majority of it (see [Credits & Disclosures](https://github.com/altair5607249/Crusaders-Game#credits--disclosures)) and simply designing its agent logic for the most part.
+Its effects were small, in which only a few values (e.g., cooldown, damage, range) were tweaked, but the whole process meant a lot to me in terms of learning, even if I wasn't writing the majority of it (see [Credits & Disclosures](https://github.com/altair5607249/Crusaders-Game/blob/main/README.md#credits--disclosures)) and simply designing its agent logic for the most part.
 
 ## Constraints
 
