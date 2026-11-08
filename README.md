@@ -168,12 +168,12 @@ Its effects were small, in which only a few values (e.g., cooldown, damage, rang
   - Jazz — QA Tester
   - Zachary — Programmer, Artist, QA Tester, Map Designer, Narrative Designer, Voice Actor, Composer, Animator
   - Gabriel ([@NERailDude](https://www.youtube.com/@northeasttransitproductions)) — QA Tester
-- AI (Claude & Gemini) Usage:
+- AI (Claude & Gemini) Usage
   - Reviewing and suggesting code for the game
   - Writing code for the game, which was tweaked by me afterwards and occurred on two separate occasions:
     - Applying skins in `Matter`
     - Applying skins in `SelectionManager`
-  - Writing code for the ABM, specifically:
+  - Writing code for the ABM, specifically
     - Mesa/Agent boilerplate 
     - Gymnasium/RL wrapper
     - Seaborn data visualization
