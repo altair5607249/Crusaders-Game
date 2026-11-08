@@ -317,6 +317,14 @@ This is the nigh-complete hierarchy of the game's source code, including scripts
   - `GuiManager` —
   - `Hitboxes` —
   - `ModuleLoader2` —
+    - `Handlers`
+      - `AnimationHandler` —
+      - `KnockbackHandler` —
+      - `MusicHandler` —
+    - `InputModules`
+      - `M1_Client` —
+      - `Movement` —
+      - `Sol_Client` —
   - `Energy` —
 - `StarterGui`
   - `LoadingScreen`
@@ -328,6 +336,16 @@ This is the nigh-complete hierarchy of the game's source code, including scripts
     - `ModuleLoader4` —
       - `Manager` —
 - `ServerScriptService`
+  - `CoreGameplay`
+    - `Mouselock` —
+      - `SLHandler` —
+    - `Weapon` —
+  - `Misc`
+    - `CameraFocus` —
+      - `CameraHandler` —
+    - `Collision` —
+    - `DummySpawner` —
+    - `PartSpawner` —
   - `ModuleLoader` —
     - `Administration`
       - `Commands` —
