@@ -53,6 +53,11 @@ flowchart TB;
   classDef clientNode fill:#42a1f5,stroke:#000000,color:#000000
   classDef universalNode fill:#b549eb,stroke:#000000,color:#000000
 
+  classDef redNode fill:#FF0000,stroke:#000000,color:#000000
+  classDef yellowNode fill:#FFFF00,stroke:#000000,color:#000000
+  classDef greenNode fill:#00FF00,stroke:#000000,color:#000000
+  classDef blueNode fill:#0000FF,stroke:#000000,color:#000000
+
   subgraph InputModules
     M1_Client;
     Sol_Client;
@@ -137,6 +142,11 @@ flowchart TB;
 
   class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,DamageManager,BSCR-Move-1,BSCR-Move-2,BSCR-Move-3,BSCR-Move-4,BSCY-Move-1,BSCY-Move-2,BSCY-Move-3,BSCY-Move-4,BSCG-Move-1,BSCG-Move-2,BSCG-Move-3,BSCG-Move-4,BSCB-Move-1,BSCB-Move-2,BSCB-Move-3,BSCB-Move-4,WSCR-Move-1,WSCR-Move-2,WSCR-Move-3,WSCR-Move-4,WSCY-Move-1,WSCY-Move-2,WSCY-Move-3,WSCY-Move-4,WSCG-Move-1,WSCG-Move-2,WSCG-Move-3,WSCG-Move-4,WSCB-Move-1,WSCB-Move-2,WSCB-Move-3,WSCB-Move-4 serverNode;
   class Player-Input,M1_Client,Sol_Client,Movement clientNode;
+
+  class BSC-Redd,WSC-Redd redNode;
+  class BSC-Yello,WSC-Yello yellowNode;
+  class BSC-Gleen,WSC-Gleen greenNode;
+  class BSC-Bluee,WSC-Bluee blueNode;
 ```
 
 ### Full System Diagram
