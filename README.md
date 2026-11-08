@@ -124,6 +124,7 @@ flowchart TB;
   ModuleLoader2-->|RE| Matter-->Player-Appears;
   ModuleLoader2==>Energy==>InputModules;
 
+  ModuleLoader==>Matter;
   ModuleLoader==>Administration;
   ModuleLoader==>Managers;
   ModuleLoader==>OutputModules;
