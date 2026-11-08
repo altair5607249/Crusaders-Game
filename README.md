@@ -142,6 +142,9 @@ flowchart TB;
   ModuleLoader-->|Sol| Bare_Server-->Bare_Server-CharModules;
   ModuleLoader-->|Sol| Weapon_Server-->Weapon_Server-CharModules;
 
+  Bare_Server==>Bare_Server-CharModules;
+  Weapon_Server==>Weapon_Server-CharModules;
+
   DamageManager-->KnockbackManager-->|RE| ModuleLoader2;
   DamageManager-->StunManager;
 
