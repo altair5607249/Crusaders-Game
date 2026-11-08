@@ -55,7 +55,8 @@ flowchart TB;
   classDef clientNode fill:#42a1f5,stroke:#000000,color:#000000
 
   subgraph StarterPlayerScripts
-    Energy
+    ModuleLoader2;
+    Energy;
 
     subgraph InputModules
       M1_Client;
@@ -78,14 +79,20 @@ flowchart TB;
     end
   end
 
+  ModuleLoader2==>Energy
   Energy==>InputModules
 
   M1_Client-->|RE| ModuleLoader
   Sol_Client-->|RE| ModuleLoader
   Movement-->|RE| MovementManager
 
+  ModuleLoader2-->|RE| ModuleLoader
+
+  ModuleLoader==>Managers
+  ModuleLoader==>OutputModules
+
   class ModuleLoader,MovementManager,M1_Server,Bare_Server,Weapon_Server serverNode;
-  class Energy,M1_Client,Sol_Client,Movement clientNode;
+  class ModuleLoader2,Energy,M1_Client,Sol_Client,Movement clientNode;
 ```
 
 ### Combat Flow
