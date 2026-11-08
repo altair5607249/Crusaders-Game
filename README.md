@@ -208,9 +208,9 @@ flowchart TB;
 
   M1_Server-->CooldownManager;
   Bare_Server-->CooldownManager;
-  Bare_Server-->StunManager;
+  Bare_Server-->|endlag| StunManager;
   Weapon_Server-->CooldownManager;
-  Weapon_Server-->StunManager;
+  Weapon_Server-->|endlag| StunManager;
 
   M1_Server-->DamageManager;
   Bare_Server-->DamageManager;
