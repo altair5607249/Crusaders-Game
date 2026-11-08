@@ -1,7 +1,7 @@
 # Crusaders — Game
 Crusaders is a 3D, free-for-all fighting game currently in beta and is available on Roblox! 
 
-Not all of Crusaders' code is visible on this repo, so please refer to the [Source File](https://github.com/altair5607249/Crusaders-Game/blob/main/7046.rbxl) for everything, including the minor scripts!!! ***Assistive technology was used for production efficiency***, and full credits for it can be found under [Credits & Disclosures](https://github.com/altair5607249/Crusaders-Game/blob/main/README.md#credits--disclosures) if you're interested in the specifics.
+Not all of Crusaders' code is visible on this repo, so please refer to the [Source File](https://github.com/altair5607249/Crusaders-Game/blob/main/7076.rbxl) for everything, including the minor scripts!!! ***Assistive technology was used for production efficiency***, and full credits for it can be found under [Credits & Disclosures](https://github.com/altair5607249/Crusaders-Game/blob/main/README.md#credits--disclosures) if you're interested in the specifics.
 
 For those who wish to see the game's progress from before I added GitHub to my workflow, please refer to [The Timeline](https://github.com/altair5607249/Crusaders-Game-Timeline).
 
@@ -9,7 +9,7 @@ For those who wish to see the game's progress from before I added GitHub to my w
 | Medium | Requirements | Compatibility | Status |
 | --- | --- | --- | --- |
 | Live Game | Roblox Account (Verified 16+) | PC & Mobile | [Active](https://www.roblox.com/games/123600574843310/Crusaders) |
-| Source File | Roblox Account; Roblox Studio | PC | [Active](https://github.com/altair5607249/Crusaders-Game/blob/main/7073.rbxl)
+| Source File | Roblox Account; Roblox Studio | PC | [Active](https://github.com/altair5607249/Crusaders-Game/blob/main/7076.rbxl)
 | Unity | N/A | N/A | In Progress |
 
 ### Instructions  
@@ -160,7 +160,7 @@ Its effects were small, in which only a few values (e.g., cooldown, damage, rang
 
 
 ## Credits & Disclosures
-- Crusaders' full codebase is only visible in the [Source File](https://github.com/altair5607249/Crusaders-Game/blob/main/7046.rbxl)
+- Crusaders' full codebase is only visible in the [Source File](https://github.com/altair5607249/Crusaders-Game/blob/main/7076.rbxl)
   - The reason for this is that I couldn't properly save the content under certain services, like `StarterGui`
   - If you absolutely cannot access the the file, please refer to misc-scripts (WIP)!!!
 - My Friends' Roles
