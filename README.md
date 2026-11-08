@@ -53,10 +53,10 @@ flowchart TB;
   classDef clientNode fill:#42a1f5,stroke:#000000,color:#000000
   classDef universalNode fill:#b549eb,stroke:#000000,color:#000000
 
-  classDef redNode fill:#FF0000,stroke:#000000,color:#000000
-  classDef yellowNode fill:#FFFF00,stroke:#000000,color:#000000
-  classDef greenNode fill:#00FF00,stroke:#000000,color:#000000
-  classDef blueNode fill:#0000FF,stroke:#000000,color:#000000
+  classDef redNode fill:##ff9191,stroke:#000000,color:#000000
+  classDef yellowNode fill:#fdff91,stroke:#000000,color:#000000
+  classDef greenNode fill:#91ff9c,stroke:#000000,color:#000000
+  classDef blueNode fill:#91b8ff,stroke:#000000,color:#000000
 
   ModuleLoader2-->KnockbackHandler;
 
