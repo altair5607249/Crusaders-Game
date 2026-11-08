@@ -134,11 +134,7 @@ flowchart TB;
   classDef universalNode fill:#b549eb,stroke:#000000,color:#000000
 
   subgraph StarterPlayerScripts
-    subgraph Handlers
-      KnockbackHandler;
-    end
-
-    ModuleLoader2-->KnockbackHandler;
+    ModuleLoader2
   
     subgraph InputModules
       M1_Client;
@@ -153,16 +149,13 @@ flowchart TB;
 
   M1_Client-->|RE| ModuleLoader;
   Sol_Client-->|RE| ModuleLoader;
-  Movement-->|RE| MovementManager;
+  Movement
 
   subgraph ServerScriptService
     ModuleLoader;
 
     subgraph Managers
       CooldownManager;
-      KnockbackManager;
-      MovementManager;
-      StunManager;
     end
 
     subgraph OutputModules
@@ -180,9 +173,6 @@ flowchart TB;
     ModuleLoader-->|Sol| Weapon_Server
   end
 
-  DamageManager-->KnockbackManager-->|RE| ModuleLoader2;
-  DamageManager-->StunManager;
-
   subgraph ReplicatedStorage
     Space;
     Time;
@@ -197,9 +187,7 @@ flowchart TB;
 
   M1_Server-->CooldownManager;
   Bare_Server-->CooldownManager;
-  Bare_Server-->|endlag| StunManager;
   Weapon_Server-->CooldownManager;
-  Weapon_Server-->|endlag| StunManager;
 
   M1_Server-->DamageManager;
   Bare_Server-->DamageManager;
@@ -211,7 +199,7 @@ flowchart TB;
   Movement-->Time;
 
   class Player-Input eventNode;
-  class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,DamageManager,KnockbackManager,StunManager,CooldownManager serverNode;
+  class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,DamageManager,CooldownManager serverNode;
   class ModuleLoader2,M1_Client,Sol_Client,Movement,KnockbackHandler clientNode;
   class Space,Time universalNode;
 ```
