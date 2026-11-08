@@ -326,8 +326,8 @@ Its effects were small, in which only a few values (e.g., cooldown, damage, rang
       - Zachary taught himself how to code with Luau; I taught him how to rig models in Roblox Studio
       - Aidan taught himself how to compose and create digital art; I taught him how to use and test his character (Redd/Aidalon)
 - Personal Constraints
-  - Hard to get work done at my house
-  - Making time competes with schoolwork & extracurriculars
+  - Hard to get work done at my house, so I try to frequent safe, public spaces
+  Time spent on making stuff competes with schoolwork & extracurriculars, so good time management is key
 
 ## Credits & Disclosures
 - Crusaders' full codebase is only visible in the [Source File](https://github.com/altair5607249/Crusaders-Game/blob/main/7077.rbxl)
