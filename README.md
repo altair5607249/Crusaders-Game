@@ -157,8 +157,10 @@ flowchart TB;
   end
 
   subgraph ReplicatedStorage
-    Space;
-    Time;
+    subgraph UniversalModules
+      Space;
+      Time;
+    end
   end
 
   OutputModules-->Space;
@@ -216,14 +218,14 @@ flowchart TB;
   M1_Client-->|RE| ModuleLoader;
   Sol_Client-->|RE| ModuleLoader;
   Movement-->|RE| MovementManager;
-  M1_Client-->Time;
-  Sol_Client-->Time;
-  Movement-->Time;
+  InputModules-->Time;
   Movement-->Space;
 
   subgraph ReplicatedStorage
-    Space;
-    Time;
+    subgraph UniversalModules
+      Space;
+      Time;
+    end
   end
 
   ModuleLoader==>Administration;
@@ -298,10 +300,8 @@ flowchart TB;
   DataManager-->|RE| C-->|RE| DataManager;
   B-->|RE| ModuleLoader-->Matter;
 
-  M1_Server-->CooldownManager;
-  Bare_Server-->CooldownManager;
+  OutputModules-->CooldownManager;
   Bare_Server-->StunManager;
-  Weapon_Server-->CooldownManager;
   Weapon_Server-->StunManager;
 
   class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,Commands,Permissions,CooldownManager,DamageManager,DataManager,KnockbackManager,MapManager,MovementManager,StunManager,Matter serverNode;
@@ -311,7 +311,13 @@ flowchart TB;
 This is the complete map for anyone who wants it :)
 
 ### Functionality
-(insert desc of every mechanic/module here later)
+- StarterPlayerScripts
+- StarterGui
+- ServerScriptService
+- `ReplicatedStorage`
+  - `UniversalModules`
+    - `Space` — houses config tables for O(1) lookups, calculates knockback vectors, and helps with finding directions
+    - `Time` - houses a config table for O(1) lookups, calculates timing constraints, and helps with M1 timing
 
 ## Agent-Based Modeling
 For those who wanna check out the simple ABM I worked on to optimize the game a bit, feel free to take a look [here](https://github.com/altair5607249/Crusaders-Game/tree/main/abm)!  
@@ -330,7 +336,7 @@ Its effects were small, in which only a few values (e.g., cooldown, damage, rang
       - Aidan taught himself how to compose and create digital art; I taught him how to use and test his character (Redd/Aidalon)
 - Personal Constraints
   - Hard to get work done at my house, so I try to frequent safe, public spaces
-  Time spent on making stuff competes with schoolwork & extracurriculars, so good time management is key
+  - Time spent on making stuff competes with schoolwork & extracurriculars, so good time management is key
 
 ## Credits & Disclosures
 - Crusaders' full codebase is only visible in the [Source File](https://github.com/altair5607249/Crusaders-Game/blob/main/7077.rbxl)
