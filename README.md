@@ -53,6 +53,7 @@ flowchart TB;
 
   classDef serverNode fill:#5bf547,stroke:#000000,color:#000000
   classDef clientNode fill:#42a1f5,stroke:#000000,color:#000000
+  classDef universalNode fill:#b549eb,stroke:#000000,color:#000000
 
   subgraph StarterPlayerScripts
     ModuleLoader2;
@@ -117,8 +118,9 @@ flowchart TB;
   end
 
 
-  class  serverNode;
-  class  clientNode;
+  class ModuleLoader,Matter,Commands,Permissions,CooldownManager,DamageManager,DataManager,KnockbackManager,MapManager,MovementManager,StunManager,M1_Server,Bare_Server,Weapon_Server serverNode;
+  class ModuleLoader2,Energy,AnimationHandler,KnockbackHandler,MusicHandler,M1_Client,Sol_Client,Movement,ModuleLoader3,ModuleLoader4,A,B,C clientNode;
+  class Space,Time universalNode;
 ```
 
 ### Combat Flow
