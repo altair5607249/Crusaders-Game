@@ -165,7 +165,6 @@ flowchart TB;
   subgraph StarterPlayerScripts
     ModuleLoader2==>Energy;
     ModuleLoader2==>Handlers;
-    ModuleLoader2-->|RE| Matter;
     Energy==>InputModules;
   
     subgraph Handlers
@@ -180,6 +179,8 @@ flowchart TB;
       Movement;
     end
   end
+
+  ModuleLoader2-->|RE| Matter;
 
   M1_Client-->AnimationHandler;
   Sol_Client-->AnimationHandler;
