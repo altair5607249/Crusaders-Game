@@ -212,6 +212,10 @@ flowchart TB;
   classDef blueNode fill:#91b8ff,stroke:#000000,color:#000000
 
   subgraph ServerScriptService
+    subgraph Managers
+      DamageManager;
+    end
+
     subgraph Weapon_Server-CharModules
       subgraph WSC-Redd
         Q["Move1"]-->DamageManager;
