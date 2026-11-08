@@ -47,7 +47,7 @@ The important parts will be given in smaller diagrams, and everything, everywher
   - Green — Server
   - Purple — Universal
  
-### Client-Server Communication
+### Initialization
 ```mermaid
 flowchart TB;
 
@@ -55,7 +55,14 @@ flowchart TB;
   classDef clientNode fill:#42a1f5,stroke:#000000,color:#000000
 
   subgraph StarterPlayerScripts
+    ModuleLoader2;
     Energy;
+
+    subgraph Handlers
+      AnimationHandler;
+      KnockbackHandler;
+      MusicHandler;
+    end
 
     subgraph InputModules
       M1_Client;
@@ -64,11 +71,42 @@ flowchart TB;
     end
   end
 
+  subgraph StarterGui
+    subgraph Transition
+      ModuleLoader3==>A["Manager"]
+    end
+
+    subgraph Selection
+      B["Manager"]
+    end
+
+    subgraph Settings
+      ModuleLoader4==>C["Manager"]
+    end
+  end
+
+  subgraph ReplicatedStorage
+    Space;
+    Time;
+  end
+
   subgraph ServerScriptService
     ModuleLoader;
+    Matter;
+
+    subgraph Administration
+      Commands;
+      Permissions;
+    end
 
     subgraph Managers
+      CooldownManager;
+      DamageManager;
+      DataManager;
+      KnockbackManager;
+      MapManager;
       MovementManager;
+      StunManager;
     end
 
     subgraph OutputModules
@@ -78,14 +116,9 @@ flowchart TB;
     end
   end
 
-  Energy==>InputModules
 
-  M1_Client-->|RE| ModuleLoader
-  Sol_Client-->|RE| ModuleLoader
-  Movement-->|RE| MovementManager
-
-  class ModuleLoader,MovementManager,M1_Server,Bare_Server,Weapon_Server serverNode;
-  class Energy,M1_Client,Sol_Client,Movement clientNode;
+  class  serverNode;
+  class  clientNode;
 ```
 
 ### Combat Flow
@@ -172,140 +205,6 @@ flowchart TB;
   class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,DamageManager,KnockbackManager,StunManager,CooldownManager serverNode;
   class ModuleLoader2,Player-Input,M1_Client,Sol_Client,Movement,KnockbackHandler clientNode;
   class Space,Time universalNode;
-```
-
-### Bare-Style Flow
-```mermaid
-flowchart TB;
-
-  classDef serverNode fill:#5bf547,stroke:#000000,color:#000000
-  classDef clientNode fill:#42a1f5,stroke:#000000,color:#000000
-  classDef universalNode fill:#b549eb,stroke:#000000,color:#000000
-
-  classDef redNode fill:#ff9191,stroke:#000000,color:#000000
-  classDef yellowNode fill:#fdff91,stroke:#000000,color:#000000
-  classDef greenNode fill:#91ff9c,stroke:#000000,color:#000000
-  classDef blueNode fill:#91b8ff,stroke:#000000,color:#000000
-
-  subgraph ServerScriptService
-    subgraph Managers
-      DamageManager;
-    end
-
-    subgraph OutputModules
-      Bare_Server;
-    end
-
-    Bare_Server---CharModules
-
-    subgraph CharModules
-      subgraph Redd
-        A["Move1"]-->DamageManager;
-        B["Move2"]-->DamageManager;
-        C["Move3"]-->DamageManager;
-        D["Move4"];
-      end 
-      subgraph Yello
-        E["Move1"]-->DamageManager;
-        F["Move2"]-->DamageManager;
-        G["Move3"]-->DamageManager;
-        H["Move4"]-->DamageManager;
-      end
-      subgraph Gleen
-        I["Move1"]-->DamageManager;
-        J["Move2"]-->DamageManager;
-        K["Move3"]-->DamageManager;
-        L["Move4"]-->DamageManager;
-      end 
-      subgraph Bluee
-        M["Move1"]-->DamageManager;
-        N["Move2"];
-        O["Move3"]-->DamageManager;
-        P["Move4"];
-      end 
-    end
-  end
-
-  subgraph ReplicatedStorage
-    Space;
-    Time;
-  end
-
-  class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,DamageManager,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,KnockbackManager,StunManager serverNode;
-  class ModuleLoader2,Player-Input,M1_Client,Sol_Client,Movement,KnockbackHandler clientNode;
-  class Space,Time universalNode;
-
-  class Redd redNode;
-  class Yello yellowNode;
-  class Gleen greenNode;
-  class Bluee blueNode;
-```
-
-### Weapon-Style Flow
-```mermaid
-flowchart TB;
-
-  classDef serverNode fill:#5bf547,stroke:#000000,color:#000000
-  classDef clientNode fill:#42a1f5,stroke:#000000,color:#000000
-  classDef universalNode fill:#b549eb,stroke:#000000,color:#000000
-
-  classDef redNode fill:#ff9191,stroke:#000000,color:#000000
-  classDef yellowNode fill:#fdff91,stroke:#000000,color:#000000
-  classDef greenNode fill:#91ff9c,stroke:#000000,color:#000000
-  classDef blueNode fill:#91b8ff,stroke:#000000,color:#000000
-
-  subgraph ServerScriptService
-    subgraph Managers
-      DamageManager;
-    end
-
-    subgraph OutputModules
-      Weapon_Server;
-    end
-
-    Weapon_Server---CharModules
-
-    subgraph CharModules
-      subgraph Redd
-        Q["Move1"]-->DamageManager;
-        R["Move2"]-->DamageManager;
-        S["Move3"]-->DamageManager;
-        T["Move4"];
-      end 
-      subgraph Yello
-        U["Move1"]-->DamageManager;
-        V["Move2"]-->DamageManager;
-        W["Move3"]-->DamageManager;
-        X["Move4"];
-      end 
-      subgraph Gleen
-        Y["Move1"]-->DamageManager;
-        Z["Move2"]-->DamageManager;
-        a["Move3"];
-        b["Move4"]-->DamageManager;
-        end 
-      subgraph Bluee
-        c["Move1"]-->DamageManager;
-        d["Move2"]-->DamageManager;
-        e["Move3"]-->DamageManager;
-        f["Move4"]-->DamageManager;
-      end 
-    end
-  end
-
-  subgraph ReplicatedStorage
-    Space;
-    Time;
-  end
-
-  class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,DamageManager,Q,R,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,KnockbackManager,StunManager serverNode;
-  class ModuleLoader2,Player-Input,M1_Client,Sol_Client,Movement,KnockbackHandler clientNode;
-  class Space,Time universalNode;
-
-  class Redd redNode;
-  class Yello yellowNode;
-  class Gleen greenNode;
-  class Bluee blueNode;
 ```
 
 ### Full System Diagram
@@ -406,14 +305,22 @@ flowchart TB;
   MovementManager-->StunManager;
 
   subgraph StarterGui
-    ModuleLoader3==>Transition-Manager;
-    ModuleLoader4==>Settings-Manager;
-    Selection-Manager;
+    subgraph Transition
+      ModuleLoader3==>A["Manager"]
+    end
+
+    subgraph Selection
+      B["Manager"]
+    end
+
+    subgraph Settings
+      ModuleLoader4==>C["Manager"]
+    end
   end
 
-  Matter-->|RE| ModuleLoader3-->Transition-Manager;
-  DataManager-->|RE| Settings-Manager-->|RE| DataManager;
-  Selection-Manager-->|RE| ModuleLoader-->Matter;
+  Matter-->|RE| ModuleLoader3-->A;
+  DataManager-->|RE| C-->|RE| DataManager;
+  B-->|RE| ModuleLoader-->Matter;
 
   M1_Server-->CooldownManager;
   Bare_Server-->CooldownManager;
@@ -422,7 +329,7 @@ flowchart TB;
   Weapon_Server-->StunManager;
 
   class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,Commands,Permissions,CooldownManager,DamageManager,DataManager,KnockbackManager,MapManager,MovementManager,StunManager,Matter serverNode;
-  class ModuleLoader2,Energy,M1_Client,Sol_Client,Movement,AnimationHandler,KnockbackHandler,MusicHandler,ModuleLoader3,ModuleLoader4,Transition-Manager,Settings-Manager,Selection-Manager clientNode;
+  class ModuleLoader2,Energy,M1_Client,Sol_Client,Movement,AnimationHandler,KnockbackHandler,MusicHandler,ModuleLoader3,ModuleLoader4,A,B,C clientNode;
   class Space,Time universalNode;
 ```
 
