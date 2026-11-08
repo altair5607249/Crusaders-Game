@@ -134,8 +134,6 @@ flowchart TB;
   classDef universalNode fill:#b549eb,stroke:#000000,color:#000000
 
   subgraph StarterPlayerScripts
-    ModuleLoader2
-  
     subgraph InputModules
       M1_Client;
       Sol_Client;
