@@ -58,6 +58,8 @@ flowchart TB;
   classDef greenNode fill:#00FF00,stroke:#000000,color:#000000
   classDef blueNode fill:#0000FF,stroke:#000000,color:#000000
 
+  ModuleLoader2-->KnockbackHandler;
+
   subgraph InputModules
     M1_Client;
     Sol_Client;
@@ -84,55 +86,55 @@ flowchart TB;
 
   subgraph Bare_Server-CharModules;
     subgraph BSC-Redd
-      BSCR-Move-1-->DamageManager;
-      BSCR-Move-2-->DamageManager;
-      BSCR-Move-3-->DamageManager;
-      BSCR-Move-4;
+      BSCR-Move1-->DamageManager;
+      BSCR-Move2-->DamageManager;
+      BSCR-Move3-->DamageManager;
+      BSCR-Move4;
     end 
     subgraph BSC-Yello
-      BSCY-Move-1-->DamageManager;
-      BSCY-Move-2-->DamageManager;
-      BSCY-Move-3-->DamageManager;
-      BSCY-Move-4-->DamageManager;
+      BSCY-Move1-->DamageManager;
+      BSCY-Move2-->DamageManager;
+      BSCY-Move3-->DamageManager;
+      BSCY-Move4-->DamageManager;
     end
     subgraph BSC-Gleen
-      BSCG-Move-1-->DamageManager;
-      BSCG-Move-2-->DamageManager;
-      BSCG-Move-3-->DamageManager;
-      BSCG-Move-4-->DamageManager;
+      BSCG-Move1-->DamageManager;
+      BSCG-Move2-->DamageManager;
+      BSCG-Move3-->DamageManager;
+      BSCG-Move4-->DamageManager;
     end 
     subgraph BSC-Bluee
-      BSCB-Move-1-->DamageManager;
-      BSCB-Move-2;
-      BSCB-Move-3-->DamageManager;
-      BSCB-Move-4;
+      BSCB-Move1-->DamageManager;
+      BSCB-Move2;
+      BSCB-Move3-->DamageManager;
+      BSCB-Move4;
     end 
   end
 
   subgraph Weapon_Server-CharModules;
     subgraph WSC-Redd
-      WSCR-Move-1-->DamageManager;
-      WSCR-Move-2-->DamageManager;
-      WSCR-Move-3-->DamageManager;
-      WSCR-Move-4;
+      WSCR-Move1-->DamageManager;
+      WSCR-Move2-->DamageManager;
+      WSCR-Move3-->DamageManager;
+      WSCR-Move4;
     end 
     subgraph WSC-Yello
-      WSCY-Move-1-->DamageManager;
-      WSCY-Move-2-->DamageManager;
-      WSCY-Move-3-->DamageManager;
-      WSCY-Move-4;
+      WSCY-Move1-->DamageManager;
+      WSCY-Move2-->DamageManager;
+      WSCY-Move3-->DamageManager;
+      WSCY-Move4;
     end 
     subgraph WSC-Gleen
-      WSCG-Move-1-->DamageManager;
-      WSCG-Move-2-->DamageManager;
-      WSCG-Move-3;
-      WSCG-Move-4-->DamageManager;
+      WSCG-Move1-->DamageManager;
+      WSCG-Move2-->DamageManager;
+      WSCG-Move3;
+      WSCG-Move4-->DamageManager;
     end 
     subgraph WSC-Bluee
-      WSCB-Move-1-->DamageManager;
-      WSCB-Move-2-->DamageManager;
-      WSCB-Move-3-->DamageManager;
-      WSCB-Move-4-->DamageManager;
+      WSCB-Move1-->DamageManager;
+      WSCB-Move2-->DamageManager;
+      WSCB-Move3-->DamageManager;
+      WSCB-Move4-->DamageManager;
     end 
   end
 
@@ -140,8 +142,11 @@ flowchart TB;
   ModuleLoader-->|Sol| Bare_Server-->Bare_Server-CharModules;
   ModuleLoader-->|Sol| Weapon_Server-->Weapon_Server-CharModules;
 
-  class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,DamageManager,BSCR-Move-1,BSCR-Move-2,BSCR-Move-3,BSCR-Move-4,BSCY-Move-1,BSCY-Move-2,BSCY-Move-3,BSCY-Move-4,BSCG-Move-1,BSCG-Move-2,BSCG-Move-3,BSCG-Move-4,BSCB-Move-1,BSCB-Move-2,BSCB-Move-3,BSCB-Move-4,WSCR-Move-1,WSCR-Move-2,WSCR-Move-3,WSCR-Move-4,WSCY-Move-1,WSCY-Move-2,WSCY-Move-3,WSCY-Move-4,WSCG-Move-1,WSCG-Move-2,WSCG-Move-3,WSCG-Move-4,WSCB-Move-1,WSCB-Move-2,WSCB-Move-3,WSCB-Move-4 serverNode;
-  class Player-Input,M1_Client,Sol_Client,Movement clientNode;
+  DamageManager-->KnockbackManager-->|RE| ModuleLoader2;
+  DamageManager-->StunManager;
+
+  class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,DamageManager,BSCR-Move1,BSCR-Move2,BSCR-Move3,BSCR-Move4,BSCY-Move1,BSCY-Move2,BSCY-Move3,BSCY-Move4,BSCG-Move1,BSCG-Move2,BSCG-Move3,BSCG-Move4,BSCB-Move1,BSCB-Move2,BSCB-Move3,BSCB-Move4,WSCR-Move1,WSCR-Move2,WSCR-Move3,WSCR-Move4,WSCY-Move1,WSCY-Move2,WSCY-Move3,WSCY-Move4,WSCG-Move1,WSCG-Move2,WSCG-Move3,WSCG-Move4,WSCB-Move1,WSCB-Move2,WSCB-Move3,WSCB-Move4,KnockbackManager,StunManager serverNode;
+  class ModuleLoader2,Player-Input,M1_Client,Sol_Client,Movement,KnockbackHandler clientNode;
 
   class BSC-Redd,WSC-Redd redNode;
   class BSC-Yello,WSC-Yello yellowNode;
