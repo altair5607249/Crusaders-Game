@@ -106,6 +106,7 @@ flowchart TB;
   class ModuleLoader2,Energy,AnimationHandler,KnockbackHandler,MusicHandler,M1_Client,Sol_Client,Movement,ModuleLoader3,ModuleLoader4,A,B,C clientNode;
   class Space,Time universalNode;
 ```
+`Everything-Else` includes `Administration`, `Managers`, and `OutputModules`, which are folders of modules/nodes parented to `ModuleLoader`.
 
 ### Combat Flow
 ```mermaid
@@ -180,6 +181,7 @@ flowchart TB;
   class ModuleLoader2,M1_Client,Sol_Client,Movement,KnockbackHandler clientNode;
   class Space,Time universalNode;
 ```
+The results, which aren't drawn, return to clients as replicated state and visuals.
 
 ### Full System Diagram
 ```mermaid
@@ -306,6 +308,7 @@ flowchart TB;
   class ModuleLoader2,Energy,M1_Client,Sol_Client,Movement,AnimationHandler,KnockbackHandler,MusicHandler,ModuleLoader3,ModuleLoader4,A,B,C clientNode;
   class Space,Time universalNode;
 ```
+This is the complete map for anyone who wants it :)
 
 ### Functionality
 (insert desc of every mechanic/module here later)
