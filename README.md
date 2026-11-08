@@ -84,25 +84,8 @@ flowchart TB;
     ModuleLoader;
     Matter;
 
-    subgraph Administration
-      Commands;
-      Permissions;
-    end
-
-    subgraph Managers
-      CooldownManager;
-      DamageManager;
-      DataManager;
-      KnockbackManager;
-      MapManager;
-      MovementManager;
-      StunManager;
-    end
-
-    subgraph OutputModules
-      M1_Server;
-      Bare_Server;
-      Weapon_Server;
+    subgraph Everything-Else
+      Lots-of-Modules;
     end
   end
 
@@ -114,12 +97,10 @@ flowchart TB;
   ModuleLoader2==>Energy==>InputModules;
 
   ModuleLoader==>Matter;
-  ModuleLoader==>Administration;
-  ModuleLoader==>Managers;
-  ModuleLoader==>OutputModules;
+  ModuleLoader==>Everything-Else;
 
   class Player-Joins,Player-Appears,Loading-Screen eventNode;
-  class ModuleLoader,Matter,Commands,Permissions,CooldownManager,DamageManager,DataManager,KnockbackManager,MapManager,MovementManager,StunManager,M1_Server,Bare_Server,Weapon_Server serverNode;
+  class ModuleLoader,Matter,Lots-of-Modules,CooldownManager,DamageManager,DataManager,KnockbackManager,MapManager,MovementManager,StunManager,M1_Server,Bare_Server,Weapon_Server serverNode;
   class ModuleLoader2,Energy,AnimationHandler,KnockbackHandler,MusicHandler,M1_Client,Sol_Client,Movement,ModuleLoader3,ModuleLoader4,A,B,C clientNode;
   class Space,Time universalNode;
 ```
