@@ -111,7 +111,7 @@ flowchart TB;
   ModuleLoader3==>|Loading-Screen-Removed| ModuleLoader2
 
   ModuleLoader2-->|RE| Matter-->Player-Appears;
-  Loading-Screen==>Energy==>InputModules;
+  ModuleLoader2==>Energy==>InputModules;
 
   ModuleLoader==>Matter;
   ModuleLoader==>Administration;
