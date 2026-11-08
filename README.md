@@ -84,55 +84,55 @@ flowchart TB;
 
   subgraph Bare_Server-CharModules;
     subgraph BSC-Redd
-      BSCR-Move-1;
-      BSCR-Move-2;
-      BSCR-Move-3;
+      BSCR-Move-1-->DamageManager;
+      BSCR-Move-2-->DamageManager;
+      BSCR-Move-3-->DamageManager;
       BSCR-Move-4;
     end 
     subgraph BSC-Yello
-      BSCY-Move-1;
-      BSCY-Move-2;
-      BSCY-Move-3;
-      BSCY-Move-4;
+      BSCY-Move-1-->DamageManager;
+      BSCY-Move-2-->DamageManager;
+      BSCY-Move-3-->DamageManager;
+      BSCY-Move-4-->DamageManager;
     end
     subgraph BSC-Gleen
-      BSCG-Move-1;
-      BSCG-Move-2;
-      BSCG-Move-3;
-      BSCG-Move-4;
+      BSCG-Move-1-->DamageManager;
+      BSCG-Move-2-->DamageManager;
+      BSCG-Move-3-->DamageManager;
+      BSCG-Move-4-->DamageManager;
     end 
     subgraph BSC-Bluee
-      BSCB-Move-1;
+      BSCB-Move-1-->DamageManager;
       BSCB-Move-2;
-      BSCB-Move-3;
+      BSCB-Move-3-->DamageManager;
       BSCB-Move-4;
     end 
   end
 
   subgraph Weapon_Server-CharModules;
     subgraph WSC-Redd
-      WSCR-Move-1;
-      WSCR-Move-2;
-      WSCR-Move-3;
+      WSCR-Move-1-->DamageManager;
+      WSCR-Move-2-->DamageManager;
+      WSCR-Move-3-->DamageManager;
       WSCR-Move-4;
     end 
     subgraph WSC-Yello
-      WSCY-Move-1;
-      WSCY-Move-2;
-      WSCY-Move-3;
+      WSCY-Move-1-->DamageManager;
+      WSCY-Move-2-->DamageManager;
+      WSCY-Move-3-->DamageManager;
       WSCY-Move-4;
     end 
     subgraph WSC-Gleen
-      WSCG-Move-1;
-      WSCG-Move-2;
+      WSCG-Move-1-->DamageManager;
+      WSCG-Move-2-->DamageManager;
       WSCG-Move-3;
-      WSCG-Move-4;
+      WSCG-Move-4-->DamageManager;
     end 
     subgraph WSC-Bluee
-      WSCB-Move-1;
-      WSCB-Move-2;
-      WSCB-Move-3;
-      WSCB-Move-4;
+      WSCB-Move-1-->DamageManager;
+      WSCB-Move-2-->DamageManager;
+      WSCB-Move-3-->DamageManager;
+      WSCB-Move-4-->DamageManager;
     end 
   end
 
