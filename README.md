@@ -361,8 +361,8 @@ This is the nigh-complete hierarchy of the game's source code, including scripts
     - `OutputModules`
       - `M1_Server` —
       - `Bare_Server` —
-      - `Weapon_Server` —
-    - `Matter` —
+      - `Weapon_Server` — 
+    - `Matter` — controls life and death for the players
 - `ReplicatedStorage`
   - `UniversalModules`
     - `Space` — houses config tables for O(1) lookups, calculates knockback vectors, and helps with finding directions
