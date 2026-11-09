@@ -313,16 +313,16 @@ This is the complete map for anyone who wants it :)
 ### Tree of Functionality
 This is the nigh-complete hierarchy of the game's source code, including scripts that didn't fit as nodes in the Full System Diagram! For those who want to see everything, including the most minor scripts, please refer to the [Source File](https://github.com/altair5607249/Crusaders-Game/blob/main/7077.rbxl) or the [docs (WIP)](https://github.com/altair5607249/Crusaders-Game/blob/main/docs/diagrams.md).
 - `StarterPlayerScripts`
-  - `ChatHandler` —
-  - `GuiManager` —
-  - `Hitboxes` —
-  - `ModuleLoader2` —
+  - `ChatHandler` — announces when an admin joins in the chat
+  - `GuiManager` — 
+  - `Hitboxes` —  
+  - `ModuleLoader2` — initializes client-side modules and receives certain remote events
     - `Handlers`
-      - `AnimationHandler` —
-      - `KnockbackHandler` —
-      - `MusicHandler` —
+      - `AnimationHandler` — 
+      - `KnockbackHandler` — applies a knockback vector to and plays an animation on the target character
+      - `MusicHandler` — 
     - `InputModules`
-      - `M1_Client` —
+      - `M1_Client` — 
       - `Movement` —
       - `Sol_Client` —
   - `Energy` —
