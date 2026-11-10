@@ -314,7 +314,7 @@ This is the complete map for anyone who wants it :)
 This is the nigh-complete hierarchy of the game's source code, including scripts that didn't fit as nodes in the Full System Diagram! For those who want to see everything, including the most minor scripts, please refer to the [Source File](https://github.com/altair5607249/Crusaders-Game/blob/main/7077.rbxl) or the [docs (WIP)](https://github.com/altair5607249/Crusaders-Game/blob/main/docs/diagrams.md).
 - `StarterPlayerScripts`
   - `ChatHandler` — announces when an admin joins in the chat
-  - `GuiManager` — 
+  - `GuiManager` — controls the starting screen
   - `Hitboxes` — generates hitboxes
   - `ModuleLoader2` — initializes client-side modules and receives certain remote events
     - `Handlers`
@@ -325,7 +325,7 @@ This is the nigh-complete hierarchy of the game's source code, including scripts
       - `M1_Client` — registers player input for basic/click attacks
       - `Movement` — registers player input for non-damaging techniques
       - `Sol_Client` — registers player input for character-exclusive attacks
-  - `Energy` —
+  - `Energy` — maps inputs to actions
 - `StarterGui`
   - `LoadingScreen`
     - `ModuleLoader3` —
@@ -344,9 +344,9 @@ This is the nigh-complete hierarchy of the game's source code, including scripts
     - `CameraFocus` —
       - `CameraHandler` —
     - `Collision` —
-    - `DummySpawner` —
+    - `DummySpawner` — replaces dummies when they're destroyed
     - `PartSpawner` — spawns a hitbox basis for each player's character upon joining
-  - `ModuleLoader` —
+  - `ModuleLoader` — initializes server-side modules and receives certain remote events
     - `Administration`
       - `Commands` — houses the admin commands
       - `Permissions` — houses the admin registry
