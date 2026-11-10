@@ -316,7 +316,7 @@ This is the nigh-complete hierarchy of the game's source code, including scripts
   - `ChatHandler` — announces when an admin joins in the chat
   - `GuiManager` — controls the starting screen
   - `Hitboxes` — generates hitboxes
-  - `ModuleLoader2` — initializes client-side modules and receives certain remote events
+  - `ModuleLoader2` — initializes client-side modules and receives remote events that invoke the modules' methods
     - `Handlers`
       - `AnimationHandler` — loads and caches character animations
       - `KnockbackHandler` — applies knockback vectors to and plays animations on target characters
@@ -328,13 +328,13 @@ This is the nigh-complete hierarchy of the game's source code, including scripts
   - `Energy` — maps inputs to actions
 - `StarterGui`
   - `LoadingScreen`
-    - `ModuleLoader3` —
-      - `Manager` —
+    - `ModuleLoader3` — initializes the child module and receives remote events that invoke the module's methods
+      - `Manager` — controls the starting and loading screen for players
   - `SelectionGui`
-    - `Manager` —
+    - `Manager` — controls the character-selection screen
   - `Settings`
-    - `ModuleLoader4` —
-      - `Manager` —
+    - `ModuleLoader4` — initializes the child module and receives remote events that invoke the module's methods
+      - `Manager` — controls player settings
 - `ServerScriptService`
   - `CoreGameplay`
     - `Mouselock` — clones and parents the child script to players
@@ -343,10 +343,10 @@ This is the nigh-complete hierarchy of the game's source code, including scripts
   - `Misc`
     - `CameraFocus` — clones and parents the child script to players
       - `CameraHandler` — focuses the player camera on the player character's head
-    - `Collision` —
+    - `Collision` — controls player collision alongside resultant effects (e.g., wall damage, fall damage)
     - `DummySpawner` — replaces dummies when they're destroyed
     - `PartSpawner` — spawns a hitbox basis for each player's character upon joining
-  - `ModuleLoader` — initializes server-side modules and receives certain remote events
+  - `ModuleLoader` — initializes server-side modules and receives remote events that invoke the modules' methods
     - `Administration`
       - `Commands` — houses the admin commands
       - `Permissions` — houses the admin registry
