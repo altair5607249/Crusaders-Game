@@ -392,6 +392,3 @@ flowchart TB;
   class ModuleLoader2,Energy,M1_Client,Sol_Client,Movement,AnimationHandler,KnockbackHandler,MusicHandler,ModuleLoader3,ModuleLoader4,Transition-Manager,Settings-Manager,Selection-Manager clientNode;
   class Space,Time universalNode;
 ```
-
-### Functionality
-(insert desc of every mechanic/module here later)
