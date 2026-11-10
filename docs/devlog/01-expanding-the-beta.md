@@ -26,6 +26,15 @@ The characters are decently balanced at the moment.
 
 However, that's only because I was able to combine sufficient experimental data from countless playtests with empirical data from the simple Agent-Based Model (ABM) I made.  
 
-If I was able to r
+If I was able to create an ABM that produces accurate-enough data, then I'd end up with better balance between characters while still saving time on playtesting!
+
+Sounds like a neat idea, but I'd have to learn more about game theory and code that ideal ABM myself, which will take a lot of time. I'm willing to do all that learning and coding since I actually enjoy that stuff, but I can't promise when it will be done.
 
 ## Network Optimization
+The amount of latency that exists isn't game-breaking, but it's annoying.  
+
+As computer scientists Donald Knuth once wrote in *The Art of Computer Programming* (1974), "Premature optimization is the root of all evil."  
+
+I heartily agree with that statement after seeing some of the stuff I wasted good problem-solving time on, like the listener subsystem in `Sol_Client`.
+
+Therefore, this issue will be one of the last things I address during the general development of this game, kept safe for whenever find myself bored and without real bottlenecks in the future.
