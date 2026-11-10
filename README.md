@@ -408,6 +408,7 @@ Its effects were small, in which only a few values (e.g., cooldown, damage, rang
 - Tutorials
   - [RPG Tutorial by GnomeCode](https://www.youtube.com/playlist?list=PLtMUa6NlF10eTKSVlNrTiPRqiR87f-V1j)
   - [Roblox Advanced Scripting Tutorial Guide by BrawlDev](https://www.youtube.com/playlist?list=PLQ1Qd31Hmi3WKkVHnadvhOOjz04AuMYAf)
+  - [How to Force Enable Shift-Lock](https://devforum.roblox.com/t/how-to-force-enable-shift-lock-without-changing-the-playermodule/1072967)
 - Public Assets
   - Maps
     - [City 17](https://developer.valvesoftware.com/wiki/City_17) by [Valve Software](https://www.valvesoftware.com/en/) (Abeyant)
