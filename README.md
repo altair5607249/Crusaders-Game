@@ -315,12 +315,12 @@ This is the nigh-complete hierarchy of the game's source code, including scripts
 - `StarterPlayerScripts`
   - `ChatHandler` — announces when an admin joins in the chat
   - `GuiManager` — 
-  - `Hitboxes` —  
+  - `Hitboxes` — generates hitboxes
   - `ModuleLoader2` — initializes client-side modules and receives certain remote events
     - `Handlers`
-      - `AnimationHandler` — 
+      - `AnimationHandler` — loads and caches character animations
       - `KnockbackHandler` — applies knockback vectors to and plays animations on target characters
-      - `MusicHandler` — 
+      - `MusicHandler` — tweens background music volume during map rotation
     - `InputModules`
       - `M1_Client` — registers player input for basic/click attacks
       - `Movement` — registers player input for non-damaging techniques
