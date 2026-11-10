@@ -437,7 +437,10 @@ Its effects were small, in which only a few values (e.g., cooldown, damage, rang
 
 ## Roadmap
 - Create a Unity version of Crusaders
-- Add a state machine
+- Add Orange/Xæon and Purple/Koleon
+- Add a state machine to `Matter`
 - Merge `Bare_Server` and `Weapon_Server`
+- Make three more custom maps
+- Build a better ABM
 - Reduce collision latency
-- Replace royalty-free music with custom music
+- Replace royalty-free music with custom music (2 tracks left!)
