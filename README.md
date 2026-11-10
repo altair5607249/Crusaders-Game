@@ -436,6 +436,7 @@ Its effects were small, in which only a few values (e.g., cooldown, damage, rang
   - [Street Fighter 6](https://store.steampowered.com/app/1364780/Street_Fighter_6/)
 
 ## Roadmap
+Just a list of things I wish to do for the game, written in no particular order.
 - Create a Unity version of Crusaders
 - Add Orange/Xæon and Purple/Koleon
 - Add a state machine to `Matter`
