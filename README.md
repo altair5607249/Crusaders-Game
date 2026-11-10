@@ -319,12 +319,12 @@ This is the nigh-complete hierarchy of the game's source code, including scripts
   - `ModuleLoader2` — initializes client-side modules and receives certain remote events
     - `Handlers`
       - `AnimationHandler` — 
-      - `KnockbackHandler` — applies a knockback vector to and plays an animation on the target character
+      - `KnockbackHandler` — applies knockback vectors to and plays animations on target characters
       - `MusicHandler` — 
     - `InputModules`
-      - `M1_Client` — 
-      - `Movement` —
-      - `Sol_Client` —
+      - `M1_Client` — registers player input for basic/click attacks
+      - `Movement` — registers player input for non-damaging techniques
+      - `Sol_Client` — registers player input for character-exclusive attacks
   - `Energy` —
 - `StarterGui`
   - `LoadingScreen`
@@ -345,24 +345,24 @@ This is the nigh-complete hierarchy of the game's source code, including scripts
       - `CameraHandler` —
     - `Collision` —
     - `DummySpawner` —
-    - `PartSpawner` —
+    - `PartSpawner` — spawns a hitbox basis for each player's character upon joining
   - `ModuleLoader` —
     - `Administration`
-      - `Commands` —
-      - `Permissions` —
+      - `Commands` — houses the admin commands
+      - `Permissions` — houses the admin registry
     - `Managers`
-      - `CooldownManager` —
-      - `DamageManager` —
-      - `DataManager` —
-      - `KnockbackManager` —
-      - `MapManager` —
-      - `MovementManager` —
-      - `StunManager` —
+      - `CooldownManager` — registers and tracks the timing of attacks and non-damaging techniques
+      - `DamageManager` — administers damage to target characters alongside secondary effects (e.g., shielding, reflection, knockback, stun)
+      - `DataManager` — saves player data and remotely shares it with player settings
+      - `KnockbackManager` — validates knockback vectors and administers the ragdoll state to target characters
+      - `MapManager` — rotates through available maps alongside their background music and skyboxes
+      - `MovementManager` — validates player input for non-damaging techniques and utilizes state enforcement on players' characters
+      - `StunManager` — administers the stun state to target characters
     - `OutputModules`
-      - `M1_Server` —
-      - `Bare_Server` —
-      - `Weapon_Server` — 
-    - `Matter` — controls life and death for the players
+      - `M1_Server` — validates player input for and allows basic/click attacks
+      - `Bare_Server` — validates player input for and allows character-exclusive, bare-style attacks
+      - `Weapon_Server` — validates player input for and allows character-exclusive, weapon-style attacks
+    - `Matter` — controls life and death for players' characters
 - `ReplicatedStorage`
   - `UniversalModules`
     - `Space` — houses config tables for O(1) lookups, calculates knockback vectors, and helps with finding directions
