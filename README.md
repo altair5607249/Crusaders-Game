@@ -337,12 +337,12 @@ This is the nigh-complete hierarchy of the game's source code, including scripts
       - `Manager` —
 - `ServerScriptService`
   - `CoreGameplay`
-    - `Mouselock` —
-      - `SLHandler` —
-    - `Weapon` —
+    - `Mouselock` — clones and parents the child script to players
+      - `SLHandler` — controls mouselock for players
+    - `Weapon` — repositions and modifies the motor joints of character weapons 
   - `Misc`
-    - `CameraFocus` —
-      - `CameraHandler` —
+    - `CameraFocus` — clones and parents the child script to players
+      - `CameraHandler` — focuses the player camera on the player character's head
     - `Collision` —
     - `DummySpawner` — replaces dummies when they're destroyed
     - `PartSpawner` — spawns a hitbox basis for each player's character upon joining
