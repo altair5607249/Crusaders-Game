@@ -14,6 +14,65 @@ Important parts will be given in smaller diagrams, and everything, everywhere, a
   - Green — Server
   - Purple — Universal
  
+## Initialization
+```mermaid
+flowchart TB;
+
+  classDef eventNode fill:#e33939,stroke:#000000,color:#000000
+  classDef serverNode fill:#5bf547,stroke:#000000,color:#000000
+  classDef clientNode fill:#42a1f5,stroke:#000000,color:#000000
+  classDef universalNode fill:#b549eb,stroke:#000000,color:#000000
+
+  subgraph StarterPlayerScripts
+    ModuleLoader2;
+    Energy;
+
+    subgraph Handlers
+      AnimationHandler;
+      KnockbackHandler;
+      MusicHandler;
+    end
+
+    subgraph InputModules
+      M1_Client;
+      Sol_Client;
+      Movement;
+    end
+  end
+
+  subgraph StarterGui
+    subgraph Transition
+      ModuleLoader3==>A["Manager"]
+    end
+  end
+
+  subgraph ServerScriptService
+    ModuleLoader;
+    Matter;
+
+    subgraph Everything-Else
+      Lots-of-Modules;
+    end
+  end
+
+  Player-Joins==>ModuleLoader2
+
+  A==>|Loading-Screen-Removed| ModuleLoader2
+
+  ModuleLoader2-->|RE| Matter-->Player-Appears;
+  ModuleLoader2==>Energy==>InputModules;
+  ModuleLoader2==>KnockbackHandler;
+  ModuleLoader2==>MusicHandler;
+
+  ModuleLoader==>Matter;
+  ModuleLoader==>Everything-Else;
+
+  class Player-Joins,Player-Appears,Loading-Screen eventNode;
+  class ModuleLoader,Matter,Lots-of-Modules,CooldownManager,DamageManager,DataManager,KnockbackManager,MapManager,MovementManager,StunManager,M1_Server,Bare_Server,Weapon_Server serverNode;
+  class ModuleLoader2,Energy,AnimationHandler,KnockbackHandler,MusicHandler,M1_Client,Sol_Client,Movement,ModuleLoader3,ModuleLoader4,A,B,C clientNode;
+  class Space,Time universalNode;
+```
+
 ## Client-Server Communication
 ```mermaid
 flowchart TB;
@@ -59,17 +118,12 @@ flowchart TB;
 ```mermaid
 flowchart TB;
 
+  classDef eventNode fill:#e33939,stroke:#000000,color:#000000
   classDef serverNode fill:#5bf547,stroke:#000000,color:#000000
   classDef clientNode fill:#42a1f5,stroke:#000000,color:#000000
   classDef universalNode fill:#b549eb,stroke:#000000,color:#000000
 
   subgraph StarterPlayerScripts
-    subgraph Handlers
-      KnockbackHandler;
-    end
-
-    ModuleLoader2-->KnockbackHandler;
-  
     subgraph InputModules
       M1_Client;
       Sol_Client;
@@ -83,16 +137,13 @@ flowchart TB;
 
   M1_Client-->|RE| ModuleLoader;
   Sol_Client-->|RE| ModuleLoader;
-  Movement-->|RE| MovementManager;
+  Movement
 
   subgraph ServerScriptService
     ModuleLoader;
 
     subgraph Managers
       CooldownManager;
-      KnockbackManager;
-      MovementManager;
-      StunManager;
     end
 
     subgraph OutputModules
@@ -103,6 +154,7 @@ flowchart TB;
   
     subgraph Managers
       DamageManager;
+      MovementManager;
     end
   
     ModuleLoader-->|M1| M1_Server
@@ -110,34 +162,31 @@ flowchart TB;
     ModuleLoader-->|Sol| Weapon_Server
   end
 
-  DamageManager-->KnockbackManager-->|RE| ModuleLoader2;
-  DamageManager-->StunManager;
-
   subgraph ReplicatedStorage
-    Space;
-    Time;
+    subgraph UniversalModules
+      Space;
+      Time;
+    end
   end
 
-  M1_Server-->Space;
-  M1_Server-->Time;  
-  Bare_Server-->Space;
-  Bare_Server-->Time;
-  Weapon_Server-->Space;
-  Weapon_Server-->Time;
+  OutputModules-->Space;
+  OutputModules-->Time;
 
   M1_Server-->CooldownManager;
   Bare_Server-->CooldownManager;
-  Bare_Server-->StunManager;
   Weapon_Server-->CooldownManager;
-  Weapon_Server-->StunManager;
 
-  M1_Client-->Time;
-  Sol_Client-->Time;
+  M1_Server-->DamageManager;
+  Bare_Server-->DamageManager;
+  Weapon_Server-->DamageManager;
+
+  InputModules-->Time;
   Movement-->Space;
-  Movement-->Time;
+  Movement-->|RE; Anticheat| MovementManager;
 
-  class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,DamageManager,KnockbackManager,StunManager,CooldownManager serverNode;
-  class ModuleLoader2,Player-Input,M1_Client,Sol_Client,Movement,KnockbackHandler clientNode;
+  class Player-Input eventNode;
+  class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,DamageManager,CooldownManager,MovementManager serverNode;
+  class ModuleLoader2,M1_Client,Sol_Client,Movement,KnockbackHandler clientNode;
   class Space,Time universalNode;
 ```
 
@@ -308,14 +357,14 @@ flowchart TB;
   M1_Client-->|RE| ModuleLoader;
   Sol_Client-->|RE| ModuleLoader;
   Movement-->|RE| MovementManager;
-  M1_Client-->Time;
-  Sol_Client-->Time;
-  Movement-->Time;
+  InputModules-->Time;
   Movement-->Space;
 
   subgraph ReplicatedStorage
-    Space;
-    Time;
+    subgraph UniversalModules
+      Space;
+      Time;
+    end
   end
 
   ModuleLoader==>Administration;
@@ -373,22 +422,28 @@ flowchart TB;
   MovementManager-->StunManager;
 
   subgraph StarterGui
-    ModuleLoader3==>Transition-Manager;
-    ModuleLoader4==>Settings-Manager;
-    Selection-Manager;
+    subgraph Transition
+      ModuleLoader3==>A["Manager"]
+    end
+
+    subgraph Selection
+      B["Manager"]
+    end
+
+    subgraph Settings
+      ModuleLoader4==>C["Manager"]
+    end
   end
 
-  Matter-->|RE| ModuleLoader3-->Transition-Manager;
-  DataManager-->|RE| Settings-Manager-->|RE| DataManager;
-  Selection-Manager-->|RE| ModuleLoader-->Matter;
+  Matter-->|RE| ModuleLoader3-->A;
+  DataManager-->|RE| C-->|RE| DataManager;
+  B-->|RE| ModuleLoader-->Matter;
 
-  M1_Server-->CooldownManager;
-  Bare_Server-->CooldownManager;
+  OutputModules-->CooldownManager;
   Bare_Server-->StunManager;
-  Weapon_Server-->CooldownManager;
   Weapon_Server-->StunManager;
 
   class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,Commands,Permissions,CooldownManager,DamageManager,DataManager,KnockbackManager,MapManager,MovementManager,StunManager,Matter serverNode;
-  class ModuleLoader2,Energy,M1_Client,Sol_Client,Movement,AnimationHandler,KnockbackHandler,MusicHandler,ModuleLoader3,ModuleLoader4,Transition-Manager,Settings-Manager,Selection-Manager clientNode;
+  class ModuleLoader2,Energy,M1_Client,Sol_Client,Movement,AnimationHandler,KnockbackHandler,MusicHandler,ModuleLoader3,ModuleLoader4,A,B,C clientNode;
   class Space,Time universalNode;
 ```
