@@ -3,14 +3,14 @@ This folder contains all the info you need to know about each character in Crusa
 
 ## Character Overview
 Just a quick, by-character overview:
-- Red / Redd / Aidalon / Aidan
-- Orange / Orang / Xæon / Sean
-- Yellow / Yello / Ethandros / Ethan
-- Green / Gleen / Zakyros / Zachary
-- Blue / Bluee / Gabrius / Gabriel
-- Purple / Purble / Koleon / Colin
+- Red / Redd / Aidalon / Aidan — the all-rounder
+- Orange / Orang / Xæon / Sean — TBA
+- Yellow / Yello / Ethandros / Ethan — the zoner
+- Green / Gleen / Zakyros / Zachary — the grappler
+- Blue / Bluee / Gabrius / Gabriel — the wildcard
+- Purple / Purble / Koleon / Colin — TBA
 
-## Nomenclature
+### Nomenclature
 - Main Name: for chromatic association
 - Auxiliary Name: for coding
 - Lore Name: for creative writing & worldbuilding
