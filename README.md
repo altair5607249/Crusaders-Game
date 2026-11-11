@@ -434,8 +434,9 @@ Its effects were small, in which only a few values (e.g., cooldown, damage, rang
     - [TopbarPlus](https://create.roblox.com/store/asset/92368439343389/TopbarPlus) by [ForeverHD](https://www.roblox.com/users/82347291/profile)
     - [Asadrith's Dialogue Kit](https://create.roblox.com/store/asset/18835619908/Asadriths-Dialogue-Kit) by [Asadrith](https://www.youtube.com/channel/UCSHDfp-fGeSeIP4j_Q_gKdA)
 - Inspirations
-  - [The Strongest Battlegrounds](https://www.roblox.com/games/10449761463/The-Strongest-Battlegrounds)
-  - [Street Fighter 6](https://store.steampowered.com/app/1364780/Street_Fighter_6/)
+  - [The Strongest Battlegrounds](https://www.roblox.com/games/10449761463/The-Strongest-Battlegrounds) by [Yielding Arts](https://www.roblox.com/communities/12013007/Yielding-Arts#!/about)
+  - [Street Fighter 6](https://store.steampowered.com/app/1364780/Street_Fighter_6/) by [Capcom](https://www.capcom.com/)
+  - [Lookism](https://lookism.fandom.com/wiki/Lookism_Wiki) by [Taejun Pak (PTJ)](https://lookism.fandom.com/wiki/Park_Tae-jun_(Author))
 
 ## Roadmap
 Just a list of things I wish to do for the game, written in no particular order.
