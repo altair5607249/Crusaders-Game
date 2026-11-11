@@ -376,6 +376,7 @@ In short, it was a capricious choice made by me to algorithmically balance every
 Its effects were small, in which only a few values (e.g., cooldown, damage, range) were tweaked, but the whole process meant a lot to me in terms of learning, even if I wasn't writing the majority of it (see [Credits & Disclosures](https://github.com/altair5607249/Crusaders-Game/blob/main/README.md#credits--disclosures)) and simply designing its agent logic for the most part.
 
 ## Constraints
+"A pinch is a chance." — Uncle (Isekai Ojisan), 2019
 - Project Constraints
   - No budget, so custom & public assets + free tools are used during Crusaders' development
   - No formal team, so my friends collaborate whenever they're available
@@ -388,6 +389,7 @@ Its effects were small, in which only a few values (e.g., cooldown, damage, rang
   - Time spent on making stuff competes with schoolwork & extracurriculars, so good time management is key
 
 ## Credits & Disclosures
+"If I have seen further, it is by standing on the shoulders of giants." — Sir Isaac Newton, 1675
 - Crusaders' full codebase is only visible in the [Source File](https://github.com/altair5607249/Crusaders-Game/blob/main/7077.rbxl)
   - The reason for this is that I couldn't properly save the content under certain services, like `StarterGui`
   - If you absolutely cannot access the the file, please refer to the [docs (WIP)](https://github.com/altair5607249/Crusaders-Game/blob/main/docs/diagrams.md)!!!
