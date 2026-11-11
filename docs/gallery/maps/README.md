@@ -1,4 +1,4 @@
-# Gallery — Maps!
+# Gallery — Maps
 Here, you'll find images of each map, including:
 - Winterness (Lobby) by InstantlyBread (Me)
 - Backrooms by GreenHoldinItDown (Zachary) & InstantlyBread (Me)
