@@ -5,6 +5,8 @@ While this is to be expected with the growth of a project such as this, one deci
 
 I did not completely abandon the idea of them; I'm simply saving them for the Crusaders RPG I will be working on in the distant future with [Godot Engine](https://godotengine.org/).
 
+Also, I'm pretty sure you'll notice this along with the content mismatch I just indicated, but I stopped using this document by the time I finished Red's/Aidalon's bare-style moveset.
+
 ## Game To-Do List
 Notes:
 
