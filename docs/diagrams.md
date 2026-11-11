@@ -245,9 +245,19 @@ flowchart TB;
   end
 
   subgraph ReplicatedStorage
-    Space;
-    Time;
+    subgraph UniversalModules
+      Space;
+      Time;
+    end
   end
+
+  Bare_Server-->UniversalModules;
+  OutputModules-->Time;
+
+  D-->Space;
+  J-->Space;
+  L-->Space;
+  O-->Space;
 
   class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,DamageManager,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,KnockbackManager,StunManager serverNode;
   class ModuleLoader2,Player-Input,M1_Client,Sol_Client,Movement,KnockbackHandler clientNode;
@@ -312,10 +322,19 @@ flowchart TB;
   end
 
   subgraph ReplicatedStorage
-    Space;
-    Time;
+    subgraph UniversalModules
+      Space;
+      Time;
+    end
   end
 
+  Weapon_Server-->UniversalModules;
+  OutputModules-->Time;
+
+  X-->Space;
+  a-->Space;
+  b-->Space;
+  
   class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,DamageManager,Q,R,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,KnockbackManager,StunManager serverNode;
   class ModuleLoader2,Player-Input,M1_Client,Sol_Client,Movement,KnockbackHandler clientNode;
   class Space,Time universalNode;
