@@ -5,7 +5,7 @@ Behold, Crusaders' simple ABM, which tests baseline character balance!
 | Version | Description | Status |
 | --- | --- | --- |
 | v1 | Bare-style-focused version. I designed the model + its agent behavior and directed the build, finding and fixing most of the problems myself. Much of the code was written with AI assistance (Claude and Gemini). | [Recovered](https://github.com/altair5607249/Crusaders-Game/blob/main/abm/abm_v1.ipynb?short_path=d9abe4e) |
-| v2 | Weapon-style-focused version with batched matchups, per-move tallying, and a fixed RL wrapper. | Lost (not saved) |
+| v2 | Weapon-style-focused version with batched matchups, per-move tallying, and a fixed RL wrapper. | [Partially recovered](https://github.com/altair5607249/Crusaders-Game/blob/main/abm/abm_v2.py) |
 | v3 | Full rewrite by me. I'm aware that the ABM code is rushed and messy, so I will be working on a full rewrite without AI! | In progress |
 
 ## Codebase
@@ -39,4 +39,4 @@ Not because I enjoy torturing myself with my capriciousness, but for the love of
 
 I used basic intuition and experimental studies to balance the characters' stats, but I felt a little unconfident without empirical analysis to back up my numbers.
 
-As I was researching ways to optimize the numbers with actual game theory, Agent-Based Modeling was one of the first and most promising solutions that came up!
+As I was researching ways to optimize the numbers with actual game theory, Agent-Based Modeling was one of the first and most promising solutions that came up! Trying it out seemed harmless and enriching, so I made it a side quest of mine to integrate the process of creating one into Crusaders' beta development pipeline.
