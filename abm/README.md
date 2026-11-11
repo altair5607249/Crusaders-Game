@@ -11,13 +11,27 @@ Behold, Crusaders' simple ABM, which tests baseline character balance!
 ## Codebase
 All of the code for the second version of the ABM hasn't been recovered, so the diagram below will only be describing the general flow of the program, largely deriving from the first version of the ABM.
 
-### General Idea
+### Legend
+
+### Tick-Length Lifecycle
 ```mermaid
+
 flowchart TB;
 
-A-->B
+A("Agent step begins")-->B["Tick down active cooldowns"]-->C["Regenerate 1 stamina"]-->D["Process delayed hit(s)"]
+
+D-->E{Alive?}
+E-->|No| F["Skip the tick"]
+E-->|Yes| G["Continue"]
+
+G-->H{Stunned or Animation-Locked?}
+H-->|Yes| I["Skip the tick"]
+H-->|No| J["Continue"]
+
+J-->K["Evaluate & choose move"]
+
 ```
-test
+For reference, a single tick lasts 0.1 seconds.
 
 ## Constraints
 - Time
