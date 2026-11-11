@@ -24,6 +24,7 @@ Behold, Crusaders' simple ABM, which tests baseline character balance!
   - Time moves in 0.1-second ticks, so moves with fast startups are rounded off and become inaccurate
 - Agent Behavior
   - Agents pick moves using tag priority and randomness, not reinforcement learning (v1 only)
+  - Agents pick moves using tag priority and reinforcement learning (v2+)
 - Results' Meaning
   - Model output is not a proof of balance, and must be weighed against real playtest results
   - Against real playtest results, the model seems to be relatively accurate
