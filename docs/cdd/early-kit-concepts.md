@@ -1,3 +1,9 @@
+## Disclaimer
+This game was originally meant to be much more martially realistic.
+
+However, I ended making a quick decision during alpha development to let the characters' lore player a greater role in their kits. Thankfully, this decision would allow me to build a bridge between martial realism and the fantastical elements of The Ashes, and Crusaders ended up with gameplay that was uniquely ours (me and my friends).
+
+## Game Fighting
 Client-Server Architecture (to work on):
 
 * Client Module (animations)  
