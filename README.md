@@ -3,7 +3,9 @@ Crusaders is a 3D, free-for-all fighting game currently in beta and is available
 
 Not all of Crusaders' code is visible on this repo, so please refer to the [Source File](https://github.com/altair5607249/Crusaders-Game/blob/main/7077.rbxl) for everything, including the minor scripts!!! ***Assistive technology was used for production efficiency***; full credits for it can be found under [Credits & Disclosures](https://github.com/altair5607249/Crusaders-Game/blob/main/README.md#credits--disclosures) if you're interested in the specifics.
 
-For those who wish to see the game's progress from before I added GitHub to my workflow, please refer to [The Timeline](https://github.com/altair5607249/Crusaders-Game-Timeline).
+For those who wish to see the game's progress from before I added GitHub to my workflow, please refer to [The Timeline](https://github.com/altair5607249/Crusaders-Game-Timeline). 
+
+If you're more of a visual person, why not take a look at the [gallery](https://github.com/altair5607249/Crusaders-Game/tree/main/docs/gallery)?
 
 ## Play the Game!
 | Medium | Requirements | Compatibility | Status |
