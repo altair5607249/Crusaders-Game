@@ -1,3 +1,11 @@
+## Disclaimer
+You might notice that some of the content below doesn't exist or was replaced with something else in the current version of Crusaders.
+
+While this is to be expected with the growth of a project such as this, one decision that *will* stand out is the omission of ultimate abilities, commonly referred to as "ults" these days.
+
+I did not completely abandon the idea of them; I'm simply saving them for the Crusaders RPG I will be working on in the distant future with [Godot Engine](https://godotengine.org/).
+
+## Game To-Do List
 Notes:
 
 - Weapon M1s & moves will drain this faster than the Bare M1s & moves  
