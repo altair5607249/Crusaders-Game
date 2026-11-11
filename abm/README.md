@@ -9,8 +9,15 @@ Behold, Crusaders' simple ABM, which tests baseline character balance!
 | v3 | Full rewrite by me. I'm aware that the ABM code is rushed and messy, so I will be working on a full rewrite without AI! | In progress |
 
 ## Codebase
-(insert flowchart here)  
-(insert desc of components here)
+All of the code for the second version of the ABM hasn't been recovered, so the diagram below will only be describing the general flow of the program, largely deriving from the first version of the ABM.
+
+### General Idea
+```mermaid
+flowchart TB;
+
+A-->B
+```
+test
 
 ## Constraints
 - Time
