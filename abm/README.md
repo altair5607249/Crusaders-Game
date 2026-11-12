@@ -11,7 +11,13 @@ Behold, Crusaders' simple ABM, which tests baseline character balance!
 ## Codebase
 All of the code for the second version of the ABM hasn't been recovered, so the diagram below will only be describing the general flow of the program, largely deriving from the first version of the ABM.
 
+Also, this code is way shorter and simpler than [Crusaders' system](https://github.com/altair5607249/Crusaders-Game/blob/main/docs/diagrams.md), so I will only be using basic shape standards (see [ISO 5807:1985](https://cdn.standards.iteh.ai/samples/11955/1b7dd254a2a54fd7a89d616dc0570e18/ISO-5807-1985.pdf)).
+
 ### Legend
+- Rounded Rectangle — terminator; the start or end of the program
+- Rectangle — process; an action or task
+- Rhombus — decision; yes/no branch point
+- Ray — flow line; direction of the program's sequence
 
 ### Tick-Length Lifecycle
 ```mermaid
@@ -28,7 +34,7 @@ G-->H{Stunned or Animation-Locked?}
 H-->|Yes| I["Skip the tick"]
 H-->|No| J["Continue"]
 
-J-->K["Evaluate & choose move"]
+J-->K["Evaluate & choose move"]-->L("Agent step ends")
 
 ```
 For reference, a single tick lasts 0.1 seconds.
