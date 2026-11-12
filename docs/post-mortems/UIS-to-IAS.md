@@ -1,5 +1,5 @@
 # UIS to IAS
-This is just a lil' anecdote about how hard it was for me to switch from UserInputService (UIS) to InputActionSystem (IAS).
+This is just a lil' anecdote about how hard it was for me to switch from User Input Service (UIS) to Input Action System (IAS).
 
 ## Getting Accustomed to UIS
 As I began developing on Roblox, I always used UIS to map user inputs to in-game actions, though mostly for simple actions such as sprinting and shiftlock.  
@@ -14,3 +14,8 @@ As much as I wanted to stick to coding with UIS, I knew it would be much more be
 IAS is easier to use, and especially more scalable! The biggest reason of all for me to start using it, however, was the fact that other game engines utilized it natively. So, it was with a heavy heart that I revamped my codebase in the middle of alpha development.
 
 Though I wasn't nearly advanced enough in coding to be pulling a stunt like this, I already had an idea for integrating IAS into Crusaders' full system architecture, and I didn't want to forget the idea while it was still fresh in my mind.
+
+## Energizing the System
+After removing UIS from the code under `InputModules`, my brain worked overtime to justify the new system.
+
+At first, I imagined each module under `InputModules` (e.g., `M1_Client`) would require `Energy`, the module my IAS lived in. However, each of those modules speaking to `Energy` at once introduced too many bugs for me to fix at the time; the most glaring issue if I went this route would've been finding out what `Energy` would return.
