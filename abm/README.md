@@ -61,7 +61,7 @@ The University of Wisconsin-Madison (see [Agent-Based Evolutionary Game Dynamics
 
 Essentially, agent-based modeling is a way of simulating real-world systems. Such systems are made up by individual units (e.g., atoms, people, institutions) which repeatedly interact with each other and/or their environment!
 
-For a more in-depth look at the subject, please refer to the University of Wisconsin-Madison's research linked above, or other credible sources (e.g., Stanford Encyclopedia of Philosophy — [Agent-Based Modeling in the Philosophy of Science](https://plato.stanford.edu/entries/agent-modeling-philscience/)).
+For a more in-depth look at the subject, please refer to the University of Wisconsin-Madison's research linked above, or other credible sources (e.g., [Stanford Encyclopedia of Philosophy](https://plato.stanford.edu/about.html) — [Agent-Based Modeling in the Philosophy of Science](https://plato.stanford.edu/entries/agent-modeling-philscience/)).
 
 ## Why did I use Agent-Based Modeling?
 Not because I enjoy torturing myself with my capriciousness, but for the love of the game (literally)!
