@@ -1,4 +1,6 @@
 # Expanding the Beta
+*November 11, 2026*
+
 Right now, the game is alright, but it could use more of everything: custom maps, characters, character balance, and network optimization!  
 
 ...Also, I need to document my work better. It's quite hard doing all of this work retroactively.
