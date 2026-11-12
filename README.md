@@ -397,18 +397,18 @@ Its effects were small, in which only a few values (e.g., cooldown, damage, rang
   - If you absolutely cannot access the the file, please refer to the [docs (WIP)](https://github.com/altair5607249/Crusaders-Game/blob/main/docs/diagrams.md)!!!
 - My Friends' Roles
   - Aidan ([@Trapizoid](https://www.pixilart.com/trapizoid)) — Lead Artist, Lead Composer, QA Tester
-  - Jazz — QA Tester
-  - Zachary ([]()) — Programmer, Artist, QA Tester, Map Designer, Narrative Designer, Voice Actor, Composer, Animator
+  - Jazz [@jazkatbuttersky](https://www.roblox.com/users/474688120/profile) — QA Tester
+  - Zachary ([@exp3ctati0nz](https://www.roblox.com/users/306366365/profile)) — Programmer, Artist, QA Tester, Map Designer, Narrative Designer, Voice Actor, Composer, Animator
   - Gabriel ([@NERailDude](https://www.youtube.com/@northeasttransitproductions)) — QA Tester
-- AI (Claude & Gemini) Usage
+- AI ([Claude](https://academy.claude.com/courses/claude-101/what-is-claude) & [Gemini](https://gemini.google/overview/)) Usage
   - Reviewing and suggesting code for the game
   - Writing code for the game, which was tweaked by me afterwards and occurred on two separate occasions:
     - Applying skins in `Matter`
     - Applying skins in `SelectionManager`
   - Writing code for the ABM, specifically
-    - Mesa/Agent boilerplate 
-    - Gymnasium/RL wrapper
-    - Seaborn data visualization
+    - [Mesa](https://mesa.readthedocs.io/latest/)/Agent boilerplate 
+    - [Gymnasium](https://gymnasium.farama.org/index.html)/RL wrapper
+    - [Seaborn](https://seaborn.pydata.org/) data visualization
 - Tutorials
   - [RPG Tutorial by GnomeCode](https://www.youtube.com/playlist?list=PLtMUa6NlF10eTKSVlNrTiPRqiR87f-V1j)
   - [Roblox Advanced Scripting Tutorial Guide by BrawlDev](https://www.youtube.com/playlist?list=PLQ1Qd31Hmi3WKkVHnadvhOOjz04AuMYAf)
@@ -417,7 +417,7 @@ Its effects were small, in which only a few values (e.g., cooldown, damage, rang
   - Maps
     - [City 17](https://developer.valvesoftware.com/wiki/City_17) by [Valve Software](https://www.valvesoftware.com/en/) (Abeyant)
       - Can't find the original asset from the Creator Store, but it's literally an asset rip from Half-Life 2
-      - The map won't be in the current rotation until Valve Software confirms with Zachary that it's okay to use their map
+      - The map won't be in the current rotation until Zachary confirms with Valve Software that it's okay to use their map
     - [Cyberpunk City](https://create.roblox.com/store/asset/11332829712/Cyberpunk-city) by [Animateria](https://sketchfab.com/Animateria)
     - [Floating Castle](https://create.roblox.com/store/asset/8673654426/Floating-Castle) by [J4milion](https://www.roblox.com/users/2236599004/profile)
     - [Former School](https://create.roblox.com/store/asset/8855189243/Former-School) by [Brendan](https://www.linkedin.com/in/brendan-o-brien-a6b1b4269/) & [RedManta LLC](https://www.redmanta.games/)
