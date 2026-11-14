@@ -1,6 +1,10 @@
 # Crusaders — Game
 Crusaders is a 3D, free-for-all fighting game currently in beta and is available on Roblox! 
 
+| ![the-art](https://github.com/user-attachments/assets/4bdd5bc8-4a6e-4e2a-abe9-a1943c2f2d2d) |
+| :---: |
+| "Colorful dudes" by [@Trapizoid](https://www.pixilart.com/art/colorful-dudes-cfr216b17d4cccaws3?ft=user&ft_id=429e6a2cc06f24f) |
+
 Not all of Crusaders' code is visible on this repo, so please refer to the [Source File](https://github.com/altair5607249/Crusaders-Game/blob/main/7077.rbxl) for everything, including the minor scripts!!! ***Assistive technology was used for production efficiency***; full credits for it can be found under [Credits & Disclosures](https://github.com/altair5607249/Crusaders-Game/blob/main/README.md#credits--disclosures) if you're interested in the specifics.
 
 For those who wish to see the game's progress from before I added GitHub to my workflow, please refer to [The Timeline](https://github.com/altair5607249/Crusaders-Game-Timeline). 
