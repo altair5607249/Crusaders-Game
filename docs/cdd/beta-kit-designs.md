@@ -3,12 +3,25 @@ These are the final kit designs for the open beta of Crusaders!
 
 Future versions will receive stat adjustments and (potentially) entire reworks, but the main idea will remain the same for each character.
 
+## General Format
+- Character Overview
+  - Configuration Tables — these numbers can be found in `Space`, `Time`, `M1_Server`, and the UI itself
+    - Character Configs
+    - M1 Configs
+  - Moveset — for the stats of each move, please refer to the [source code](https://github.com/altair5607249/Crusaders-Game/tree/main/src) itself
+    - Bare Style
+    - Weapon Style
+
 ## Red
 Also known as Aidalon, Red has an answer for everything! 
 
-Though he's the roster's all-rounder, he possesses a special gimmick of his own: the lower his health gets, the stronger his moveset becomes.
+He's formidable in close-range combat, has powerful mid-range responses, can use shockwaves at a distance, and has explicit, defensive countermeasures against most attacks. Even his stats play to his general strength.
 
-### Character Configurations
+Though he's the roster's all-rounder, he possesses a special gimmick of his own: the lower his health gets, the stronger his moveset becomes. Whether this means adding a secondary effect to the move (e.g., bypassing parries), increasing the move's stats (e.g., damage), or leaving it the way it is (for character balance) is dependent on the nature of the move itself.
+
+### Configuration Tables
+
+#### Character Configs
 | Stat | Amount |
 | --- | --- |
 | Max Health (HP) | 300 |
@@ -16,7 +29,7 @@ Though he's the roster's all-rounder, he possesses a special gimmick of his own:
 | Walk Speed (studs/second) | 16 |
 | Run Speed (studs/second) | 24 |
 
-### M1 Configurations
+#### M1 Configs
 | Stat | Bare Style | Weapon Style |
 | --- | --- | --- |
 | Damage (HP) | 5 | 6.25 |
@@ -29,13 +42,34 @@ Though he's the roster's all-rounder, he possesses a special gimmick of his own:
 | Finisher Hitstun (seconds) | 0.0 | 0.0 |
 | Extension (seconds) | 0.9 | 0.9 |
 
+### Moveset
+
+#### Bare Style
+| Move # | Move Name | Description |
+| --- | --- | --- |
+| Move 1 | Headbutt | --- |
+| Move 2 | Hero's Fist | --- |
+| Move 3 | Sacred Circle | --- |
+| Move 4 | Sixth Sense | --- |
+
+#### Weapon Style
+| Move # | Move Name | Description |
+| --- | --- | --- |
+| Move 1 | Feint | --- |
+| Move 2 | Supernova | --- |
+| Move 3 | Blade Parade | --- |
+| Move 4 | Chanticleer Counter | --- |
+
 ## Orange
 
 Sorry, but I haven't figured this character out yet; check back later!
 
 ## Yellow
+Also known as Ethandros, Yellow can outpace any plan!
 
-### Character Configurations
+### Configuration Tables
+
+#### Character Configs
 | Stat | Amount |
 | --- | --- |
 | Max Health (HP) | 250 |
@@ -43,7 +77,7 @@ Sorry, but I haven't figured this character out yet; check back later!
 | Walk Speed (studs/second) | 15.5 |
 | Run Speed (studs/second) | 25 |
 
-### M1 Configurations
+### M1 Configs
 | Stat | Bare Style | Weapon Style |
 | --- | --- | --- |
 | Damage (HP) | 4.85 | 5.7 |
@@ -56,9 +90,30 @@ Sorry, but I haven't figured this character out yet; check back later!
 | Finisher Hitstun (seconds) | 0.5 | 0.5 |
 | Extension (seconds) | 0.8 | 0.8 |
 
-## Green
+### Moveset
 
-### Character Configurations
+#### Bare Style
+| Move # | Move Name | Description |
+| --- | --- | --- |
+| Move 1 | Beam | --- |
+| Move 2 | Invisible Attack | --- |
+| Move 3 | Fulmination | --- |
+| Move 4 | Rift Rush | --- |
+
+#### Weapon Style
+| Move # | Move Name | Description |
+| --- | --- | --- |
+| Move 1 | Lasso | --- |
+| Move 2 | Lighthouse | --- |
+| Move 3 | Breakaway | --- |
+| Move 4 | Borean Blitz | --- |
+
+## Green
+Also known as Zakyros, Green won't go down without a fight!
+
+### Configuration Tables
+
+#### Character Configs
 | Stat | Amount |
 | --- | --- |
 | Max Health (HP) | 325 |
@@ -66,7 +121,7 @@ Sorry, but I haven't figured this character out yet; check back later!
 | Walk Speed (studs/second) | 17 |
 | Run Speed (studs/second) | 22 |
 
-### M1 Configurations
+### M1 Configs
 | Stat | Bare Style | Weapon Style |
 | --- | --- | --- |
 | Damage (HP) | 4.95 | 5.9 |
@@ -79,9 +134,30 @@ Sorry, but I haven't figured this character out yet; check back later!
 | Finisher Hitstun (seconds) | 0.0 | 0.0 |
 | Extension (seconds) | 1 | 1 |
 
-## Blue
+### Moveset
 
-### Character Configurations
+#### Bare Style
+| Move # | Move Name | Description |
+| --- | --- | --- |
+| Move 1 | Headbutt | --- |
+| Move 2 | Hero's Fist | --- |
+| Move 3 | Sacred Circle | --- |
+| Move 4 | Sixth Sense | --- |
+
+#### Weapon Style
+| Move # | Move Name | Description |
+| --- | --- | --- |
+| Move 1 | Yeet | --- |
+| Move 2 | Accretion Disk | --- |
+| Move 3 | Anchor Point | --- |
+| Move 4 | Ghillie Groundbreaker | --- |
+
+## Blue
+Also known as Gabrius, Blue is nearly impossible to predict!
+
+### Configuration Tables
+
+#### Character Configs
 | Stat | Amount |
 | --- | --- |
 | Max Health (HP) | 275 |
@@ -89,7 +165,7 @@ Sorry, but I haven't figured this character out yet; check back later!
 | Walk Speed (studs/second) | 16.5 |
 | Run Speed (studs/second) | 23 |
 
-### M1 Configurations
+### M1 Configs
 | Stat | Bare Style | Weapon Style |
 | --- | --- | --- |
 | Damage (HP) | 4.9 | 5.9 |
@@ -101,6 +177,24 @@ Sorry, but I haven't figured this character out yet; check back later!
 | Hitstun (seconds) | 0.55 | 0.55 |
 | Finisher Hitstun (seconds) | 0.0 | 0.0 |
 | Extension (seconds) | 0.9 | 0.9 |
+
+### Moveset
+
+#### Bare Style
+| Move # | Move Name | Description |
+| --- | --- | --- |
+| Move 1 | Rip | --- |
+| Move 2 | Copy | --- |
+| Move 3 | Vortex | --- |
+| Move 4 | Gamble | --- |
+
+#### Weapon Style
+| Move # | Move Name | Description |
+| --- | --- | --- |
+| Move 1 | Rend | --- |
+| Move 2 | Oumuamua | --- |
+| Move 3 | Sword Trick | --- |
+| Move 4 | Protean Pace | --- |
 
 ## Purple
 
