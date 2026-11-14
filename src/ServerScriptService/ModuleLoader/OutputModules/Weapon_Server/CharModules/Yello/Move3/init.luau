@@ -11,11 +11,16 @@ local duration = timing.GetValue("Yello", "Weapon", 3, 3) - delayTime
 local YM3 = {}
 
 function YM3:Trigger(player: Player)
-	print("weapon ym3")
-
 	local char = player.Character or player.CharacterAdded:Wait()
 	local hum: Humanoid = char:WaitForChild("Humanoid")
 	local root: Part = char:WaitForChild("HumanoidRootPart")
+
+	local sfx = script.Throw:Clone()
+	sfx.Parent = root
+	sfx:Play()
+	sfx.Ended:Connect(function()
+		sfx:Destroy()
+	end)
 	
 	local rootFrame = root.CFrame
 	local extendedHitbox = rootFrame * CFrame.new(1.5, 0, -42.5)
@@ -24,6 +29,7 @@ function YM3:Trigger(player: Player)
 		atkdur = duration,
 		atkrad = 5,
 		atktype = "medium",
+		customSound = script.Whack,
 		dmg = 30,
 		getTargets = true,
 		ID = 3,

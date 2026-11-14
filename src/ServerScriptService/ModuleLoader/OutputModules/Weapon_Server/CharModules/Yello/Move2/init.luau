@@ -11,8 +11,6 @@ local duration = timing.GetValue("Yello", "Weapon", 3, 2) - delayTime
 local YM2 = {}
 
 function YM2:Trigger(player: Player)
-	print("weapon ym2")
-
 	local char = player.Character or player.CharacterAdded:Wait()
 	local hum = char:WaitForChild("Humanoid")
 	local root = char:WaitForChild("HumanoidRootPart")
@@ -30,12 +28,19 @@ function YM2:Trigger(player: Player)
 		origin = root,
 		style = "Weapon"
 	}
+
+	local sfx = script.Flash:Clone()
+	sfx.Parent = root
+	sfx:Play()
+	sfx.Ended:Connect(function()
+		sfx:Destroy()
+	end)
 	
 	local light = Instance.new("PointLight")
 	light.Parent = root
 
 	--customizing the light
-	light.Brightness = 10
+	light.Brightness = 17
 	light.Color = Color3.new(1, 1, 0)
 
 	task.delay(duration, function()

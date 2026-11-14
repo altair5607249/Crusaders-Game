@@ -15,11 +15,16 @@ local tweenInfo = TweenInfo.new(retraction, Enum.EasingStyle.Sine, Enum.EasingDi
 local YM1 = {}
 
 function YM1:Trigger(player: Player)
-	print("weapon ym1")
-
 	local char = player.Character or player.CharacterAdded:Wait()
 	local hum = char:WaitForChild("Humanoid")
 	local root: Part = char:WaitForChild("HumanoidRootPart")
+
+	local sfx = script.Throw:Clone()
+	sfx.Parent = root
+	sfx:Play()
+	sfx.Ended:Connect(function()
+		sfx:Destroy()
+	end)
 	
 	local rootFrame = root.CFrame
 	local extendedHitbox = rootFrame * CFrame.new(0, 0, -25)
@@ -28,6 +33,7 @@ function YM1:Trigger(player: Player)
 		atkdur = duration - retraction,
 		atkrad = 3,
 		atktype = "light",
+		customSound = script.Tie,
 		dmg = 20,
 		getTargets = true,
 		ID = 1,

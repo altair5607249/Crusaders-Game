@@ -30,8 +30,6 @@ end
 local YM4 = {}
 
 function YM4:Trigger(player: Player)
-	print("weapon ym4")
-
 	local char = player.Character or player.CharacterAdded:Wait()
 	local hum: Humanoid = char:WaitForChild("Humanoid")
 	local root: Part = char:WaitForChild("HumanoidRootPart")
@@ -45,6 +43,13 @@ function YM4:Trigger(player: Player)
 	local speed: number = spacing.GetValue("Yello", 2) * 2
 	movement.ChangeTolerance(player, speed)
 	hum.WalkSpeed = speed
+
+	local sfx = script.Boost:Clone()
+	sfx.Parent = root
+	sfx:Play()
+	sfx.Ended:Connect(function()
+		sfx:Destroy()
+	end)
 	
 	local vfx = RS.AttackVFX.Electricity:Clone()
 	vfx.Parent = workspace
