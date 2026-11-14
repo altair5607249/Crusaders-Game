@@ -1,16 +1,19 @@
 # Beta Kit Designs
 These are the final kit designs for the open beta of Crusaders! 
 
-Future versions will receive stat adjustments and (potentially) entire reworks, but the main idea will remain the same for each character.
+Future versions will receive stat adjustments and (potentially) entire reworks, but the main idea established here will remain the same for each character.
 
-## General Format
+## Notes
+The general format of each character's section in this document is as follows:
 - Character Overview
   - Configuration Tables — these numbers can be found in `Space`, `Time`, `M1_Server`, and the UI itself
     - Character Configs
     - M1 Configs
-  - Moveset — for the stats of each move, please refer to the [source code](https://github.com/altair5607249/Crusaders-Game/tree/main/src) itself
+  - Moveset — for the specific data (e.g., damage, hitstun, knockback) attributed to each move, please refer to the [source code](https://github.com/altair5607249/Crusaders-Game/tree/main/src) itself
     - Bare Style
     - Weapon Style
+   
+Any mention of "SOL" in this document refers to the unique energy that lives within each individual and gives them life. If you wish to understand this intradiegetic concept better, you may refer to my [creative writing repo](https://github.com/altair5607249/Crusaders-Writing).
 
 ## Red
 Also known as Aidalon, Red has an answer for everything! 
@@ -47,18 +50,18 @@ Though he's the roster's all-rounder, he possesses a special gimmick of his own:
 #### Bare Style
 | Move # | Move Name | Description |
 | --- | --- | --- |
-| Move 1 | Headbutt | --- |
-| Move 2 | Hero's Fist | --- |
-| Move 3 | Sacred Circle | --- |
-| Move 4 | Sixth Sense | --- |
+| 1 | Headbutt | Red swiftly smashes his head forward. |
+| 2 | Hero's Fist | Red reinforces his right fist with his SOL before throwing it forward, creating a massive shockwave in the process. |
+| 3 | Sacred Circle | Red summons a ring of fire around himself that radiates symmetrically. |
+| 4 | Sixth Sense | Red becomes massless, gaining immunity to all attacks; he also has the opportunity to equip his weapon, effectively switching from bare style to weapon style. |
 
 #### Weapon Style
 | Move # | Move Name | Description |
 | --- | --- | --- |
-| Move 1 | Feint | --- |
-| Move 2 | Supernova | --- |
-| Move 3 | Blade Parade | --- |
-| Move 4 | Chanticleer Counter | --- |
+| 1 | Feint | Red pretends to use Supernova, but swipes his hand forward at the last moment. |
+| 2 | Supernova | Red builds up SOL in his knife before spinning in a circle with it, releasing all of its destructive energy in a brilliant explosion; he nearly passes out afterward. |
+| 3 | Blade Parade | Red telekinetically throws his knife around himself, its trajectory radiating symemetrically. |
+| 4 | Chanticleer Counter | Red substitutes himself with his pet rooster, which proportionally reflects all damage administered to it. |
 
 ## Orange
 
@@ -66,6 +69,10 @@ Sorry, but I haven't figured this character out yet; check back later!
 
 ## Yellow
 Also known as Ethandros, Yellow can outpace any plan!
+
+There's no time to waste against him, as he can chip away at your health from the comfort of his corner; even backing him up into an actual corner may simply prompt him to run away.
+
+His whole thing is being fast, whether through the timing of his moves, his actual movement, or his general play style. Of course, the main downside to his kit is that he's quite frail, so it's best to keep some distance when playing as him; he performs best at farther ranges, having minimal coverage for close to mid-range combat.
 
 ### Configuration Tables
 
@@ -95,21 +102,25 @@ Also known as Ethandros, Yellow can outpace any plan!
 #### Bare Style
 | Move # | Move Name | Description |
 | --- | --- | --- |
-| Move 1 | Beam | --- |
-| Move 2 | Invisible Attack | --- |
-| Move 3 | Fulmination | --- |
-| Move 4 | Rift Rush | --- |
+| Move 1 | Beam | Yellow shoots a beam of his SOL's destructive energy forward. |
+| Move 2 | Invisible Attack | Yellow kicks forward faster than the eye can perceive. |
+| Move 3 | Fulmination | Yellow leaps up and smashes the ground with the force of a thunderbolt, damaging the surrounding area. |
+| Move 4 | Rift Rush | Yellow quickly summons a pair of portals, instantly traveling forward through them. |
 
 #### Weapon Style
 | Move # | Move Name | Description |
 | --- | --- | --- |
-| Move 1 | Lasso | --- |
-| Move 2 | Lighthouse | --- |
-| Move 3 | Breakaway | --- |
-| Move 4 | Borean Blitz | --- |
+| Move 1 | Lasso | Yellow slings his yoyo forward, roping in anyone caught by it. |
+| Move 2 | Lighthouse | Yellow opens his SOL, surrounding himself with a blinding light that stuns anyone close enough. |
+| Move 3 | Breakaway | Yellow performs a yoyo trick, tossing it forward in a wide motion. (Note: I know the yoyo is supposed to be tossed to the side of the yo-yoer, but I somehow forgot to animate it that way! I will rectify this in a future update, of course.) |
+| Move 4 | Borean Blitz | Yellow strengthens his body with his SOL, moving with incredible speed; his weapon-style moveset is enhanced during this strengthened state, and all successful hits (including M1s) restore stamina. |
 
 ## Green
 Also known as Zakyros, Green won't go down without a fight!
+
+He's got a few tricks up his sleeve to make sure his opponents won't escape unscathed; not only is he tanky, but he can steal health and utilize a shield. That all goes without even mentioning his grab!
+
+Being the type of fighter he is, there is a key benefit to keeping him at high health: his moveset becomes stronger. He practically follows the same principle that Red does with low health, though that does lead to the implication that he grows weaker as he loses more health, which is true.
 
 ### Configuration Tables
 
@@ -139,17 +150,17 @@ Also known as Zakyros, Green won't go down without a fight!
 #### Bare Style
 | Move # | Move Name | Description |
 | --- | --- | --- |
-| Move 1 | Headbutt | --- |
-| Move 2 | Hero's Fist | --- |
-| Move 3 | Sacred Circle | --- |
-| Move 4 | Sixth Sense | --- |
+| Move 1 | Suplex | Green grabs the opponent (if there is one) in front of him and slams them onto the ground behind himself. |
+| Move 2 | Animal Instinct | Green laughs and locks onto the nearest opponent (if one is in range), swinging violently at them. |
+| Move 3 | Give Gifts | Green prays and levitates behind the nearest opponent (if one is in range), stealing their health. |
+| Move 4 | Breach | Green flies forward for a period of time, during which his trajectory changes with wherever he's facing; he stops early if he hits an opponent. |
 
 #### Weapon Style
 | Move # | Move Name | Description |
 | --- | --- | --- |
-| Move 1 | Yeet | --- |
-| Move 2 | Accretion Disk | --- |
-| Move 3 | Anchor Point | --- |
+| Move 1 | Yeet | Green hurls his anchor forward; anything penetrated by the tip is dealt with triple the damage. |
+| Move 2 | Accretion Disk | Green swings his anchor around himself in a circle. |
+| Move 3 | Anchor Point | Green shields himself in the direction he's facing with his anchor; he's able to move while his shield is up. |
 | Move 4 | Ghillie Groundbreaker | --- |
 
 ## Blue
