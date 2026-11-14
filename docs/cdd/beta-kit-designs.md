@@ -50,18 +50,18 @@ Though he's the roster's all-rounder, he possesses a special gimmick of his own:
 #### Bare Style
 | Move # | Move Name | Description |
 | --- | --- | --- |
-| 1 | Headbutt | Red swiftly smashes his head forward. When his health is below 50%, this move is able to bypass parrying. |
-| 2 | Hero's Fist | Red reinforces his right fist with his SOL before throwing it forward, creating a massive shockwave in the process. This move's damage scales higher with lower health. When his health is below 20%, this move is able to bypass parrying. |
-| 3 | Sacred Circle | Red summons a ring of fire around himself that radiates symmetrically. |
-| 4 | Sixth Sense | Red becomes massless, gaining immunity to all attacks; he also has the opportunity to equip his weapon, effectively switching from bare style to weapon style. This move's immunity duration scales higher with lower health. |
+| [Move 1](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/OutputModules/Bare_Server/CharModules/Redd/Move1/init.luau) | Headbutt | Red swiftly smashes his head forward. When his health is below 50% of its maximum value, this move is able to bypass parrying. |
+| [Move 2](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/OutputModules/Bare_Server/CharModules/Redd/Move2/init.luau) | Hero's Fist | Red reinforces his right fist with his SOL before throwing it forward, creating a massive shockwave in the process. This move's damage scales higher with lower health. When his health is below 20% of its maximum value, this move is able to bypass parrying. |
+| [Move 3](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/OutputModules/Bare_Server/CharModules/Redd/Move3/init.luau) | Sacred Circle | Red summons a ring of fire around himself that radiates symmetrically. |
+| [Move 4](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/OutputModules/Bare_Server/CharModules/Redd/Move4/init.luau) | Sixth Sense | Red becomes massless, gaining immunity to all attacks; he also has the opportunity to equip his weapon, effectively switching from bare style to weapon style. This move's immunity duration scales higher with lower health. |
 
 #### Weapon Style
 | Move # | Move Name | Description |
 | --- | --- | --- |
-| 1 | Feint | Red pretends to use Supernova, but swipes his hand forward at the last moment. |
-| 2 | Supernova | Red builds up SOL in his knife before spinning in a circle with it, releasing all of its destructive energy in a brilliant explosion; he nearly passes out afterward. This move's damage scales higher with lower health. |
-| 3 | Blade Parade | Red telekinetically throws his knife around himself, its trajectory radiating symemetrically. |
-| 4 | Chanticleer Counter | Red substitutes himself with his pet rooster, which proportionally reflects all damage administered to it. The proportion of reflected damage scales higher with lower health. |
+| [Move 1](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/OutputModules/Weapon_Server/CharModules/Redd/Move1/init.luau) | Feint | Red pretends to use Supernova, but swipes his hand forward at the last moment. |
+| [Move 2](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/OutputModules/Weapon_Server/CharModules/Redd/Move2/init.luau) | Supernova | Red builds up SOL in his knife before spinning in a circle with it, releasing all of its destructive energy in a brilliant explosion; he nearly passes out afterward. This move's damage scales higher with lower health. |
+| [Move 3](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/OutputModules/Weapon_Server/CharModules/Redd/Move3/init.luau) | Blade Parade | Red telekinetically throws his knife around himself, its trajectory radiating symmetrically. |
+| [Move 4](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/OutputModules/Weapon_Server/CharModules/Redd/Move4/init.luau) | Chanticleer Counter | Red substitutes himself with his pet rooster, which proportionally reflects all damage administered to it. The proportion of reflected damage scales higher with lower health. |
 
 ## Orange
 
@@ -72,7 +72,7 @@ Also known as Ethandros, Yellow can outpace any plan!
 
 There's no time to waste against him, as he can chip away at your health from the comfort of his corner; even backing him up into an actual corner may simply prompt him to run away.
 
-His whole thing is being fast, whether through the timing of his moves, his actual movement, or his general play style. Of course, the main downside to his kit is that he's quite frail, so it's best to keep some distance when playing as him; he performs best at farther ranges, having minimal coverage for close to mid-range combat.
+His whole thing is being fast, whether through the timing of his moves, his actual movement, or his general playstyle. Of course, the main downside to his kit is that he's quite frail, so it's best to keep some distance when playing as him; he performs best at farther ranges, having minimal coverage for close to mid-range combat.
 
 ### Configuration Tables
 
@@ -84,7 +84,7 @@ His whole thing is being fast, whether through the timing of his moves, his actu
 | Walk Speed (studs/second) | 15.5 |
 | Run Speed (studs/second) | 25 |
 
-### M1 Configs
+#### M1 Configs
 | Stat | Bare Style | Weapon Style |
 | --- | --- | --- |
 | Damage (HP) | 4.85 | 5.7 |
@@ -102,10 +102,10 @@ His whole thing is being fast, whether through the timing of his moves, his actu
 #### Bare Style
 | Move # | Move Name | Description |
 | --- | --- | --- |
-| Move 1 | Beam | Yellow shoots a beam of his SOL's destructive energy forward. |
-| Move 2 | Invisible Attack | Yellow kicks forward faster than the eye can perceive. |
-| Move 3 | Fulmination | Yellow leaps up and smashes the ground with the force of a thunderbolt, damaging the surrounding area. |
-| Move 4 | Rift Rush | Yellow quickly summons a pair of portals, instantly traveling forward through them. |
+| [Move 1](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/OutputModules/Bare_Server/CharModules/Yello/Move1/init.luau) | Beam | Yellow shoots a beam of his SOL's destructive energy forward. |
+| [Move 2](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/OutputModules/Bare_Server/CharModules/Yello/Move2/init.luau) | Invisible Attack | Yellow kicks forward faster than the eye can perceive. |
+| [Move 3](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/OutputModules/Bare_Server/CharModules/Yello/Move3/init.luau) | Fulmination | Yellow leaps up and smashes the ground with the force of a thunderbolt, damaging the surrounding area. |
+| [Move 4](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/OutputModules/Bare_Server/CharModules/Yello/Move4/init.luau) | Rift Rush | Yellow quickly summons a pair of portals, instantly traveling forward through them. |
 
 #### Weapon Style
 | Move # | Move Name | Description |
@@ -132,7 +132,7 @@ Being the type of fighter he is, there is a key benefit to keeping him at high h
 | Walk Speed (studs/second) | 17 |
 | Run Speed (studs/second) | 22 |
 
-### M1 Configs
+#### M1 Configs
 | Stat | Bare Style | Weapon Style |
 | --- | --- | --- |
 | Damage (HP) | 4.95 | 5.9 |
@@ -150,21 +150,25 @@ Being the type of fighter he is, there is a key benefit to keeping him at high h
 #### Bare Style
 | Move # | Move Name | Description |
 | --- | --- | --- |
-| Move 1 | Suplex | Green grabs the opponent (if there is one) in front of him and slams them onto the ground behind himself. |
-| Move 2 | Animal Instinct | Green laughs and locks onto the nearest opponent (if one is in range), swinging violently at them. This move's damage scales higher with higher health. |
-| Move 3 | Give Gifts | Green prays and levitates behind the nearest opponent (if one is in range), stealing their health. This move's heal scales higher with lower health. |
-| Move 4 | Breach | Green flies forward for a period of time, during which his trajectory changes with wherever he's facing; he stops early if he hits an opponent. |
+| [Move 1](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/OutputModules/Bare_Server/CharModules/Gleen/Move1/init.luau) | Suplex | Green grabs the opponent in front of him if there is one, and slams them onto the ground behind himself. |
+| [Move 2](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/OutputModules/Bare_Server/CharModules/Gleen/Move2/init.luau) | Animal Instinct | Green laughs and locks onto the nearest opponent if one is in range, swinging violently at them. This move's damage scales higher with higher health. |
+| [Move 3](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/OutputModules/Bare_Server/CharModules/Gleen/Move3/init.luau) | Give Gifts | Green prays to the past and repositions himself behind the nearest opponent if one is in range, stealing their health. This move's heal scales higher with lower health. |
+| [Move 4](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/OutputModules/Bare_Server/CharModules/Gleen/Move4/init.luau) | Breach | Green propels himself forward with his SOL for a period of time, during which his trajectory changes with wherever he's facing; he stops early if he hits an opponent. |
 
 #### Weapon Style
 | Move # | Move Name | Description |
 | --- | --- | --- |
-| Move 1 | Yeet | Green hurls his anchor forward; anything penetrated by the tip is dealt with triple the damage. |
-| Move 2 | Accretion Disk | Green swings his anchor around himself in a circle. This move drains the stamina of whomever it hits. |
-| Move 3 | Anchor Point | Green shields himself in the direction he's facing with his anchor; he's able to move while his shield is up. The strength of the shield scales higher with higher health. |
-| Move 4 | Ghillie Groundbreaker | Green leaps forward and smashes the ground beneath him as he lands. When his stamina is equal to this move's cost, the damage diminishes by 20%; when his stamina is lesser than the cost, the damage diminishes by 40% and the effective radius is halved. |
+| [Move 1](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/OutputModules/Weapon_Server/CharModules/Gleen/Move1/init.luau) | Yeet | Green hurls his anchor forward; anything penetrated by the tip is dealt with triple the damage. |
+| [Move 2](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/OutputModules/Weapon_Server/CharModules/Gleen/Move2/init.luau) | Accretion Disk | Green swings his anchor around himself in a circle. This move drains the stamina of whomever it hits. |
+| [Move 3](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/OutputModules/Weapon_Server/CharModules/Gleen/Move3/init.luau) | Anchor Point | Green shields himself in the direction he's facing with his anchor; he's able to move while his shield is up. The strength of the shield scales higher with higher health. |
+| [Move 4](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/OutputModules/Weapon_Server/CharModules/Gleen/Move4/init.luau) | Ghillie Groundbreaker | Green leaps forward and smashes the ground beneath him as he lands. When his stamina is equal to this move's cost, the damage diminishes by 20%; when his stamina is lesser than the cost, the damage diminishes by 40% and the effective radius is halved. |
 
 ## Blue
 Also known as Gabrius, Blue is nearly impossible to predict!
+
+If you think the other characters have tricks, this guy is the entire magic show. He can copy his opponents, gamble with them, and even mess with their cooldowns. I've had to add numerous features to the codebase (e.g., cooldown manipulation) just because of him!
+
+He can play effectively at any range, though his heaviest-hitting moves prefer narrow spaces. Without experience, you're bound to be confused by him at least once. Once you've fought him enough times, his tricks can be countered by your mindfulness, though knowing his playstyle doesn't make him any less dangerous.
 
 ### Configuration Tables
 
@@ -176,7 +180,7 @@ Also known as Gabrius, Blue is nearly impossible to predict!
 | Walk Speed (studs/second) | 16.5 |
 | Run Speed (studs/second) | 23 |
 
-### M1 Configs
+#### M1 Configs
 | Stat | Bare Style | Weapon Style |
 | --- | --- | --- |
 | Damage (HP) | 4.9 | 5.9 |
@@ -194,18 +198,18 @@ Also known as Gabrius, Blue is nearly impossible to predict!
 #### Bare Style
 | Move # | Move Name | Description |
 | --- | --- | --- |
-| Move 1 | Rip | Blue cleaves the air with his hand, creating a temporary, spatial rip in front of himself. |
-| Move 2 | Copy | Blue warps his SOL, allowing himself to perform the other characters' moves. He can only copy one, random move at a time; the pool of available moves does not include any weapon-style moves, nor the fourth bare-style move of other characters. |
-| Move 3 | Vortex | Blue  |
-| Move 4 | Gamble | --- |
+| [Move 1](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/OutputModules/Bare_Server/CharModules/Bluee/Move1/init.luau) | Rip | Blue cleaves the air with his hand, creating a temporary, spatial rip in front of himself. |
+| [Move 2](https://github.com/altair5607249/Crusaders-Game/tree/main/src/ServerScriptService/ModuleLoader/OutputModules/Bare_Server/CharModules/Bluee/Move2/init.luau) | Copy | Blue warps his SOL, allowing himself to perform the other characters' moves. He can only copy one, random move at a time; the pool of available moves does not include any weapon-style moves, nor the fourth bare-style move of other characters. |
+| [Move 3](https://github.com/altair5607249/Crusaders-Game/tree/main/src/ServerScriptService/ModuleLoader/OutputModules/Bare_Server/CharModules/Bluee/Move3/init.luau) | Vortex | Blue spins and sucks in every opponent if there are any in range. |
+| [Move 4](https://github.com/altair5607249/Crusaders-Game/tree/main/src/ServerScriptService/ModuleLoader/OutputModules/Bare_Server/CharModules/Bluee/Move4/init.luau) | Gamble | Blue offers to gamble with the nearest opponent if one is in range; the gamble at hand is a coin flip. Whoever fails the coin flip loses an eighth of their current health and is left stunned. If both players pick the same option, nothing happens. If both players lose after picking different options, they're both left stunned. |
 
 #### Weapon Style
 | Move # | Move Name | Description |
 | --- | --- | --- |
-| Move 1 | Rend | --- |
-| Move 2 | Oumuamua | --- |
-| Move 3 | Sword Trick | --- |
-| Move 4 | Protean Pace | --- |
+| [Move 1](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/OutputModules/Weapon_Server/CharModules/Bluee/Move1/init.luau) | Rend | Blue dashes forward and swings his sword, creating a narrow shockwave in the process. |
+| [Move 2](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/OutputModules/Weapon_Server/CharModules/Bluee/Move2/init.luau) | Oumuamua | Blue ends one of his moves' cooldowns early; the pool of available moves does not include any bare-style moves. If none of his moves are on cooldown, he performs a variant of this move called "Azurewrath," in which he adds cooldown to a random move of the nearest opponent if one is in range; the pool of available moves depends on the opponent's current fighting style. |
+| [Move 3](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/OutputModules/Weapon_Server/CharModules/Bluee/Move3/init.luau) | Sword Trick | Blue performs a series of forward slashes with his sword. |
+| [Move 4](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/OutputModules/Weapon_Server/CharModules/Bluee/Move4/init.luau) | Protean Pace | Blue channels his SOL through his sword and releases its destructive energy forward, which takes different forms depending on his health: If his health is above or equal to 66% of its maximum value, it becomes ice; if his health is between 66% and 33% of its maximum value (or equal to 33%), it becomes water; if his health is below 33% of its maximum value, it becomes vapor. |
 
 ## Purple
 
