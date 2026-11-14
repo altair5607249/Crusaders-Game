@@ -5,7 +5,7 @@
 | :---: |
 | "Colorful dudes" by [@Trapizoid](https://www.pixilart.com/art/colorful-dudes-cfr216b17d4cccaws3?ft=user&ft_id=429e6a2cc06f24f) |
 
-Not all of Crusaders' code is visible on this repo, so please refer to the [Source File](https://github.com/altair5607249/Crusaders-Game/blob/main/7077.rbxl) for everything, including the minor scripts!!! ***Assistive technology was used for production efficiency***; full credits for it can be found under [Credits & Disclosures](https://github.com/altair5607249/Crusaders-Game/blob/main/README.md#credits--disclosures) if you're interested in the specifics.
+Not all of Crusaders' code is visible on this repo, so please refer to the [Source File](7107.rbxl) for everything, including the minor scripts!!! ***Assistive technology was used for production efficiency***; full credits for it can be found under [Credits & Disclosures](https://github.com/altair5607249/Crusaders-Game/blob/main/README.md#credits--disclosures) if you're interested in the specifics.
 
 For those who wish to see the game's progress from before I added GitHub to my workflow, please refer to [The Timeline](https://github.com/altair5607249/Crusaders-Game-Timeline). 
 
@@ -15,7 +15,7 @@ If you're more of a visual person, why not take a look at the [gallery](https://
 | Medium | Requirements | Compatibility | Status |
 | --- | --- | --- | --- |
 | Live Game | Roblox Account (Verified 16+) | PC & Mobile | [Active](https://www.roblox.com/games/123600574843310/Crusaders) |
-| Source File | Roblox Account; Roblox Studio | PC | [Active](https://github.com/altair5607249/Crusaders-Game/blob/main/7077.rbxl)
+| Source File | Roblox Account; Roblox Studio | PC | [Active](7107.rbxl)
 | Unity | N/A | N/A | In Progress |
 
 ### Instructions  
@@ -317,7 +317,7 @@ flowchart TB;
 This is the complete map for anyone who wants it :)
 
 ### Tree of Functionality
-This is the nigh-complete hierarchy of the game's source code, including scripts that didn't fit as nodes in the Full System Diagram! For those who want to see everything, including the most minor scripts, please refer to the [Source File](https://github.com/altair5607249/Crusaders-Game/blob/main/7077.rbxl) or the [docs (WIP)](https://github.com/altair5607249/Crusaders-Game/blob/main/docs/diagrams.md).
+This is the nigh-complete hierarchy of the game's source code, including scripts that didn't fit as nodes in the Full System Diagram! For those who want to see everything, including the most minor scripts, please refer to the [Source File](7107.rbxl) or the [docs (WIP)](https://github.com/altair5607249/Crusaders-Game/blob/main/docs/diagrams.md).
 - `StarterPlayerScripts`
   - `ChatHandler` — announces when an admin joins in the chat
   - `GuiManager` — controls the starting screen
@@ -396,7 +396,7 @@ Its effects were small, in which only a few values (e.g., cooldown, damage, rang
 
 ## Credits & Disclosures
 "If I have seen further, it is by standing on the shoulders of giants." — Sir Isaac Newton, 1675
-- Crusaders' full codebase is only visible in the [Source File](https://github.com/altair5607249/Crusaders-Game/blob/main/7077.rbxl)
+- Crusaders' full codebase is only visible in the [Source File](7107.rbxl)
   - The reason for this is that I couldn't properly save the content under certain services, like `StarterGui`
   - If you absolutely cannot access the the file, please refer to the [docs (WIP)](https://github.com/altair5607249/Crusaders-Game/blob/main/docs/diagrams.md)!!!
 - My Friends' Roles
