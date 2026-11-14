@@ -310,7 +310,7 @@ flowchart TB;
   Bare_Server-->StunManager;
   Weapon_Server-->StunManager;
 
-  class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,MovementManager,Commands,Permissions,CooldownManager,DamageManager,DataManager,KnockbackManager,MapManager,MovementManager,StunManager,Matter serverNode;
+  class ModuleLoader,M1_Server,Bare_Server,Weapon_Server,Commands,Permissions,CooldownManager,DamageManager,DataManager,KnockbackManager,MapManager,MovementManager,StunManager,Matter serverNode;
   class ModuleLoader2,Energy,M1_Client,Sol_Client,Movement,AnimationHandler,KnockbackHandler,MusicHandler,ModuleLoader3,ModuleLoader4,A,B,C clientNode;
   class Space,Time universalNode;
 ```
@@ -398,10 +398,10 @@ Its effects were small, in which only a few values (e.g., cooldown, damage, rang
 "If I have seen further, it is by standing on the shoulders of giants." — Sir Isaac Newton, 1675
 - Crusaders' full codebase is only visible in the [Source File](7107.rbxl)
   - The reason for this is that I couldn't properly save the content under certain services, like `StarterGui`
-  - If you absolutely cannot access the the file, please refer to the [docs (WIP)](https://github.com/altair5607249/Crusaders-Game/blob/main/docs/diagrams.md)!!!
+  - If you absolutely cannot access the file, please refer to the [docs (WIP)](https://github.com/altair5607249/Crusaders-Game/blob/main/docs/diagrams.md)!!!
 - My Friends' Roles
   - Aidan ([@Trapizoid](https://www.pixilart.com/trapizoid)) — Lead Artist, Lead Composer, QA Tester
-  - Jazz [@jazkatbuttersky](https://www.roblox.com/users/474688120/profile) — QA Tester
+  - Jazz ([@jazkatbuttersky](https://www.roblox.com/users/474688120/profile)) — QA Tester
   - Zachary ([@exp3ctati0nz](https://www.roblox.com/users/306366365/profile)) — Programmer, Artist, QA Tester, Map Designer, Narrative Designer, Voice Actor, Composer, Animator
   - Gabriel ([@NERailDude](https://www.youtube.com/@northeasttransitproductions)) — QA Tester
 - AI ([Claude](https://academy.claude.com/courses/claude-101/what-is-claude) & [Gemini](https://gemini.google/overview/)) Usage
