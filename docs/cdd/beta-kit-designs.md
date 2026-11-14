@@ -110,10 +110,10 @@ His whole thing is being fast, whether through the timing of his moves, his actu
 #### Weapon Style
 | Move # | Move Name | Description |
 | --- | --- | --- |
-| Move 1 | Lasso | Yellow slings his yoyo forward, roping in anyone caught by it. |
-| Move 2 | Lighthouse | Yellow opens his SOL, surrounding himself with a blinding light that stuns anyone close enough. |
-| Move 3 | Breakaway | Yellow performs a yoyo trick, tossing it forward in a wide motion. (Note: I know the yoyo is supposed to be tossed to the side of the yo-yoer, but I somehow forgot to animate it that way! I will rectify this in a future update, of course.) |
-| Move 4 | Borean Blitz | Yellow strengthens his body with his SOL, moving with incredible speed; his weapon-style moveset is enhanced during this strengthened state, and all successful hits (including M1s) restore stamina. |
+| [Move 1](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/OutputModules/Weapon_Server/CharModules/Yello/Move1/init.luau) | Lasso | Yellow slings his yoyo forward, roping in anyone caught by it. |
+| [Move 2](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/OutputModules/Weapon_Server/CharModules/Yello/Move2/init.luau) | Lighthouse | Yellow opens his SOL, surrounding himself with a blinding light that stuns anyone close enough. |
+| [Move 3](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/OutputModules/Weapon_Server/CharModules/Yello/Move3/init.luau) | Breakaway | Yellow performs a yoyo trick, tossing it forward in a wide motion. (Note: I know the yoyo is supposed to be tossed to the side of the yo-yoer, but I somehow forgot to animate it that way! I will rectify this in a future update, of course.) |
+| [Move 4](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/OutputModules/Weapon_Server/CharModules/Yello/Move4/init.luau) | Borean Blitz | Yellow strengthens his body with his SOL, moving with incredible speed; his weapon-style moveset is enhanced during this strengthened state, and all successful hits (including M1s) restore stamina. |
 
 ## Green
 Also known as Zakyros, Green won't go down without a fight!
