@@ -50,18 +50,18 @@ Though he's the roster's all-rounder, he possesses a special gimmick of his own:
 #### Bare Style
 | Move # | Move Name | Description |
 | --- | --- | --- |
-| 1 | Headbutt | Red swiftly smashes his head forward. |
-| 2 | Hero's Fist | Red reinforces his right fist with his SOL before throwing it forward, creating a massive shockwave in the process. |
+| 1 | Headbutt | Red swiftly smashes his head forward. When his health is below 50%, this move is able to bypass parrying. |
+| 2 | Hero's Fist | Red reinforces his right fist with his SOL before throwing it forward, creating a massive shockwave in the process. This move's damage scales higher with lower health. When his health is below 20%, this move is able to bypass parrying. |
 | 3 | Sacred Circle | Red summons a ring of fire around himself that radiates symmetrically. |
-| 4 | Sixth Sense | Red becomes massless, gaining immunity to all attacks; he also has the opportunity to equip his weapon, effectively switching from bare style to weapon style. |
+| 4 | Sixth Sense | Red becomes massless, gaining immunity to all attacks; he also has the opportunity to equip his weapon, effectively switching from bare style to weapon style. This move's immunity duration scales higher with lower health. |
 
 #### Weapon Style
 | Move # | Move Name | Description |
 | --- | --- | --- |
 | 1 | Feint | Red pretends to use Supernova, but swipes his hand forward at the last moment. |
-| 2 | Supernova | Red builds up SOL in his knife before spinning in a circle with it, releasing all of its destructive energy in a brilliant explosion; he nearly passes out afterward. |
+| 2 | Supernova | Red builds up SOL in his knife before spinning in a circle with it, releasing all of its destructive energy in a brilliant explosion; he nearly passes out afterward. This move's damage scales higher with lower health. |
 | 3 | Blade Parade | Red telekinetically throws his knife around himself, its trajectory radiating symemetrically. |
-| 4 | Chanticleer Counter | Red substitutes himself with his pet rooster, which proportionally reflects all damage administered to it. |
+| 4 | Chanticleer Counter | Red substitutes himself with his pet rooster, which proportionally reflects all damage administered to it. The proportion of reflected damage scales higher with lower health. |
 
 ## Orange
 
@@ -151,17 +151,17 @@ Being the type of fighter he is, there is a key benefit to keeping him at high h
 | Move # | Move Name | Description |
 | --- | --- | --- |
 | Move 1 | Suplex | Green grabs the opponent (if there is one) in front of him and slams them onto the ground behind himself. |
-| Move 2 | Animal Instinct | Green laughs and locks onto the nearest opponent (if one is in range), swinging violently at them. |
-| Move 3 | Give Gifts | Green prays and levitates behind the nearest opponent (if one is in range), stealing their health. |
+| Move 2 | Animal Instinct | Green laughs and locks onto the nearest opponent (if one is in range), swinging violently at them. This move's damage scales higher with higher health. |
+| Move 3 | Give Gifts | Green prays and levitates behind the nearest opponent (if one is in range), stealing their health. This move's heal scales higher with lower health. |
 | Move 4 | Breach | Green flies forward for a period of time, during which his trajectory changes with wherever he's facing; he stops early if he hits an opponent. |
 
 #### Weapon Style
 | Move # | Move Name | Description |
 | --- | --- | --- |
 | Move 1 | Yeet | Green hurls his anchor forward; anything penetrated by the tip is dealt with triple the damage. |
-| Move 2 | Accretion Disk | Green swings his anchor around himself in a circle. |
-| Move 3 | Anchor Point | Green shields himself in the direction he's facing with his anchor; he's able to move while his shield is up. |
-| Move 4 | Ghillie Groundbreaker | --- |
+| Move 2 | Accretion Disk | Green swings his anchor around himself in a circle. This move drains the stamina of whomever it hits. |
+| Move 3 | Anchor Point | Green shields himself in the direction he's facing with his anchor; he's able to move while his shield is up. The strength of the shield scales higher with higher health. |
+| Move 4 | Ghillie Groundbreaker | Green leaps forward and smashes the ground beneath him as he lands. When his stamina is equal to this move's cost, the damage diminishes by 20%; when his stamina is lesser than the cost, the damage diminishes by 40% and the effective radius is halved. |
 
 ## Blue
 Also known as Gabrius, Blue is nearly impossible to predict!
@@ -194,9 +194,9 @@ Also known as Gabrius, Blue is nearly impossible to predict!
 #### Bare Style
 | Move # | Move Name | Description |
 | --- | --- | --- |
-| Move 1 | Rip | --- |
-| Move 2 | Copy | --- |
-| Move 3 | Vortex | --- |
+| Move 1 | Rip | Blue cleaves the air with his hand, creating a temporary, spatial rip in front of himself. |
+| Move 2 | Copy | Blue warps his SOL, allowing himself to perform the other characters' moves. He can only copy one, random move at a time; the pool of available moves does not include any weapon-style moves, nor the fourth bare-style move of other characters. |
+| Move 3 | Vortex | Blue  |
 | Move 4 | Gamble | --- |
 
 #### Weapon Style
