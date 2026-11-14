@@ -42,7 +42,7 @@ function RM2:Trigger(player: Player)
 		atkdur = 0.5,
 		atkrad = 5,
 		atktype = "heavy",
-		bypassParry = (health > maxHealth * 0.8 and true) or false,
+		bypassParry = (health < maxHealth * 0.2 and true) or false,
 		customSound = script.Kapow,
 		dmg = dmg + health^2/(8*maxHealth),
 		ID = 2,

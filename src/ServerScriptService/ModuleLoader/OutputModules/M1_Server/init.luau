@@ -57,7 +57,7 @@ function m1Manager.Action(player: Player, index: number)
 	
 	if char:HasTag("SolDisabled") then return end
 	
-	if index > 4 then return end --just incase a modified client tries to pass their strike index as 4 when it isnt actually 4
+	if index > 4 then return end --just in case a modified client tries to pass their strike index as 4 when it isnt actually 4
 	if not cooldown:IsReady(player, "M1", "M1") or char:GetAttribute("Stunned") then return end
 	
 	local count = timing.M1Timing(m1Registry[player].prevCount, m1Registry[player].prevTick, comboExtension)
