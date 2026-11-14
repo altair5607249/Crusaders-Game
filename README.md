@@ -1,5 +1,5 @@
 # Crusaders — Game
-Crusaders is a 3D, free-for-all fighting game currently in beta and is available on Roblox! 
+***Crusaders*** is a 3D, free-for-all fighting game currently in beta and is available on Roblox! 
 
 | ![the-art](https://github.com/user-attachments/assets/4bdd5bc8-4a6e-4e2a-abe9-a1943c2f2d2d) |
 | :---: |
