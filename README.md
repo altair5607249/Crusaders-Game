@@ -411,7 +411,7 @@ Its effects were small, in which only a few values (e.g., cooldown, damage, rang
   - Jazz ([@jazkatbuttersky](https://www.roblox.com/users/474688120/profile)) — QA Tester
   - Zachary ([@exp3ctati0nz](https://www.roblox.com/users/306366365/profile)) — Programmer, Artist, QA Tester, Map Designer, Narrative Designer, Voice Actor, Composer, Animator
   - Gabriel ([@NERailDude](https://www.youtube.com/@northeasttransitproductions)) — QA Tester
-- AI ([Claude](https://academy.claude.com/courses/claude-101/what-is-claude) & [Gemini](https://gemini.google/overview/)) Usage
+- AI Usage (primarily [Claude](https://academy.claude.com/courses/claude-101/what-is-claude) & [Gemini](https://gemini.google/overview/))
   - Reviewing and suggesting code for the game
   - Writing code for the game, which was tweaked by me afterwards and occurred on two separate occasions:
     - Applying skins in `Matter`
@@ -420,6 +420,7 @@ Its effects were small, in which only a few values (e.g., cooldown, damage, rang
     - [Mesa](https://mesa.readthedocs.io/latest/)/Agent boilerplate 
     - [Gymnasium](https://gymnasium.farama.org/index.html)/RL wrapper
     - [Seaborn](https://seaborn.pydata.org/) data visualization
+  - A jocular painting in `Former School` that [ChatGPT](https://chatgpt.com/overview/) generated, which can be found [here](https://github.com/altair5607249/Crusaders-Game/blob/main/docs/gallery/maps/former-school/02-prince-e-paul.md)
 - Tutorials
   - [RPG Tutorial by GnomeCode](https://www.youtube.com/playlist?list=PLtMUa6NlF10eTKSVlNrTiPRqiR87f-V1j)
   - [Roblox Advanced Scripting Tutorial Guide by BrawlDev](https://www.youtube.com/playlist?list=PLQ1Qd31Hmi3WKkVHnadvhOOjz04AuMYAf)
