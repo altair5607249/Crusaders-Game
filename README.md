@@ -23,6 +23,7 @@ If you're more of a visual person, why not take a look at the [gallery](https://
 - You need a Roblox account to play the game, whether via Roblox itself or Roblox Studio; it only takes a few minutes to make if you don't already have one!
   - If you decide to play the public release of the game (the first link), you must verify that you're of 16 years or older
   - If you decide to open the binary place file (the second link), you must download Roblox Studio
+- For those (probably fellow devs) who might want to sync `\src` into Roblox Studio via [Rojo](https://rojo.space), you can build from the root `default.project.json` file
  
 ## My Roles
 Each job below is something I spent significant time on, listed in order of personal importance:
@@ -318,6 +319,10 @@ This is the complete map for anyone who wants it :)
 
 ### Tree of Functionality
 This is the nigh-complete hierarchy of the game's source code, including scripts that didn't fit as nodes in the Full System Diagram! For those who want to see everything, including the most minor scripts, please refer to the [Source File](7107.rbxl) or the [docs (WIP)](https://github.com/altair5607249/Crusaders-Game/blob/main/docs/diagrams.md).
+
+<details>
+<summary><strong>Click to expand the script hierarchy</strong></summary>
+  
 - `StarterPlayerScripts`
   - `ChatHandler` — announces when an admin joins in the chat
   - `GuiManager` — controls the starting screen
@@ -373,6 +378,8 @@ This is the nigh-complete hierarchy of the game's source code, including scripts
   - `UniversalModules`
     - `Space` — houses config tables for O(1) lookups, calculates knockback vectors, and helps with finding directions
     - `Time` — houses a config table for O(1) lookups, calculates timing constraints, and helps with M1 timing
+
+</details>
 
 ## Agent-Based Modeling
 For those who wanna check out the simple ABM I worked on to optimize the game a bit, feel free to take a look [here](https://github.com/altair5607249/Crusaders-Game/tree/main/abm)!  
@@ -439,6 +446,11 @@ Its effects were small, in which only a few values (e.g., cooldown, damage, rang
     - [Star's Shaders](https://create.roblox.com/store/asset/6980389129/Stars-Shaders) by [stxrryxnvght](https://www.roblox.com/users/536426235/profile)
     - [TopbarPlus](https://create.roblox.com/store/asset/92368439343389/TopbarPlus) by [ForeverHD](https://www.roblox.com/users/82347291/profile)
     - [Asadrith's Dialogue Kit](https://create.roblox.com/store/asset/18835619908/Asadriths-Dialogue-Kit) by [Asadrith](https://www.youtube.com/channel/UCSHDfp-fGeSeIP4j_Q_gKdA)
+  - External API
+    - [Roblox Studio](https://create.roblox.com/landing) by the Roblox Corporation
+    - [Rojo](https://rojo.space) by Lucien Greathouse
+    - [Visual Studio Code](https://code.visualstudio.com) by Microsoft
+    - External APIs used for building the ABM can be found [here](https://github.com/altair5607249/Crusaders-Game/blob/main/abm/README.md) under "Dependencies"
 - Inspirations
   - [The Strongest Battlegrounds](https://www.roblox.com/games/10449761463/The-Strongest-Battlegrounds) by [Yielding Arts](https://www.roblox.com/communities/12013007/Yielding-Arts#!/about)
   - [Street Fighter 6](https://store.steampowered.com/app/1364780/Street_Fighter_6/) by [Capcom](https://www.capcom.com/)
