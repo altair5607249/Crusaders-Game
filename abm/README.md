@@ -1,6 +1,30 @@
 # Agent-Based Model (ABM)
 Behold, Crusaders' simple ABM, which tests baseline character balance!
 
+## What is Agent-Based Modeling?
+The University of Wisconsin-Madison (see [Agent-Based Evolutionary Game Dynamics](https://wisc.pb.unizin.org/agent-based-evolutionary-game-dynamics/chapter/i-3/)) has a lovely way of explaining this, so I'll be paraphrasing their content! 
+
+Essentially, agent-based modeling is a way of simulating real-world systems. Such systems are made up of individual units (e.g., atoms, people, institutions) which repeatedly interact with each other and/or their environment!
+
+For a more in-depth look at the subject, please refer to the University of Wisconsin-Madison's research linked above, or other credible sources (e.g., [Stanford Encyclopedia of Philosophy](https://plato.stanford.edu/about.html) — [Agent-Based Modeling in the Philosophy of Science](https://plato.stanford.edu/entries/agent-modeling-philscience/)).
+
+## Why did I use Agent-Based Modeling?
+Not because I enjoy torturing myself with my capriciousness, but for the love of the game (literally)!
+
+I used basic intuition and experimental studies to balance the characters' stats, but I felt a little unconfident without empirical analysis to back up my numbers.
+
+As I was researching ways to optimize the numbers with actual game theory, Agent-Based Modeling was one of the first and most promising solutions that came up! Trying it out seemed harmless and enriching, so I made it a side quest of mine to integrate the process of creating one into Crusaders' beta development pipeline.
+
+## Dependencies
+Here are the resources I used, so that anyone cloning the repo can execute the ABM as they please:
+- [Mesa](https://mesa.readthedocs.io/latest/)
+- [Numpy](https://numpy.org/doc/)
+- [Gymnasium](https://gymnasium.farama.org)
+- [SB3 Contrib](https://stable-baselines3.readthedocs.io/en/master/guide/sb3_contrib.html)
+- [Jupyter Notebook](https://jupyter.org)
+- [Matplotlib](https://matplotlib.org/stable/index.html)
+- [Seaborn](https://seaborn.pydata.org)
+
 ## Version History
 | Version | Description | Status |
 | --- | --- | --- |
@@ -9,7 +33,7 @@ Behold, Crusaders' simple ABM, which tests baseline character balance!
 | v3 | Full rewrite by me. I'm aware that the ABM code is rushed and messy, so I will be working on a full rewrite without AI! | In progress |
 
 ## Codebase
-All of the code for the second version of the ABM hasn't been recovered, so the diagram below will only be describing the general flow of the program, largely deriving from the first version of the ABM.
+Not all of the code for the second version of the ABM was recovered, so the diagram below will only be describing the general flow of the program, largely deriving from the first version of the ABM.
 
 Also, this code is way shorter and simpler than [Crusaders' system](https://github.com/altair5607249/Crusaders-Game/blob/main/docs/diagrams.md), so I will only be using basic shape standards (see [ISO 5807:1985](https://cdn.standards.iteh.ai/samples/11955/1b7dd254a2a54fd7a89d616dc0570e18/ISO-5807-1985.pdf)).
 
@@ -24,11 +48,12 @@ Also, this code is way shorter and simpler than [Crusaders' system](https://gith
 
 flowchart TB;
 
-A("Agent step begins")-->B["Tick down active cooldowns"]-->C["Regenerate 1 stamina"]-->D["Process delayed hit(s)"]
+A("Agent step begins")-->B{Alive?}
 
-D-->E{Alive?}
-E-->|No| F["Skip the tick"]
-E-->|Yes| G["Continue"]
+B-->|No| C["Skip the tick"]
+B-->|Yes| D["Continue"]
+
+D-->E["Tick down active cooldowns"]-->F["Regenerate 1 stamina"]-->G["Process active/delayed hit(s)"]
 
 G-->H{Stunned or Animation-Locked?}
 H-->|Yes| I["Skip the tick"]
@@ -44,7 +69,7 @@ For reference, a single tick lasts 0.1 seconds.
   - Needed to be done in 2-3 days, so I could continue working on releasing Crusaders' open beta (v1 & v2)
 - Scope
   - 1D simulations; only a single distance between agents
-  - No auxiliary (aux) dash (v1 only)
+  - No auxiliary (aux) dash (v1 & v2)
 - Estimations
   - Knockback and dash displacements are estimates from converting studs to fit 1D
   - Some moves' mechanics are simplified (e.g., Blue's/Bluee's Gamble)
@@ -52,20 +77,7 @@ For reference, a single tick lasts 0.1 seconds.
 - Agent Behavior
   - Agents pick moves using tag priority and randomness, not reinforcement learning (v1 only)
   - Agents pick moves using tag priority and reinforcement learning (v2+)
+    - Unfortunately, the reinforcement-learning (RL) training loop was lost in the recovery
 - Results' Meaning
   - Model output is not a proof of balance, and must be weighed against real playtest results
   - Against real playtest results, the model seems to be relatively accurate
-
-## What is Agent-Based Modeling?
-The University of Wisconsin-Madison (see [Agent-Based Evolutionary Game Dynamics](https://wisc.pb.unizin.org/agent-based-evolutionary-game-dynamics/chapter/i-3/)) has a lovely way of explaining this, so I'll be paraphrasing their content! 
-
-Essentially, agent-based modeling is a way of simulating real-world systems. Such systems are made up by individual units (e.g., atoms, people, institutions) which repeatedly interact with each other and/or their environment!
-
-For a more in-depth look at the subject, please refer to the University of Wisconsin-Madison's research linked above, or other credible sources (e.g., [Stanford Encyclopedia of Philosophy](https://plato.stanford.edu/about.html) — [Agent-Based Modeling in the Philosophy of Science](https://plato.stanford.edu/entries/agent-modeling-philscience/)).
-
-## Why did I use Agent-Based Modeling?
-Not because I enjoy torturing myself with my capriciousness, but for the love of the game (literally)!
-
-I used basic intuition and experimental studies to balance the characters' stats, but I felt a little unconfident without empirical analysis to back up my numbers.
-
-As I was researching ways to optimize the numbers with actual game theory, Agent-Based Modeling was one of the first and most promising solutions that came up! Trying it out seemed harmless and enriching, so I made it a side quest of mine to integrate the process of creating one into Crusaders' beta development pipeline.
