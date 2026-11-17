@@ -10,9 +10,15 @@ Important parts will be given in smaller diagrams, and everything, everywhere, a
       - IA — Input Action
   - Thick Arrow — Init
 - Colors
+  - Red — Event
   - Blue — Client
   - Green — Server
   - Purple — Universal
+- Shapes (standards derived from [ISO 5807:1985](https://cdn.standards.iteh.ai/samples/11955/1b7dd254a2a54fd7a89d616dc0570e18/ISO-5807-1985.pdf))
+  - Rounded Rectangle — terminator; the start or end of the program
+  - Rectangle — process; an action or task
+  - Rhombus — decision; yes/no branch point
+  - Ray — flow line; direction of the program's sequence
  
 ## Initialization
 ```mermaid
@@ -50,27 +56,66 @@ flowchart TB;
     ModuleLoader;
     Matter;
 
-    subgraph Everything-Else
-      Lots-of-Modules;
+    subgraph a["Everything Else"]
+      b["Lots of Modules"];
     end
   end
 
-  Player-Joins==>ModuleLoader2
+  c["Player joins"]==>ModuleLoader2
 
-  A==>|Loading-Screen-Removed| ModuleLoader2
+  A==>|Loading screen is removed| ModuleLoader2
 
-  ModuleLoader2-->|RE| Matter-->Player-Appears;
+  ModuleLoader2-->|RE| Matter-->d["Player appears"];
   ModuleLoader2==>Energy==>InputModules;
   ModuleLoader2==>KnockbackHandler;
   ModuleLoader2==>MusicHandler;
 
   ModuleLoader==>Matter;
-  ModuleLoader==>Everything-Else;
+  ModuleLoader==>a;
 
-  class Player-Joins,Player-Appears,Loading-Screen eventNode;
-  class ModuleLoader,Matter,Lots-of-Modules,CooldownManager,DamageManager,DataManager,KnockbackManager,MapManager,MovementManager,StunManager,M1_Server,Bare_Server,Weapon_Server serverNode;
+  class c,d eventNode;
+  class ModuleLoader,Matter,b,CooldownManager,DamageManager,DataManager,KnockbackManager,MapManager,MovementManager,StunManager,M1_Server,Bare_Server,Weapon_Server serverNode;
   class ModuleLoader2,Energy,AnimationHandler,KnockbackHandler,MusicHandler,M1_Client,Sol_Client,Movement,ModuleLoader3,ModuleLoader4,A,B,C clientNode;
   class Space,Time universalNode;
+```
+
+## Input Action System (IAS)
+```mermaid
+flowchart TB;
+
+  classDef clientNode fill:#42a1f5,stroke:#000000,color:#000000
+
+  subgraph StarterPlayerScripts
+    Energy;
+
+    subgraph InputModules
+      M1_Client;
+      Sol_Client;
+      Movement;
+    end
+  end
+
+  Energy-->InputModules;
+  InputModules-->|Send input-action data| Energy;
+  Energy-->|Single iteration| A{"Is the action valid?}
+
+  A-->|No| B["Warning"]
+  A-->|Yes| C["Press connection is created"]
+
+  C-->D["Connection is saved"]
+  D-->E{"Is this a held action?"}
+
+  E-->|Yes| F["Release connection is created"]-->f["Connection is saved"]-->H["Actions are mapped to GUI buttons"]
+  E-->|No| G["Continue"]-->H
+
+  G-->|Happens once, first iteration| h["Set listeners"]
+  f-->|Happens once, first iteration| h
+
+  h-->i["Player dies & respawns"]-->H
+
+  H-->I["Connections are created and saved"]
+
+  class Energy,M1_Client,Sol_Client,Movement clientNode;
 ```
 
 ## Client-Server Communication
