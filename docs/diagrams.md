@@ -107,7 +107,7 @@ flowchart TB;
   D-->E{Is this a held action?}
 
   E-->|Yes| F["Release connection is created"]-->f["Connection is saved"]-->H["Action is mapped to GUI buttons"]
-  E-->|No| G-->H
+  E-->|No| G["Continue"]-->H
 
   G-->|Only for the first valid iteration| h["Set listener"]
   f-->|Only for the first valid iteration| h
