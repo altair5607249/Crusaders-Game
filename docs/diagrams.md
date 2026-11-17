@@ -111,8 +111,11 @@ flowchart TB;
 
   G-->|Only for the first valid iteration| h["Set listener"]
   f-->|Only for the first valid iteration| h
-
   h-->i["Player dies & respawns"]-->H
+
+  G-->a["Associated context is tagged as active"]
+  f-->a
+  a-->|Next iteration| A
 
   H-->I{Are the button and the binding valid?}
 
@@ -121,6 +124,8 @@ flowchart TB;
 
   K-->|No| L["Activated connection is created"]-->O["Connection(s) saved"]
   K--> |Yes| M["Began & ended connections are created"]-->O
+
+  O-->|Next iteration| H
 
   class Energy,M1_Client,Sol_Client,Movement clientNode;
   class i eventNode;
