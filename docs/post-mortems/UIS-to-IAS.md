@@ -19,3 +19,5 @@ Though I wasn't nearly advanced enough in coding to be pulling a stunt like this
 After removing UIS from the code under `InputModules`, my brain worked overtime to justify the new system.
 
 At first, I imagined each module under `InputModules` (e.g., `M1_Client`) would require `Energy`, the module my IAS lived in. However, each of those modules speaking to `Energy` at once introduced too many bugs for me to fix at the time; the most glaring issue if I went this route would've been finding out what `Energy` would return.
+
+I eventually resolved on a design idea that involved `Energy` as the prime mover of the whole shebang, in which it would initialize each module under `InputModules` and, in the process, grab data from them that allowed it to create connections (input actions) and save them. That's the easiest explanation I could come up with, but if you're interested how it actually works, please refer to either the [script](https://github.com/altair5607249/Crusaders-Game/blob/main/src/StarterPlayerScripts/Energy.luau) itself or the [diagram]() for it.
