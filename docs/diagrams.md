@@ -95,25 +95,25 @@ flowchart TB;
     end
   end
 
-  Energy-->InputModules;
-  InputModules-->|Send input-action data| Energy;
-  Energy-->|Single iteration| A{"Is the action valid?};
+  Energy-->InputModules
+  InputModules-->|Send input-action data| Energy
+  Energy-->|Single iteration| A{Is the action valid?}
 
-  A-->|No| B["Warning"];
-  A-->|Yes| C["Press connection is created"];
+  A-->|No| B["Warning"]
+  A-->|Yes| C["Press connection is created"]
 
-  C-->D["Connection is saved"];
-  D-->E{"Is this a held action?"};
+  C-->D["Connection is saved"]
+  D-->E{Is this a held action?}
 
-  E-->|Yes| F["Release connection is created"]-->f["Connection is saved"]-->H["Actions are mapped to GUI buttons"];
-  E-->|No| G["Continue"]-->H;
+  E-->|Yes| F["Release connection is created"]-->f["Connection is saved"]-->H["Actions are mapped to GUI buttons"]
+  E-->|No| G["Continue"]-->H
 
-  G-->|Happens once, first iteration| h["Set listeners"];
-  f-->|Happens once, first iteration| h;
+  G-->|Happens once, first iteration| h["Set listeners"]
+  f-->|Happens once, first iteration| h
 
-  h-->i["Player dies & respawns"]-->H;
+  h-->i["Player dies & respawns"]-->H
 
-  H-->I["Connections are created and saved"];
+  H-->I["Connections are created and saved"]
 
   class Energy,M1_Client,Sol_Client,Movement clientNode;
 ```
