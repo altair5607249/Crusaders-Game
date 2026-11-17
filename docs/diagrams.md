@@ -96,7 +96,7 @@ flowchart TB;
     end
   end
 
-  Energy-->InputModules
+  Energy-->|Require & init| InputModules
   InputModules-->|Send input-action data| Energy
   Energy-->|First iteration| A{Is the action valid?}
 
