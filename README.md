@@ -407,6 +407,7 @@ Its effects were small, in which only a few values (e.g., cooldown, damage, rang
   - The reason for this is that I couldn't properly save the content under certain services, like `StarterGui`
   - If you absolutely cannot access the file, please refer to the [docs (WIP)](https://github.com/altair5607249/Crusaders-Game/blob/main/docs/diagrams.md)!!!
 - My Friends' Roles
+  - Dino ([@dino_vibes6](https://www.roblox.com/users/1686067617/profile)) — Emotional Support, QA Tester
   - Aidan ([@Trapizoid](https://www.pixilart.com/trapizoid)) — Lead Artist, Lead Composer, QA Tester
   - Jazz ([@jazkatbuttersky](https://www.roblox.com/users/474688120/profile)) — QA Tester
   - Zachary ([@exp3ctati0nz](https://www.roblox.com/users/306366365/profile)) — Programmer, Artist, QA Tester, Map Designer, Narrative Designer, Voice Actor, Composer, Animator
