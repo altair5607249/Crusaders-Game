@@ -83,6 +83,7 @@ flowchart TB;
 ```mermaid
 flowchart TB;
 
+  classDef eventNode fill:#e33939,stroke:#000000,color:#000000
   classDef clientNode fill:#42a1f5,stroke:#000000,color:#000000
 
   subgraph StarterPlayerScripts
@@ -97,25 +98,32 @@ flowchart TB;
 
   Energy-->InputModules
   InputModules-->|Send input-action data| Energy
-  Energy-->|Single iteration| A{Is the action valid?}
+  Energy-->|First iteration| A{Is the action valid?}
 
-  A-->|No| B["Warning"]
+  A-->|No| B["Warning"]-->|Next iteration| A
   A-->|Yes| C["Press connection is created"]
 
   C-->D["Connection is saved"]
   D-->E{Is this a held action?}
 
-  E-->|Yes| F["Release connection is created"]-->f["Connection is saved"]-->H["Actions are mapped to GUI buttons"]
-  E-->|No| G["Continue"]-->H
+  E-->|Yes| F["Release connection is created"]-->f["Connection is saved"]-->H["Action is mapped to GUI buttons"]
+  E-->|No| H
 
-  G-->|Happens once, first iteration| h["Set listeners"]
-  f-->|Happens once, first iteration| h
+  G-->|Only for the first valid iteration| h["Set listener"]
+  f-->|Only for the first valid iteration| h
 
   h-->i["Player dies & respawns"]-->H
 
-  H-->I["Connections are created and saved"]
+  H-->I{Are the button and the binding valid?}
+
+  I-->|No| J("End iteration")
+  I-->|Yes| K{Is this a held action?}
+
+  K-->|No| L["Activated connection is created"]-->O["Connection(s) saved"]
+  K--> |Yes| M["Began & ended connections are created"]-->O
 
   class Energy,M1_Client,Sol_Client,Movement clientNode;
+  class i eventNode;
 ```
 
 ## Client-Server Communication
