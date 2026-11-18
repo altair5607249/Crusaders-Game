@@ -44,7 +44,7 @@ If you think this story ends with the derivation, then I'm sorry to disappoint y
 
 About a month later, I found myself in need of an anticheat to prevent hackers from utilizing unfair movement in combat. I couldn't track `walkspeed`, since continuous teleportation ignored that and was faster, so I focused the system on predicting displacement. 
 
-This worked well for movement with constant velocity such as walking and running, but dashing doesn't have that. Not even it's acceleration is constant, which is what makes the feel of the move so authentic when considering air resistance and other types of friction. If I wanted to calculate the dash's displacement without breaking the authentic nature of the move itself, I would have to use basic calculus.
+This worked well for movement with constant velocity such as walking and running, but dashing doesn't have that. Not even its acceleration is constant, which is what makes the feel of the move so authentic when considering air resistance and other types of friction. If I wanted to calculate the dash's displacement without breaking the authentic nature of the move itself, I would have to use basic calculus.
 
 Thankfully, I studied a bit of it during my freshman year in high school (two years prior), so I was good enough to recognize that all I needed to do was integrate the original equation `v(t) = -(bt)² + d`. Doing this took 5-10 minutes, and I ended up with this:
 
@@ -78,7 +78,7 @@ It bothered me that I used so much guessing for their bare-style moves' calculat
 
 "Wait, why can't I just use the same equation?" I asked myself.
 
-So I tried it with Red's second weapon move ([Supernova](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/OutputModules/Weapon_Server/CharModules/Redd/Move2/init.luau)), and... it worked.
+So I tried it with Red's second weapon move ([Supernova](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/OutputModules/Weapon_Server/CharModules/Redd/Move2/init.luau)), and after flipping the sign... it worked.
 
 ```lua
 local function healthCurve(health: number, maxHealth: number, stat: number)
