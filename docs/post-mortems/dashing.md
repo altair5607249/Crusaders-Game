@@ -21,6 +21,8 @@ I noticed that the dash should start at peak velocity and accelerate in the oppo
 
 `v(t) = -(bt)² + d`, or more precisely `v(t) = (√(d)/T)*t)² + d` where T = total time
 
+$$v(t) = -\left(\frac{\sqrt{d}}{T}t\right)^2 + d$$
+
 The algebra checks out too. Starting at time (t) = 0, the first term would evaluate to 0, leaving only the vertical translation to decide the initial velocity. 
 
 `v(0) = -(b*0)² + d = d`
@@ -35,7 +37,36 @@ Solving the equation for time gives us our compression factor.
 
 You can also see my work [here](https://github.com/altair5607249/Crusaders-Game/blob/main/docs/gallery/general/systems-engineering/2026-06-29-final-dash-derivation.md).
 
-This is structurally a vertex-form quadratic, but defining the compression factor in terms of the vertical translation (aka the max velocity) and total time allows this to function as a parameterized family of curves. If you are not familiar with the definition of this phrase, it essentially refers to a set of curves sharing the same general algebraic form or geometric structure, where the specifications of each individual curve are determined by one or more parameters. For a more in-depth explanation, please refer to [Dr. Eric Schechter's work](https://math.vanderbilt.edu/schectex/courses/f11/198/supplements/CURVES.pdf). The irony here is that I ended up with a parametric equation, despite avoiding one under the pretense that I didn't understand such equations.
+This is structurally a vertex-form quadratic, but defining the compression factor in terms of the vertical translation (aka the max velocity) and total time allows this to function as a parameterized family of curves. If you are not familiar with the definition of this phrase, it essentially refers to a set of curves sharing the same general algebraic form or geometric structure, where the specifications of each individual curve are determined by one or more parameters. For a more in-depth explanation, please refer to [Dr. Eric Schechter's work](https://math.vanderbilt.edu/schectex/courses/f11/198/supplements/CURVES.pdf). 
 
-## Applying Anticheats
-(TBC)
+The irony here is that I ended up with a parametric equation, despite avoiding one under the pretense that I didn't understand such equations.
+
+## Applying Anticheat
+If you think this story ends with the derivation, then I'm sorry to disappoint you, because there's much more to it than that.
+
+About a month later, I found myself in need of an anticheat to prevent hackers from utilizing unfair movement in combat. I couldn't track `walkspeed`, since continuous teleportation ignored that and was faster, so I focused the system on predicting displacement. 
+
+This worked well for movement with constant velocity such as walking and running, but dashing doesn't have that. Not even it's acceleration is constant, which is what makes the feel of the move so authentic when considering air resistance and other types of friction. If I wanted to calculate the dash's displacement without breaking the authentic nature of the move itself, I would have to use basic calculus.
+
+Thankfully, I studied a bit of it during my freshman year in high school (two years prior), so I was good enough to recognize that all I needed to do was integrate the original equation `v(t) = -(bt)² + d`. Doing this took 5-10 minutes, and I ended up with this:
+
+`∫(-b²t² + d)dt` = `-(b²t³)/3 + dt`
+
+In the [anticheat](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/Managers/MovementManager/init.luau), I used this new formula (housed by `dashDisplacement`) with definite integration in `maxDashDistance` to track dashing movement across a tick window, subtracting the previous time from the current time: 
+
+`local curveDisplacement = dashDisplacement(b, d, curveXNow) - dashDisplacement(b, d, curveXPrev)`
+
+This is also factored in with latency, walking overflow, and padding to return a fair result:
+
+`local xPrev = math.clamp((check or initialTime) - initialTime, 0, maxServerWindow)`  
+`local xNow = math.clamp(finalTime - initialTime, 0, maxServerWindow)`  
+`local curveXPrev = math.clamp(xPrev, 0, dashDur)`   
+`local curveXNow = math.clamp(xNow, 0, dashDur)`
+
+`--...`
+
+`return curveDisplacement + overflowDisplacement + padding`
+
+This taught me that there was more to the derivation than its dictation of the player character's motion; it was good at describing itself, though that's to be expected. What I *mean to say* is that it set me up for recognizing its true, oddly broad utility.
+
+## Reusing the Derivation
