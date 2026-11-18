@@ -52,19 +52,74 @@ $$\int \left(-b^2 t^2 + d\right) dt = -\frac{b^2 t^3}{3} + dt$$
 
 In the [anticheat](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/Managers/MovementManager/init.luau), I used this new formula (housed by `dashDisplacement`) with definite integration in `maxDashDistance` to track dashing movement across a tick window, subtracting the previous time from the current time: 
 
-`local curveDisplacement = dashDisplacement(b, d, curveXNow) - dashDisplacement(b, d, curveXPrev)`
+```lua
+local curveDisplacement = dashDisplacement(b, d, curveXNow) - dashDisplacement(b, d, curveXPrev)
+```
 
 This is also factored in with latency, walking overflow, and padding to return a fair result:
 
-`local xPrev = math.clamp((check or initialTime) - initialTime, 0, maxServerWindow)`  
-`local xNow = math.clamp(finalTime - initialTime, 0, maxServerWindow)`  
-`local curveXPrev = math.clamp(xPrev, 0, dashDur)`   
-`local curveXNow = math.clamp(xNow, 0, dashDur)`
+```lua
+local xPrev = math.clamp((check or initialTime) - initialTime, 0, maxServerWindow) 
+local xNow = math.clamp(finalTime - initialTime, 0, maxServerWindow)
+local curveXPrev = math.clamp(xPrev, 0, dashDur)
+local curveXNow = math.clamp(xNow, 0, dashDur)
 
-`--...`
+--...
 
-`return curveDisplacement + overflowDisplacement + padding`
+return curveDisplacement + overflowDisplacement + padding
+```
 
 This taught me that there was more to the derivation than its dictation of the player character's motion; it was good at describing itself, though that's to be expected. What I *mean to say* is that it set me up for recognizing its true, oddly broad utility.
 
 ## Reusing the Derivation
+While I was finishing the closed beta and preparing for the open beta, I wondered about how to cleanly calculate Red and Green's damage scaling.
+
+It bothered me that I used so much guessing for their bare-style moves' calculations, and by this time, I was programming their weapon-style moves, so I decided to get experimental while programming them. As I metaphorically banged my head against a wall, I thought back to the time I was banging my head against a wall while thinking up an equation for dashing.
+
+"Wait, why can't I just use the same equation?" I asked myself.
+
+So I tried it with Red's second weapon move ([Supernova](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/OutputModules/Weapon_Server/CharModules/Redd/Move2/init.luau)), and... it worked.
+
+```lua
+local function healthCurve(health: number, maxHealth: number, stat: number)
+	local a = maxHealth
+	local b = (stat^(1/2))/a
+	return (b*health)^2 + stat
+end
+
+--...
+
+local attackData = { --for the shockwave
+  atkdur = duration * 0.3, --0.375s
+	atkrad = 30,
+	atktype = "light",
+	dmg = healthCurve(deltaHealth, maxHealth, 20),
+	ID = 2,
+	noKB = true,
+	noSound = true,
+	origin = root,
+  style = "Weapon"
+}
+
+--...
+
+local attackData2 = { --for the slash itself
+	atkdur = duration * 0.1, --0.125s
+	atkrad = 8,
+	atktype = "heavy",
+	customSound = script.KnifeHit,
+	dmg = healthCurve(deltaHealth, maxHealth, 50),
+	ID = 2,
+	origin = root,
+	style = "Weapon"
+}
+
+```
+
+"Holy ####, it worked!" I exclaimed.
+
+It was pretty exciting to figure out that I'd actually invented my own family of curves from scratch, specifically a parameterized family of quadratic curves. Math is magic, and that magic came from my own two hands; stuff like that is pretty exciting, isn't it?
+
+Here's a screenshot as proof of my madness: [awesomeness](https://github.com/altair5607249/Crusaders-Game/blob/main/docs/gallery/general/systems-engineering/2026-08-29-reusing-dash-derivation.md).
+
+I didn't replace all of the pre-existing moves' code (e.g., [Hero's Fist](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/OutputModules/Bare_Server/CharModules/Redd/Move2/init.luau)) with it, but I definitely used it for the newer moves.
