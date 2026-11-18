@@ -9,7 +9,7 @@ Not all of Crusaders' code is visible on this repo, so please refer to the [Sour
 
 For those who wish to see the game's progress from before I added GitHub to my workflow, please refer to [The Timeline](https://github.com/altair5607249/Crusaders-Game-Timeline). 
 
-If you're more of a visual person, why not take a look at the [gallery](https://github.com/altair5607249/Crusaders-Game/tree/main/docs/gallery)?
+If you're more of a visual person, why not take a look at the [gallery](https://github.com/altair5607249/Crusaders-Game/tree/main/docs/gallery)? Or, if you're more interested in how my brain works, take a gander at my [post-mortems](https://github.com/altair5607249/Crusaders-Game/tree/main/docs/post-mortems)!
 
 ## Play the Game!
 | Medium | Requirements | Compatibility | Status |
