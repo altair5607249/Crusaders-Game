@@ -116,7 +116,7 @@ local attackData2 = { --for the slash itself
 
 ```
 
-"Holy ####, it worked!" I exclaimed.
+"Holy ####, it worked!"
 
 It was pretty exciting to figure out that I'd actually invented my own family of curves from scratch, specifically a parameterized family of quadratic curves. Math is magic, and that magic came from my own two hands; stuff like that is pretty exciting, isn't it?
 
