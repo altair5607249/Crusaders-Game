@@ -19,21 +19,19 @@ Frankly, I didn't know what I was doing. I thought doing this would be easy, but
 
 I noticed that the dash should start at peak velocity and accelerate in the opposite direction over time, so I got rid of the horizontal shift (c) to prevent the equation from starting at its floor. After taking that away, I noticed that the velocity reached zero at the same value as the compression factor's (b) denominator, so I set it to the value I wanted... and it worked! The vertical translation (d) already accounted for the max velocity, and the parabola was the motion behavior I wanted, so this was the final piece of the puzzle. I'd done it.
 
-`v(t) = -(bt)² + d`, or more precisely `v(t) = (√(d)/T)*t)² + d` where T = total time
-
-$$v(t) = -\left(\frac{\sqrt{d}}{T}t\right)^2 + d$$
+$$v(t) = -(bt)^2 + d \quad \text{or more precisely} \quad v(t) = -\left(\frac{\sqrt{d}}{T}t\right)^2 + d \quad (\text{where } T = \text{total time})$$
 
 The algebra checks out too. Starting at time (t) = 0, the first term would evaluate to 0, leaving only the vertical translation to decide the initial velocity. 
 
-`v(0) = -(b*0)² + d = d`
+$$v(0) = -(b \cdot 0)^2 + d = d$$
 
 Afterwards, the velocity decreases, reaching 0 once b's denominator is equal to our desired time. This works because setting up the boundary condition gives us this:
 
-`v(T) = -(bT)² + d = 0`
+$$v(T) = -(bT)^2 + d = 0$$
 
 Solving the equation for time gives us our compression factor.
 
-`(bT)² = d` → `bT = √(d)` → `b = √(d)/T`
+$$(bT)^2 = d \implies bT = \sqrt{d} \implies b = \frac{\sqrt{d}}{T}$$
 
 You can also see my work [here](https://github.com/altair5607249/Crusaders-Game/blob/main/docs/gallery/general/systems-engineering/2026-06-29-final-dash-derivation.md).
 
@@ -50,7 +48,7 @@ This worked well for movement with constant velocity such as walking and running
 
 Thankfully, I studied a bit of it during my freshman year in high school (two years prior), so I was good enough to recognize that all I needed to do was integrate the original equation `v(t) = -(bt)² + d`. Doing this took 5-10 minutes, and I ended up with this:
 
-`∫(-b²t² + d)dt` = `-(b²t³)/3 + dt`
+$$\int \left(-b^2 t^2 + d\right) dt = -\frac{b^2 t^3}{3} + dt$$
 
 In the [anticheat](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/Managers/MovementManager/init.luau), I used this new formula (housed by `dashDisplacement`) with definite integration in `maxDashDistance` to track dashing movement across a tick window, subtracting the previous time from the current time: 
 
