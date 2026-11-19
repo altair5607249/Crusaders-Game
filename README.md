@@ -412,6 +412,7 @@ Its effects were small, in which only a few values (e.g., cooldown, damage, rang
   - Jazz ([@jazkatbuttersky](https://www.roblox.com/users/474688120/profile)) — QA Tester
   - Zachary ([@exp3ctati0nz](https://www.roblox.com/users/306366365/profile)) — Programmer, Artist, QA Tester, Map Designer, Narrative Designer, Voice Actor, Composer, Animator
   - Gabriel ([@NERailDude](https://www.youtube.com/@northeasttransitproductions)) — QA Tester
+  - Logan ([@mildyconcerned](https://www.roblox.com/users/1036700937/profile)) — QA Tester
 - AI Usage (primarily [Claude](https://academy.claude.com/courses/claude-101/what-is-claude) & [Gemini](https://gemini.google/overview/))
   - Reviewing and suggesting code for the game
   - Writing code for the game, which was tweaked by me afterwards and occurred on two separate occasions:
