@@ -21,3 +21,10 @@ After removing UIS from the code under `InputModules`, my brain worked overtime 
 At first, I imagined each module under `InputModules` (e.g., `M1_Client`) would require `Energy`, the module my IAS lived in. However, each of those modules speaking to `Energy` at once introduced too many bugs for me to fix at the time; the most glaring issue if I went this route would've been finding out what `Energy` would return.
 
 I eventually resolved on a design idea that involved `Energy` as the prime mover of the whole shebang, in which it would initialize each module under `InputModules` and, in the process, grab data from them that allowed it to create connections (input actions) and save them. That's the easiest explanation I could come up with, but if you're interested how it actually works, please refer to either the [script](https://github.com/altair5607249/Crusaders-Game/blob/main/src/StarterPlayerScripts/Energy.luau) itself or the [diagram](https://github.com/altair5607249/Crusaders-Game/blob/main/docs/diagrams.md#input-action-system-ias) for it.
+
+## What I Took Away
+There's only one main thing I learned from this whole thing, but it makes a great point.
+
+Determination is the greatest driver of any car you call your project, and that project can go in any direction once determination takes the wheel. Despite the direction I was already going with UIS, my desire to innovate was much stronger, so I listened to my gut and moved forward. Looking back, it was an amazing decision to switch to IAS, but this kind of lesson is the hardest to carry into my future builds; after all, it comes from raw emotion. 
+
+Great lesson for every walk of life, and it's vital for engineering.
