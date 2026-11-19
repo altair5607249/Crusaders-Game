@@ -46,7 +46,7 @@ About a month later, I found myself in need of an anticheat to prevent hackers f
 
 This worked well for movement with constant velocity such as walking and running, but dashing doesn't have that. Not even its acceleration is constant, which is what makes the feel of the move so authentic when considering air resistance and other types of friction. If I wanted to calculate the dash's displacement without breaking the authentic nature of the move itself, I would have to use basic calculus.
 
-Thankfully, I studied a bit of it during my freshman year in high school (two years prior), so I was good enough to recognize that all I needed to do was integrate the original equation `v(t) = -(bt)² + d`. Doing this took 5-10 minutes, and I ended up with this:
+Thankfully, I studied a bit of it during my freshman year in high school (two years prior), so I was good enough to recognize that all I needed to do was integrate the original equation $v(t) = -(bt)^2 + d$. Doing this took 5-10 minutes, and I ended up with this:
 
 $$\int \left(-b^2 t^2 + d\right) dt = -\frac{b^2 t^3}{3} + dt$$
 
