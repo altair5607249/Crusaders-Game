@@ -122,4 +122,17 @@ It was pretty exciting to figure out that I'd actually invented my own family of
 
 Here's a screenshot as proof of my madness: [awesomeness](https://github.com/altair5607249/Crusaders-Game/blob/main/docs/gallery/general/systems-engineering/2026-08-29-reusing-dash-derivation.md).
 
-I didn't replace all of the pre-existing moves' code (e.g., [Hero's Fist](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/OutputModules/Bare_Server/CharModules/Redd/Move2/init.luau)) with it, but I definitely used it for the newer moves.
+I didn't replace the pre-existing moves' calculations (e.g., [Hero's Fist](https://github.com/altair5607249/Crusaders-Game/blob/main/src/ServerScriptService/ModuleLoader/OutputModules/Bare_Server/CharModules/Redd/Move2/init.luau)) with the formula, but I definitely used it for the newer moves.
+
+## What I Took Away
+So many lessons were learned from a singular storyline!
+
+For one, algebraic manipulation is a much easier card to play than intuition when it comes to deriving equations, but both cards still teach you a lot about how to play the game (math).
+
+Another point I should make is that there's so much technical debt that comes with memorizing formulas. Here is where I truly learned the joy of creating those formulas, albeit the previous times I've created them. It was challenging, but the reward made the struggle sweeter; I say that because the challenge itself was already sweet for me. 
+
+Finally, something can be useful in ways you've never imagined—you just need to get creative! It's all about perspective, as [Jack Stauber](https://jackstauber.com/about/) sang. Opening my eyes to see the broader use of my work showed me that it was never really for the single goal I'd originally proposed it to be for; it just looked to be that way in my own head, of which math was my path out.
+
+Math has been reduced to a task rather than being recognized as an art, and that may be a big reason as to why so many people at my high school hate it; I can't speak for all the kids in other schools, but it may be that way with them too. 
+
+Maybe if we act with just a bit more wonder like I was somehow able to, we can change that.
