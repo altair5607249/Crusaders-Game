@@ -423,7 +423,12 @@ Its effects were small, in which only a few values (e.g., cooldown, damage, rang
     - [Gymnasium](https://gymnasium.farama.org/index.html)/RL wrapper
     - [Seaborn](https://seaborn.pydata.org/) data visualization
   - A jocular painting in `Former School` that [ChatGPT](https://chatgpt.com/overview/) generated, which can be found [here](https://github.com/altair5607249/Crusaders-Game/blob/main/docs/gallery/maps/former-school/02-prince-e-paul.md)
-- Tutorials
+- External API
+  - [Roblox Studio](https://create.roblox.com/landing) by the Roblox Corporation
+  - [Rojo](https://rojo.space) by Lucien Greathouse
+  - [Visual Studio Code](https://code.visualstudio.com) by Microsoft
+  - External APIs used for building the ABM can be found [here](https://github.com/altair5607249/Crusaders-Game/blob/main/abm/README.md) under "Dependencies"
+- Video References
   - [RPG Tutorial by GnomeCode](https://www.youtube.com/playlist?list=PLtMUa6NlF10eTKSVlNrTiPRqiR87f-V1j)
   - [Roblox Advanced Scripting Tutorial Guide by BrawlDev](https://www.youtube.com/playlist?list=PLQ1Qd31Hmi3WKkVHnadvhOOjz04AuMYAf)
   - [How to Force Enable Shift-Lock](https://devforum.roblox.com/t/how-to-force-enable-shift-lock-without-changing-the-playermodule/1072967)
@@ -449,11 +454,6 @@ Its effects were small, in which only a few values (e.g., cooldown, damage, rang
     - [Star's Shaders](https://create.roblox.com/store/asset/6980389129/Stars-Shaders) by [stxrryxnvght](https://www.roblox.com/users/536426235/profile)
     - [TopbarPlus](https://create.roblox.com/store/asset/92368439343389/TopbarPlus) by [ForeverHD](https://www.roblox.com/users/82347291/profile)
     - [Asadrith's Dialogue Kit](https://create.roblox.com/store/asset/18835619908/Asadriths-Dialogue-Kit) by [Asadrith](https://www.youtube.com/channel/UCSHDfp-fGeSeIP4j_Q_gKdA)
-  - External API
-    - [Roblox Studio](https://create.roblox.com/landing) by the Roblox Corporation
-    - [Rojo](https://rojo.space) by Lucien Greathouse
-    - [Visual Studio Code](https://code.visualstudio.com) by Microsoft
-    - External APIs used for building the ABM can be found [here](https://github.com/altair5607249/Crusaders-Game/blob/main/abm/README.md) under "Dependencies"
 - Inspirations
   - [The Strongest Battlegrounds](https://www.roblox.com/games/10449761463/The-Strongest-Battlegrounds) by [Yielding Arts](https://www.roblox.com/communities/12013007/Yielding-Arts#!/about)
   - [Street Fighter 6](https://store.steampowered.com/app/1364780/Street_Fighter_6/) by [Capcom](https://www.capcom.com/)
