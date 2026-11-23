@@ -129,7 +129,7 @@ So many lessons were learned from a singular storyline!
 
 For one, algebraic manipulation is a much easier card to play than intuition when it comes to deriving equations, but both cards still teach you a lot about how to play the game (math).
 
-Another point I should make is that there's so much technical debt that comes with memorizing formulas. Here is where I truly learned the joy of creating those formulas, albeit the previous times I've created them. It was challenging, but the reward made the struggle sweeter; I say that because the challenge itself was already sweet for me. 
+Another point I should make is that there's so much technical debt that comes with memorizing formulas. Here is where I truly learned the joy of creating those formulas, even counting the previous times I've created them. It was challenging, but the reward made the struggle sweeter; I say that because the challenge itself was already sweet for me. 
 
 Finally, something can be useful in ways you've never imagined—you just need to get creative! It's all about perspective, as [Jack Stauber](https://jackstauber.com/about/) sang. Opening my eyes to see the broader use of my work showed me that it was never really for the single goal I'd originally proposed it to be for; it just looked to be that way in my own head, of which math was my path out.
 
