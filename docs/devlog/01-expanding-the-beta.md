@@ -35,7 +35,7 @@ Sounds like a neat idea, but I'd have to learn more about game theory and code t
 ## Network Optimization
 The amount of latency that exists isn't game-breaking, but it's annoying.  
 
-As computer scientists Donald Knuth once wrote in *The Art of Computer Programming* (1974), "Premature optimization is the root of all evil."  
+As computer scientist Donald Knuth once wrote in *The Art of Computer Programming* (1974), "Premature optimization is the root of all evil."  
 
 I heartily agree with that statement after seeing some of the stuff I wasted good problem-solving time on, like the listener subsystem in `Sol_Client`.
 
