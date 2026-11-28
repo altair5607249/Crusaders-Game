@@ -32,7 +32,8 @@ Fear not, for I will still be working on everything I promised, but slower for t
 
 I'll also be developing a walking simulator with C++ and [Raylib](https://www.raylib.com), simply to sharpen my C++ skills before I really begin my kinetic rigging adventures. Also, I'd like to put out more lore for ***The Ashes***, no matter how few people may see it!
 
-Also, to whoever sees this, I hope you take this personal lesson of mine to heart if you're struggling in a similar way. 
+## To Overcome Adversity
+To whoever sees and reads through this file, I hope you take this personal lesson of mine to heart if you're struggling in a similar way. 
 
 Despite the parts of my life where I've already beaten it, the sickness of self-reliance is still very prevalent within me, but I'm so much closer to curing it. How do I know that though? 
 
